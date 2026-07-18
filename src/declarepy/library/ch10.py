@@ -32,11 +32,14 @@ def declaration_10_1(N: int = 100, effect: float = 0.2) -> Design:
         result: np.ndarray = effect * float(z) + df["U"].to_numpy()  # type: ignore[arg-type]
         return result
 
+    # declare_estimator(Y ~ Z, inquiry = "ATE") with no .method uses
+    # DeclareDesign's default, lm_robust (HC2) — numerically the Welch SE
+    # for a two-group regression, with df = N − 2.
     return Design(
         Model(n=N, build=lambda n, rng: {"U": rng.normal(size=n)}, label="model"),
         potential_outcomes(po),
         Inquiry("ATE", lambda df: float((df["Y1"] - df["Y0"]).mean())),
         Assignment.complete(),
         reveal_outcomes(),
-        Estimator.difference_in_means(inquiry="ATE"),
+        Estimator.lm_robust("Y ~ Z", inquiry="ATE"),
     )

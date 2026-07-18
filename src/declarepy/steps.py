@@ -94,6 +94,20 @@ class Model(DesignStep):
         self.data = data
         self.label = label
 
+    @classmethod
+    def resample(cls, data: pd.DataFrame, n: int, label: str = "resample_data") -> "Model":
+        """Bootstrap-resample ``n`` rows (with replacement) from a fixed frame.
+
+        DeclareDesign's ``declare_model(N = n, data = ..., handler =
+        resample_data)`` — the model draws a fresh resampled world each run.
+        """
+
+        def build(n_: int, rng: np.random.Generator) -> pd.DataFrame:
+            idx = rng.integers(0, len(data), size=n_)
+            return data.iloc[idx].reset_index(drop=True)
+
+        return cls(n=n, build=build, label=label)
+
     def run(self, df: pd.DataFrame, rng: np.random.Generator) -> pd.DataFrame:
         if self.data is not None:
             return self.data.copy().reset_index(drop=True)
@@ -341,28 +355,48 @@ class Estimator(DesignStep):
         y: str = "Y",
         z: str = "Z",
         blocks: Optional[str] = None,
+        clusters: Optional[str] = None,
         inquiry: Optional[str] = None,
         label: str = "estimator",
         alpha: float = 0.05,
     ) -> "Estimator":
-        """estimatr-style difference in means (Welch, or blocked)."""
+        """estimatr-style difference in means (Welch, blocked, or clustered)."""
         return cls(
-            lambda df: _est.difference_in_means(df, y=y, z=z, blocks=blocks, alpha=alpha),
+            lambda df: _est.difference_in_means(
+                df, y=y, z=z, blocks=blocks, clusters=clusters, alpha=alpha
+            ),
             inquiry=inquiry,
             label=label,
         )
+
+    @staticmethod
+    def _pick_terms(
+        tidy: pd.DataFrame, term: Optional[Union[str, Sequence[str]]]
+    ) -> pd.DataFrame:
+        if term == "all":
+            return tidy
+        if term is None:
+            non_int = tidy[tidy["term"] != "Intercept"]
+            return (non_int.iloc[:1] if len(non_int) else tidy.iloc[:1]).copy()
+        wanted = [term] if isinstance(term, str) else list(term)
+        out = tidy[tidy["term"].isin(wanted)].copy()
+        if len(out) != len(wanted):
+            missing = set(wanted) - set(out["term"])
+            raise KeyError(f"terms not in fit: {sorted(missing)}")
+        return out
 
     @classmethod
     def lm_robust(
         cls,
         formula: str,
         term: Optional[Union[str, Sequence[str]]] = None,
-        se_type: str = "HC2",
+        se_type: Optional[str] = None,
+        clusters: Optional[str] = None,
         inquiry: Optional[str] = None,
         label: str = "estimator",
         alpha: float = 0.05,
     ) -> "Estimator":
-        """OLS with robust (HC2-default) SEs; reports ``term``'s row(s).
+        """OLS with robust (HC2/CR2-default) SEs; reports ``term``'s row(s).
 
         ``term=None`` reports the first non-intercept term (DeclareDesign's
         default), or the intercept for an intercept-only model; pass a term
@@ -370,18 +404,43 @@ class Estimator(DesignStep):
         """
 
         def run(df: pd.DataFrame) -> pd.DataFrame:
-            tidy = _est.lm_robust(formula, df, se_type=se_type, alpha=alpha)
-            if term == "all":
-                return tidy
-            if term is None:
-                non_int = tidy[tidy["term"] != "Intercept"]
-                return (non_int.iloc[:1] if len(non_int) else tidy.iloc[:1]).copy()
-            wanted = [term] if isinstance(term, str) else list(term)
-            out = tidy[tidy["term"].isin(wanted)].copy()
-            if len(out) != len(wanted):
-                missing = set(wanted) - set(out["term"])
-                raise KeyError(f"terms not in fit: {sorted(missing)}")
-            return out
+            tidy = _est.lm_robust(
+                formula, df, se_type=se_type, clusters=clusters, alpha=alpha
+            )
+            return cls._pick_terms(tidy, term)
+
+        return cls(run, inquiry=inquiry, label=label)
+
+    @classmethod
+    def logit(
+        cls,
+        formula: str,
+        term: Optional[Union[str, Sequence[str]]] = None,
+        inquiry: Optional[str] = None,
+        label: str = "estimator",
+        alpha: float = 0.05,
+        ci: str = "profile",
+    ) -> "Estimator":
+        """Logistic regression coefficients (R glm binomial; profile CIs)."""
+
+        def run(df: pd.DataFrame) -> pd.DataFrame:
+            return cls._pick_terms(_est.glm_logit(formula, df, alpha=alpha, ci=ci), term)
+
+        return cls(run, inquiry=inquiry, label=label)
+
+    @classmethod
+    def logit_ame(
+        cls,
+        formula: str,
+        term: Optional[Union[str, Sequence[str]]] = None,
+        inquiry: Optional[str] = None,
+        label: str = "estimator",
+        alpha: float = 0.05,
+    ) -> "Estimator":
+        """Average marginal effects of a logit (margins-package AME)."""
+
+        def run(df: pd.DataFrame) -> pd.DataFrame:
+            return cls._pick_terms(_est.logit_ame(formula, df, alpha=alpha), term)
 
         return cls(run, inquiry=inquiry, label=label)
 

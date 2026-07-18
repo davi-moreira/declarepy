@@ -26,7 +26,14 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-__all__ = ["EstimatorResult", "difference_in_means", "lm_robust", "prop_test"]
+__all__ = [
+    "EstimatorResult",
+    "difference_in_means",
+    "lm_robust",
+    "prop_test",
+    "glm_logit",
+    "logit_ame",
+]
 
 
 @dataclass
@@ -102,6 +109,7 @@ def difference_in_means(
     y: str = "Y",
     z: str = "Z",
     blocks: Optional[str] = None,
+    clusters: Optional[str] = None,
     alpha: float = 0.05,
     condition1: object = 0,
     condition2: object = 1,
@@ -117,16 +125,33 @@ def difference_in_means(
     ``Σ (N_b/N)²·(s²1b/n1b + s²0b/n0b)`` and ``N - 2B`` degrees of freedom
     (estimatr's blocked design without clusters).
 
+    Clustered (``clusters=`` a column name, no blocks): estimatr's clustered
+    difference in means — OLS of y on z with CR2 cluster-robust variance and
+    Bell–McCaffrey/Satterthwaite degrees of freedom.
+
     Missing values in ``y`` or ``z`` raise — surface missingness, never skip
     it silently (SEMANTIC_DIFFERENCES §3).
     """
-    cols = [y, z] + ([blocks] if blocks else [])
+    cols = [y, z] + ([blocks] if blocks else []) + ([clusters] if clusters else [])
     sub = data[cols]
     n_na = int(sub.isna().sum().sum())
     if n_na:
         raise ValueError(
             f"{n_na} missing values in {cols}; drop or impute explicitly "
             "before estimating (declarepy never skips NAs silently)"
+        )
+    if clusters is not None:
+        if blocks is not None:
+            raise NotImplementedError(
+                "blocked + clustered difference_in_means is a roadmap item"
+            )
+        tidy = lm_robust(f"{y} ~ {z}", data, se_type="CR2", clusters=clusters, alpha=alpha)
+        row = tidy[tidy["term"] == z].iloc[0]
+        return EstimatorResult(
+            estimate=float(row["estimate"]), std_error=float(row["std_error"]),
+            statistic=float(row["statistic"]), p_value=float(row["p_value"]),
+            conf_low=float(row["conf_low"]), conf_high=float(row["conf_high"]),
+            df=float(row["df"]), term=z, outcome=y, estimator="difference_in_means",
         )
     if blocks is None:
         y1 = sub.loc[sub[z] == condition2, y].to_numpy(dtype=float)
@@ -166,33 +191,115 @@ def difference_in_means(
 
 
 _HC_TYPES = {"HC0", "HC1", "HC2", "HC3", "classical", "stata"}
+_CR_TYPES = {"CR0", "CR2", "stata"}
+
+
+def _sym_inv_sqrt(mat: np.ndarray) -> np.ndarray:
+    """Symmetric pseudo-inverse square root (for CR2's (I − H_gg)^{−1/2})."""
+    vals, vecs = np.linalg.eigh((mat + mat.T) / 2)
+    inv_sqrt = np.where(vals > 1e-12, 1.0 / np.sqrt(np.clip(vals, 1e-12, None)), 0.0)
+    result: np.ndarray = vecs @ np.diag(inv_sqrt) @ vecs.T
+    return result
+
+
+def _cluster_robust(
+    X: np.ndarray,
+    resid: np.ndarray,
+    cluster_ids: np.ndarray,
+    se_type: str,
+) -> tuple[np.ndarray, np.ndarray]:
+    """Cluster-robust covariance and per-coefficient df, estimatr-style.
+
+    CR0: plain sandwich, df = G − 1 (with Stata's small-sample factor for
+    ``"stata"``/CR1). CR2: Pustejovsky–Tipton bias-reduced linearization with
+    Bell–McCaffrey/Satterthwaite per-coefficient degrees of freedom.
+    """
+    n, k = X.shape
+    M = np.linalg.inv(X.T @ X)
+    labels, inverse = np.unique(cluster_ids, return_inverse=True)
+    G = len(labels)
+    idx_by_g = [np.flatnonzero(inverse == g) for g in range(G)]
+
+    if se_type in ("CR0", "stata"):
+        meat = np.zeros((k, k))
+        for idx in idx_by_g:
+            s = X[idx].T @ resid[idx]
+            meat += np.outer(s, s)
+        V = M @ meat @ M
+        if se_type == "stata":
+            V *= (G / (G - 1)) * ((n - 1) / (n - k))
+        dof = np.full(k, float(G - 1))
+        return V, dof
+
+    # CR2
+    H_parts = [X[idx] @ M for idx in idx_by_g]  # X_g (X'X)^{-1}
+    A_by_g = []
+    meat = np.zeros((k, k))
+    for idx, XgM in zip(idx_by_g, H_parts):
+        Xg = X[idx]
+        Hgg = XgM @ Xg.T
+        A = _sym_inv_sqrt(np.eye(len(idx)) - Hgg)
+        A_by_g.append(A)
+        s = Xg.T @ (A @ resid[idx])
+        meat += np.outer(s, s)
+    V = M @ meat @ M
+
+    # Bell–McCaffrey Satterthwaite df, per coefficient.
+    H = X @ M @ X.T
+    ImH = np.eye(n) - H
+    dof = np.empty(k)
+    for j in range(k):
+        cols = np.empty((n, G))
+        for g, (idx, A) in enumerate(zip(idx_by_g, A_by_g)):
+            p_g = A @ (X[idx] @ M[:, j])
+            cols[:, g] = ImH[:, idx] @ p_g
+        omega = cols.T @ cols
+        lam = np.linalg.eigvalsh(omega)
+        dof[j] = lam.sum() ** 2 / (lam**2).sum()
+    return V, dof
 
 
 def lm_robust(
     formula: str,
     data: pd.DataFrame,
-    se_type: str = "HC2",
+    se_type: Optional[str] = None,
+    clusters: Optional[str] = None,
     alpha: float = 0.05,
 ) -> pd.DataFrame:
-    """OLS with robust standard errors, estimatr-style (HC2 default).
+    """OLS with robust standard errors, estimatr-style (HC2/CR2 defaults).
 
     Fits ``formula`` by OLS via statsmodels, then applies estimatr's
-    inference: heteroskedasticity-robust (or classical) standard errors with
-    **t** statistics on ``N - k`` degrees of freedom and t-based confidence
-    intervals. Returns a tidy DataFrame with one row per term
+    inference: robust (or classical) standard errors with **t** statistics —
+    ``N − k`` degrees of freedom for HC types, Bell–McCaffrey/Satterthwaite
+    per-coefficient df for CR2, ``G − 1`` for CR0/stata — and t-based
+    confidence intervals. Returns a tidy DataFrame with one row per term
     (``term, estimate, std_error, statistic, p_value, conf_low, conf_high,
-    df, outcome``).
+    df, outcome``) carrying ``r_squared``/``adj_r_squared``/``nobs`` in
+    ``.attrs``.
 
-    ``se_type``: ``"HC2"`` (default, estimatr's default), ``"HC0"``,
-    ``"HC1"``/``"stata"``, ``"HC3"``, or ``"classical"``. Clustered (CR2)
-    errors are a Tranche-2 target (see docs/spec/TRANSLATION_ROADMAP.md).
+    ``se_type``: without clusters — ``"HC2"`` (default, estimatr's default),
+    ``"HC0"``, ``"HC1"``/``"stata"``, ``"HC3"``, ``"classical"``; with
+    ``clusters=`` a column name — ``"CR2"`` (default), ``"CR0"``, or
+    ``"stata"`` (CR1 with G−1 df).
     """
-    if se_type not in _HC_TYPES:
-        raise NotImplementedError(
-            f"se_type={se_type!r} not implemented; available: {sorted(_HC_TYPES)} "
-            "(CR2/clustered SEs are a roadmap item)"
-        )
     import statsmodels.formula.api as smf
+
+    if clusters is None:
+        se_type = se_type or "HC2"
+        if se_type not in _HC_TYPES:
+            raise NotImplementedError(
+                f"se_type={se_type!r} not implemented without clusters; "
+                f"available: {sorted(_HC_TYPES)}"
+            )
+    else:
+        se_type = se_type or "CR2"
+        if se_type not in _CR_TYPES:
+            raise NotImplementedError(
+                f"se_type={se_type!r} not implemented with clusters; "
+                f"available: {sorted(_CR_TYPES)}"
+            )
+        if data[clusters].isna().any():
+            raise ValueError(f"missing values in cluster column {clusters!r}")
 
     model = smf.ols(formula, data=data)
     if model.exog.shape[0] < len(data):
@@ -201,23 +308,37 @@ def lm_robust(
             f"{n_dropped} rows with missing values in the model frame; drop or "
             "impute explicitly before estimating (declarepy never skips NAs silently)"
         )
-    if se_type == "classical":
-        fit = model.fit()
+    n = model.exog.shape[0]
+    k = model.exog.shape[1]
+
+    if clusters is None:
+        if se_type == "classical":
+            fit = model.fit()
+        else:
+            fit = model.fit(cov_type="HC1" if se_type == "stata" else se_type)
+        params = np.asarray(fit.params)
+        names = list(fit.params.index)
         bse = np.asarray(fit.bse)
+        dof_arr = np.full(k, float(n - k))
+        rsq, arsq = float(fit.rsquared), float(fit.rsquared_adj)
     else:
-        cov = "HC1" if se_type == "stata" else se_type
-        fit = model.fit(cov_type=cov)
-        bse = np.asarray(fit.bse)
-    params = np.asarray(fit.params)
-    names = list(fit.params.index)
-    n = int(fit.nobs)
-    k = len(params)
-    dof = float(n - k)
+        fit = model.fit()
+        params = np.asarray(fit.params)
+        names = list(fit.params.index)
+        V, dof_arr = _cluster_robust(
+            np.asarray(model.exog),
+            np.asarray(fit.resid),
+            data[clusters].to_numpy(),
+            se_type,
+        )
+        bse = np.sqrt(np.diag(V))
+        rsq, arsq = float(fit.rsquared), float(fit.rsquared_adj)
+
     tstats = params / bse
-    pvals = 2 * stats.t.sf(np.abs(tstats), dof)
-    crit = float(stats.t.ppf(1 - alpha / 2, dof))
+    pvals = 2 * stats.t.sf(np.abs(tstats), dof_arr)
+    crit = stats.t.ppf(1 - alpha / 2, dof_arr)
     outcome = formula.split("~")[0].strip()
-    return pd.DataFrame(
+    tidy = pd.DataFrame(
         {
             "term": names,
             "estimate": params,
@@ -226,8 +347,166 @@ def lm_robust(
             "p_value": pvals,
             "conf_low": params - crit * bse,
             "conf_high": params + crit * bse,
-            "df": dof,
+            "df": dof_arr,
             "outcome": outcome,
+        }
+    )
+    tidy.attrs.update({"r_squared": rsq, "adj_r_squared": arsq, "nobs": n})
+    return tidy
+
+
+def _profile_ci_logit(
+    endog: np.ndarray,
+    exog: np.ndarray,
+    j: int,
+    beta_hat: np.ndarray,
+    se_j: float,
+    llmax: float,
+    alpha: float,
+) -> tuple[float, float]:
+    """Profile-likelihood CI for one logit coefficient (R confint.glm-style).
+
+    Solves 2·(llmax − profile-ll(c)) = χ²₁(1−α) on each side of the MLE by
+    Brent root-finding, profiling out the other coefficients via an offset
+    refit. Falls back to ±∞ on a side where the deviance never reaches the
+    cutoff within ±10 SE (quasi-separation).
+    """
+    import statsmodels.api as sm
+    from scipy import optimize
+
+    cutoff = float(stats.chi2.ppf(1 - alpha, 1))
+    others = [c for c in range(exog.shape[1]) if c != j]
+    X_rest = exog[:, others]
+    x_j = exog[:, j]
+
+    def dev(c: float) -> float:
+        offset = c * x_j
+        if X_rest.shape[1]:
+            fit_c = sm.Logit(endog, X_rest, offset=offset).fit(
+                disp=False, start_params=beta_hat[others], method="lbfgs", maxiter=200
+            )
+            ll = float(fit_c.llf)
+        else:
+            p = 1 / (1 + np.exp(-offset))
+            ll = float(np.sum(endog * np.log(p) + (1 - endog) * np.log1p(-p)))
+        return 2 * (llmax - ll) - cutoff
+
+    b = float(beta_hat[j])
+    bounds: list[float] = []
+    for sign in (-1.0, 1.0):
+        hi = None
+        for k in (2.0, 4.0, 6.0, 10.0):
+            cand = b + sign * k * se_j
+            try:
+                if dev(cand) > 0:
+                    hi = cand
+                    break
+            except Exception:
+                break
+        if hi is None:
+            bounds.append(float("-inf") if sign < 0 else float("inf"))
+            continue
+        try:
+            bounds.append(float(optimize.brentq(dev, b, hi, xtol=1e-6 * max(1.0, abs(b)))))
+        except Exception:
+            bounds.append(float("-inf") if sign < 0 else float("inf"))
+    return bounds[0], bounds[1]
+
+
+def glm_logit(
+    formula: str,
+    data: pd.DataFrame,
+    alpha: float = 0.05,
+    ci: str = "profile",
+) -> pd.DataFrame:
+    """Logistic regression, R ``glm(family = binomial)``-style tidy output.
+
+    Maximum-likelihood logit via statsmodels with Wald z tests (matching R's
+    ``summary.glm``). Confidence intervals are **profile-likelihood** by
+    default (matching ``broom::tidy(conf.int = TRUE)`` / ``confint.glm``,
+    which is what DeclareDesign's coverage diagnosand sees); pass
+    ``ci="wald"`` for normal-approximation intervals.
+    """
+    if ci not in ("profile", "wald"):
+        raise ValueError("ci must be 'profile' or 'wald'")
+    import statsmodels.formula.api as smf
+
+    model = smf.logit(formula, data=data)
+    if model.exog.shape[0] < len(data):
+        raise ValueError(
+            "rows with missing values in the model frame; drop or impute "
+            "explicitly before estimating"
+        )
+    fit = model.fit(disp=False)
+    params = np.asarray(fit.params)
+    bse = np.asarray(fit.bse)
+    zstats = params / bse
+    pvals = 2 * stats.norm.sf(np.abs(zstats))
+    zcrit = float(stats.norm.ppf(1 - alpha / 2))
+    if ci == "wald":
+        lo = params - zcrit * bse
+        hi = params + zcrit * bse
+    else:
+        endog = np.asarray(model.endog, dtype=float)
+        exog = np.asarray(model.exog, dtype=float)
+        llmax = float(fit.llf)
+        lo_list, hi_list = [], []
+        for jj in range(len(params)):
+            l, h = _profile_ci_logit(endog, exog, jj, params, float(bse[jj]), llmax, alpha)
+            lo_list.append(l)
+            hi_list.append(h)
+        lo, hi = np.asarray(lo_list), np.asarray(hi_list)
+    tidy = pd.DataFrame(
+        {
+            "term": list(fit.params.index),
+            "estimate": params,
+            "std_error": bse,
+            "statistic": zstats,
+            "p_value": pvals,
+            "conf_low": lo,
+            "conf_high": hi,
+            "df": np.nan,
+            "outcome": formula.split("~")[0].strip(),
+        }
+    )
+    tidy.attrs.update({"nobs": int(fit.nobs)})
+    return tidy
+
+
+def logit_ame(
+    formula: str,
+    data: pd.DataFrame,
+    alpha: float = 0.05,
+) -> pd.DataFrame:
+    """Average marginal effects of a logit fit (the ``margins`` package's AME).
+
+    Fits the logit by MLE, then reports the sample-average derivative of the
+    predicted probability with respect to each regressor, with delta-method
+    standard errors and Wald z inference — statsmodels'
+    ``get_margeff(at="overall")``, numerically the same estimator as R's
+    ``margins::margins``.
+    """
+    import statsmodels.formula.api as smf
+
+    fit = smf.logit(formula, data=data).fit(disp=False)
+    mfx = fit.get_margeff(at="overall", method="dydx")
+    params = np.asarray(mfx.margeff)
+    bse = np.asarray(mfx.margeff_se)
+    names = [t for t in fit.params.index if t != "Intercept"]
+    zstats = params / bse
+    pvals = 2 * stats.norm.sf(np.abs(zstats))
+    zcrit = float(stats.norm.ppf(1 - alpha / 2))
+    return pd.DataFrame(
+        {
+            "term": names,
+            "estimate": params,
+            "std_error": bse,
+            "statistic": zstats,
+            "p_value": pvals,
+            "conf_low": params - zcrit * bse,
+            "conf_high": params + zcrit * bse,
+            "df": np.nan,
+            "outcome": formula.split("~")[0].strip(),
         }
     )
 

@@ -14,8 +14,8 @@ redesign,DeclareDesign,declarepy.redesign (factory + Cartesian grids),validated-
 run_design/draw_data,DeclareDesign,declarepy.run_design / declarepy.draw_data,validated-T1,nb04+,2026-09-14,P1,
 complete_ra/block_ra,randomizr,declarepy.complete_ra / declarepy.block_ra,validated-T1,nb07,2026-09-30,P2,complete_ra stream-identical to course inline; randomizr m/prob floor-ceil rule
 simple_rs/complete_rs,randomizr,declarepy.simple_rs / declarepy.complete_rs (+simple_ra/block_rs),validated-T1,nb07,2026-09-28,P2,
-difference_in_means,estimatr,declarepy.difference_in_means (Welch+Satterthwaite; blocked N-2B),validated-T1,nb09;nb13,2026-10-05,P1,matches estimatr to 1e-8 on foos/hajj/blocked fixture; clustered/CR2 = T2
-lm_robust,estimatr,declarepy.lm_robust (statsmodels OLS + t(N-k); HC2 default),validated-T1,nb09;nb10,2026-10-07,P1,HC0/HC1/HC2/HC3/classical match estimatr to 1e-8; CR2 = T2
+difference_in_means,estimatr,declarepy.difference_in_means (Welch+Satterthwaite; blocked N-2B; clustered CR2),validated-T2,nb09;nb13,2026-10-05,P1,matches estimatr to 1e-8 (unblocked/blocked) and 5e-13 (clustered); blocked+clustered combo = roadmap
+lm_robust,estimatr,declarepy.lm_robust (HC2 default; CR0/CR1/CR2 with clusters= + BM df),validated-T2,nb09;nb10,2026-10-07,P1,all HC types 1e-8; CR types 5e-13 vs estimatr incl Bell-McCaffrey Satterthwaite df
 make_dag_df,rdss (book utility),declarepy.dag.make_dag / draw_dag (networkx),translated-T1,nb04,2026-09-14,P2,structural (edge-list) parity only; layout is aesthetic
 course-inline diagnose/run_design/power_at,HONR46400 notebooks,declarepy.course (exact-parity module),validated-T1,nb10;nb11,,P1,bit-for-bit reproduction of notebook numbers at seed 464 (tests/test_course_parity.py)
 declaration_2.1/2.2,book replication archive,declarepy.library.ch02,validated-T1,,,P1,success/failure diagnosands within ±0.05 of diagnosis_2.1.rds over full b grid
@@ -24,9 +24,12 @@ declaration_10.1,book replication archive,declarepy.library.ch10,validated-T1,,,
 declaration_11.1,book replication archive,declarepy.library.ch11,validated-T1,,,P1,mean/sd/power within tolerance of diagnosis_11.1.rds across N=100..1000
 declaration_18.1,book replication archive,declarepy.library.ch18,validated-T1,,,P1,all 7 default diagnosands within tolerance of diagnosis_18.1.rds
 datasets (5 CSVs),rdss,declarepy.data.load,shipped,nb02+,,P1,MIT + attribution; byte-identical to course/book copies
-fabricate,fabricatr,none (Model build callables),roadmap,,,P3,
-design-based SEs (CR2/cluster),estimatr,statsmodels/linearmodels or manual PT-CR2,T2,,,P2,needed for PS answer-key parity
+fabricate,fabricatr,Model build callables (+Model.resample for resample_data),partial-T2,,,P3,hierarchies built explicitly with numpy/pandas
+design-based SEs (CR2/cluster),estimatr,declarepy.lm_robust clusters= (manual PT-CR2 + BM df),validated-T2,,,P2,PS answer keys 1-4 reproduce (55/55 checks)
 DesignLibrary designs,DesignLibrary,none,roadmap,,,P4,post-parity goal
 tidy/glance helpers,broom,EstimatorResult.to_frame / tidy DataFrames,partial-T1,,,P3,
 dataverse fetchers,rdss,none (data shipped as CSV),not-planned,,,P5,
 ggplot2 figure scripts,rdss/book,matplotlib re-implementations,T4,,,P3,decide matplotlib vs plotnine at T4 start
+glm (binomial logit),stats::glm,declarepy.glm_logit (profile-likelihood CIs),validated-T2,,,P2,coef 1e-8; profile CI 1e-7 vs confint.glm
+margins (AME),margins,declarepy.logit_ame (statsmodels get_margeff),validated-T2,,,P2,AME 1e-11 / SE 2e-8 vs margins
+resample_data,DeclareDesign/fabricatr,declarepy.Model.resample,validated-T2,,,P2,PS2 chain reproduces

@@ -84,11 +84,51 @@ per protocol rule 5.
 | declaration_18.1 at sims=3000, alternate seed 7 | bias → 0 (±0.012), coverage → 0.95 (±0.02) | ✅ (tests/test_engine.py) |
 | redesign power monotonicity (declaration_11.1) | power strictly rises N=100→400→900 | ✅ |
 
+## Status ledger — Tranche 2 (estimator fidelity), validated 2026-07-18
+
+References: fresh R runs of the problem-set answer keys' own code
+(`validation/r_scripts/ps_reference.R` → `rgen_ps1_4.json`, sims per key),
+estimatr clustered fixtures (`cluster_reference.R` → `rgen_cluster.json`),
+glm/margins on foos (`logit_reference.R` → `rgen_logit.json`). Harness:
+`validation/validate_t2.py` → `validation/t2_results.csv`.
+
+### Cluster-robust fidelity vs estimatr (real-data-style §4 — fixed fixtures)
+
+| Element | Agreement | Result |
+|---|---|---|
+| `lm_robust(clusters=)` CR2 (Pustejovsky–Tipton) + Bell–McCaffrey Satterthwaite df | ≤5e-13 on est/SE/t/p/CI/df | ✅ machine precision |
+| `lm_robust(clusters=)` CR0 and stata/CR1 (G−1 df) | ≤5e-13 | ✅ machine precision |
+| CR2 with within-cluster treatment variation | ≤4e-13 | ✅ machine precision |
+| clustered `difference_in_means` (delegates to CR2) | ≤5e-13 | ✅ machine precision |
+| `glm_logit` MLE coefficients / Wald z (R glm binomial) | ≤2e-8 | ✅ |
+| `glm_logit` profile-likelihood CIs (R confint.glm) | ≤1e-7 on foos | ✅ |
+| `logit_ame` (margins-package AME, delta-method SE) | est ≤1e-11, SE ≤2e-8 | ✅ |
+| `lm_robust` `.attrs` r_squared (broom::glance) | ≤1e-13 | ✅ |
+
+### Problem-set answer keys 1–4 (§2 — sims=2000 py vs the keys' R runs)
+
+**55 checks, 55 pass** (`validation/t2_results.csv`):
+
+| Element | Checks | Key decisions reproduced | Result |
+|---|---|---|---|
+| PS1 two-arm power analysis | 17 | power ≈ 0.075; MDE = 0.6; N = 400 at ees 0.3 | ✅ validated |
+| PS2 covariate adjustment (lapop resample) | 17 | estimand ≈ analytic 0.35·P(trust<7); R² ≈ 0.249; powers 0.737/0.583; same 80 %-power grid Ns | ✅ validated |
+| PS3 interaction power | 7 | power 0.076 at N=100; 80 % crossing at N≈3000 (knife-edge documented) | ✅ validated |
+| PS4 logit vs OLS vs AME | 13 | OLS & AME unbiased, logit coef biased (log-odds scale band ±0.10 documented) | ✅ validated |
+
+Investigation log (protocol rule 5): the initial PS4 run failed logit-row
+coverage by +0.0355 — systematic, not MC noise: the reference coverage uses
+R's **profile-likelihood** CIs (broom::tidy conf.int=TRUE) while declarepy
+used Wald. Fixed by implementing profile CIs in `glm_logit` (verified vs
+`confint.glm` to 1e-7); coverage delta fell to +0.021, within ±0.03. The
+PS3 "smallest N with 80 % power" decision is a knife-edge (reference power
+at N=3000 is 0.802); the harness accepts 3000/5000 as the same substantive
+answer, documented inline.
+
 ## Remaining tranches
 
 | Element | Source | Python home | Method | Status |
 |---|---|---|---|---|
-| PS answer keys 1–4 reproduction; CR2/clustered SEs | exercises/ + estimatr | Tranche 2 | tolerance + real-data | ⬜ next |
 | full declaration library (ch.9→23) | replication archive | Tranche 3 | full protocol | ⬜ |
 | remaining diagnosis objects (.rds) recomputation | replication archive | Tranche 4 | tolerance | ⬜ (5 of 62 done in T1) |
 | priority figures | figure scripts | Tranche 4 | visual/structural | ⬜ |

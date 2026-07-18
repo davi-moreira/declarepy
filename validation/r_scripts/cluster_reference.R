@@ -1,0 +1,15 @@
+ul <- Sys.getenv("R_LIBS_USER"); if (nzchar(ul)) .libPaths(c(ul, .libPaths()))
+suppressMessages({library(estimatr); library(jsonlite)})
+repo <- "/Users/dcordeir/Dropbox/academic/cursos/cursos-davi/evidence_based_research/declarepy"
+tidy1 <- function(fit) { td <- tidy(fit); lapply(split(td, td$term), function(r)
+  as.list(r[1, c("estimate","std.error","statistic","p.value","conf.low","conf.high","df")])) }
+out <- list()
+cl <- read.csv(file.path(repo, "validation/reference/cluster_fixture.csv"))
+cl2 <- read.csv(file.path(repo, "validation/reference/cluster_fixture2.csv"))
+out$cr2_lm    <- tidy1(lm_robust(Y ~ Z + X, data = cl, clusters = cl))
+out$cr0_lm    <- tidy1(lm_robust(Y ~ Z + X, data = cl, clusters = cl, se_type = "CR0"))
+out$stata_lm  <- tidy1(lm_robust(Y ~ Z + X, data = cl, clusters = cl, se_type = "stata"))
+out$cr2_lm2   <- tidy1(lm_robust(Y ~ Z + X, data = cl2, clusters = cl))
+out$dim_clustered <- tidy1(difference_in_means(Y ~ Z, data = cl, clusters = cl))
+write_json(out, file.path(repo, "validation/reference/rgen_cluster.json"), digits = 12, auto_unbox = TRUE)
+cat("written rgen_cluster.json\n")

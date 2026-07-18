@@ -1,0 +1,56 @@
+element,diagnosand,python,reference,delta,band,pass
+PS1 base design,power,0.079,0.075,0.004,±0.05,True
+PS1 ees=0.1,power,0.0835,0.092,-0.0085,±0.05,True
+PS1 ees=0.2,power,0.17,0.161,0.009,±0.05,True
+PS1 ees=0.3,power,0.302,0.326,-0.024,±0.05,True
+PS1 ees=0.4,power,0.5025,0.541,-0.0385,±0.05,True
+PS1 ees=0.5,power,0.717,0.692,0.025,±0.05,True
+PS1 ees=0.6,power,0.849,0.85,-0.001,±0.05,True
+PS1 ees=0.7,power,0.9325,0.921,0.0115,±0.05,True
+PS1 ees=0.8,power,0.978,0.975,0.003,±0.05,True
+PS1 ees=0.9,power,0.994,0.991,0.003,±0.05,True
+PS1 ees=1.0,power,0.997,1.0,-0.003,±0.05,True
+PS1,minimum detectable effect (answer: 0.6),0.6,0.6,,same decision,True
+PS1 bonus N=100,power,0.3025,0.328,-0.0255,±0.05,True
+PS1 bonus N=200,power,0.565,0.577,-0.012,±0.05,True
+PS1 bonus N=300,power,0.741,0.745,-0.004,±0.05,True
+PS1 bonus N=400,power,0.846,0.867,-0.021,±0.05,True
+PS1 bonus N=500,power,0.9085,0.924,-0.0155,±0.05,True
+PS1 bonus,smallest N with 80% power at ees=0.3 (answer: 400),400,400,,same decision,True
+PS2,mean estimand vs analytic truth,0.27392,0.27447,-0.00055,±0.01,True
+PS2,"estimand (single R draw, wide band)",0.27392,0.274,-8e-05,±0.05,True
+PS2,R² of covariate regression,0.25504,0.24854,0.0065,±0.03,True
+PS2 N=1000 adjusted,power,0.721,0.737,-0.016,±0.05,True
+PS2 N=1000 unadjusted,power,0.5925,0.583,0.0095,±0.05,True
+PS2 N=1000 adjusted,power,0.738,0.734,0.004,±0.05,True
+PS2 N=1000 unadjusted,power,0.5835,0.61,-0.0265,±0.05,True
+PS2 N=1500 adjusted,power,0.8765,0.884,-0.0075,±0.05,True
+PS2 N=1500 unadjusted,power,0.7405,0.768,-0.0275,±0.05,True
+PS2 N=2000 adjusted,power,0.956,0.951,0.005,±0.05,True
+PS2 N=2000 unadjusted,power,0.883,0.877,0.006,±0.05,True
+PS2 N=2500 adjusted,power,0.984,0.985,-0.001,±0.05,True
+PS2 N=2500 unadjusted,power,0.94,0.935,0.005,±0.05,True
+PS2 N=3000 adjusted,power,0.9955,0.989,0.0065,±0.05,True
+PS2 N=3000 unadjusted,power,0.967,0.958,0.009,±0.05,True
+PS2,smallest grid N reaching 80% power (adjusted),1500,1500,,same decision,True
+PS2,smallest grid N reaching 80% power (unadjusted),2000,2000,,same decision,True
+PS3 N=100,power,0.0775,0.076,0.0015,±0.05,True
+PS3 N=100,power,0.0875,0.078,0.0095,±0.05,True
+PS3 N=500,power,0.221,0.238,-0.017,±0.05,True
+PS3 N=1000,power,0.37,0.348,0.022,±0.05,True
+PS3 N=3000,power,0.8065,0.802,0.0045,±0.05,True
+PS3 N=5000,power,0.956,0.952,0.004,±0.05,True
+PS3,80% power crossing at N≈3000 (knife-edge: 3000 or 5000),True,True,,same decision,True
+PS4 logit,bias,0.45957,0.47233,-0.01277,±0.1,True
+PS4 logit,rmse,0.6718,0.68953,-0.01773,±10% rel,True
+PS4 logit,power,0.191,0.215,-0.024,±0.05,True
+PS4 logit,coverage,0.8475,0.827,0.0205,±0.03,True
+PS4 logit-marginal-effect,bias,-0.00147,-0.00089,-0.00058,±0.01,True
+PS4 logit-marginal-effect,rmse,0.07892,0.08253,-0.00361,±10% rel,True
+PS4 logit-marginal-effect,power,0.227,0.241,-0.014,±0.05,True
+PS4 logit-marginal-effect,coverage,0.9615,0.936,0.0255,±0.03,True
+PS4 ols,bias,-0.00082,-6e-05,-0.00076,±0.01,True
+PS4 ols,rmse,0.07953,0.08367,-0.00414,±10% rel,True
+PS4 ols,power,0.1975,0.22,-0.0225,±0.05,True
+PS4 ols,coverage,0.9695,0.948,0.0215,±0.03,True
+PS4,logit coef biased; ols & AME unbiased,True,True,,same decision,True

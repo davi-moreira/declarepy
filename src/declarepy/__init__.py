@@ -24,7 +24,14 @@ from .diagnose import (
     redesign,
     run_design,
 )
-from .estimators import EstimatorResult, difference_in_means, lm_robust, prop_test
+from .estimators import (
+    EstimatorResult,
+    difference_in_means,
+    glm_logit,
+    lm_robust,
+    logit_ame,
+    prop_test,
+)
 from .ra import block_ra, block_rs, complete_ra, complete_rs, simple_ra, simple_rs
 from .steps import (
     Assignment,
@@ -52,7 +59,8 @@ __all__ = [
     # procedures
     "complete_ra", "block_ra", "simple_ra", "complete_rs", "simple_rs", "block_rs",
     # estimators
-    "difference_in_means", "lm_robust", "prop_test", "EstimatorResult",
+    "difference_in_means", "lm_robust", "prop_test", "glm_logit", "logit_ame",
+    "EstimatorResult",
     # utilities
     "course", "data", "resolve_rng",
 ]
