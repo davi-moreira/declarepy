@@ -1,0 +1,1 @@
+{"kind":"diagnosis","diagnosands":[{"design":"declaration_10.1","inquiry":"ATE","estimator":"estimator","outcome":"Y","term":"Z","bias":-0.0024794531765,"se(bias)":0.0045012052284,"true_se":0.19925675066,"se(true_se)":0.003092008287,"power":0.1695,"se(power)":0.0083705465189,"coverage":0.958,"se(coverage)":0.004528904999,"n_sims":2000}],"n_sims":2000}

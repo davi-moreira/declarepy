@@ -1,0 +1,1 @@
+{"kind":"diagnosis","diagnosands":[{"design":"declaration_9.1","inquiry":"mean_age","estimator":"estimator","outcome":"age","term":"(Intercept)","mean_estimand":40.041825,"mean_estimate":40.2886666667,"bias":0.24684166667,"sd_estimate":13.2829925281,"rmse":13.1179023088,"power":0.3115,"coverage":0.924,"n_sims":2000}],"n_sims":2000}

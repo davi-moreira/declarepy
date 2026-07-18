@@ -1,0 +1,25 @@
+r_function,r_package,python_target,status,course_notebook,course_date,priority,notes
+declare_model,DeclareDesign,inline sim helper (numpy/pandas dataframe factory),course-inline,nb04;nb11,2026-09-14,P1,course ships a narrated 20-line helper; full builder API is roadmap
+potential_outcomes,DeclareDesign,explicit Y0/Y1 columns in the sim dataframe,course-inline,nb04;nb09;nb11,2026-09-14,P1,transparency is the pedagogy: no shorthand in course code
+declare_inquiry,DeclareDesign,computed truth on the full sim population,course-inline,nb04;nb11,2026-09-16,P1,estimand computed then hidden as the answer key
+declare_sampling,DeclareDesign,rng.choice / df.sample(seeded),course-inline,nb07,2026-09-28,P1,simple + complete random sampling only
+declare_assignment,DeclareDesign,rng.permutation-based complete assignment,course-inline,nb07;nb11,2026-09-30,P1,coin-flip vs complete contrast is taught
+declare_measurement,DeclareDesign,noise/bias injection on latent construct,course-inline,nb05,2026-09-21,P1,random vs systematic error sim
+reveal_outcomes,DeclareDesign,np.where(Z==1 Y1 Y0),course-inline,nb04;nb09,2026-09-14,P1,one line by design — students see the switch
+declare_estimator,DeclareDesign,function returning estimate row (DiM / statsmodels OLS),course-inline,nb09,2026-10-05,P1,estimand/estimator/estimate triad is explicit
+declare_diagnosands,DeclareDesign,dict of diagnosand lambdas (bias power coverage),course-inline,nb11,2026-10-19,P1,three diagnosands only in course scope
+diagnose_design,DeclareDesign,seeded Monte-Carlo loop -> diagnosand table,course-inline,nb10;nb11,2026-10-09,P1,1000 reps default; runtime kept <30s
+redesign,DeclareDesign,parameter-grid rerun of the diagnosis loop,course-inline,nb11,2026-10-21,P1,comparison table pattern
+run_design/draw_data,DeclareDesign,single seeded call of the sim helper,course-inline,nb04+,2026-09-14,P1,
+complete_ra/block_ra,randomizr,rng.permutation slices; block loop,course-inline (complete) / roadmap (block),nb07,2026-09-30,P2,block_ra not needed by course notebooks
+simple_rs/complete_rs,randomizr,bernoulli mask / permutation slice,course-inline,nb07,2026-09-28,P2,
+difference_in_means,estimatr,hand-rolled means + scipy/statsmodels SE,course-inline,nb09;nb13,2026-10-05,P1,design-based SE variants are roadmap
+lm_robust,estimatr,statsmodels OLS .fit(cov_type='HC2'),course-inline,nb09;nb10,2026-10-07,P1,HC2 default matches estimatr
+make_dag_df,rdss (book utility),networkx layout + matplotlib,course-inline,nb04,2026-09-14,P2,tiny DAGs only (3-5 nodes)
+declare_test,DeclareDesign,none,roadmap,,,P4,not used by course
+fabricate,fabricatr,none (pandas factories),roadmap,,,P3,useful for parity package
+DesignLibrary designs,DesignLibrary,none,roadmap,,,P4,post-parity goal
+tidy/glance helpers,broom,statsmodels summary parsing,roadmap,,,P3,
+design-based SEs (HC1/CR2/cluster),estimatr,statsmodels/linearmodels,roadmap,,,P2,needed for faithful PS answer-key parity
+dataverse fetchers,rdss,none (data shipped as CSV),not-planned,,,P5,course ships CSVs with attribution
+ggplot2 figure scripts,rdss/book,matplotlib re-implementations,roadmap,,,P3,~90 figure scripts; translate on demand

@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.mypy_cache/
+.pytest_cache/
+.venv/
+
+# OS
+.DS_Store
+
+# Validation scratch (generated reference outputs are committed under validation/reference/)
+validation/scratch/
+
+# R
+.Rhistory
+.RData

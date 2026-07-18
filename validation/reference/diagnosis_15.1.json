@@ -1,0 +1,1 @@
+{"kind":"diagnosis","diagnosands":[{"design":"declaration_15.1","inquiry":"Y_bar","estimator":"estimator","outcome":"Y","term":"(Intercept)","bias":0.0025102380952,"se(bias)":0.0024394747338,"rmse":0.1121483797,"se(rmse)":0.0018241084821,"n_sims":2000}],"n_sims":2000}

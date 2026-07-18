@@ -1,0 +1,1 @@
+{"kind":"diagnosis","diagnosands":[{"design":"declaration_17.3","inquiry":"prevalence_rate","estimator":"estimator","outcome":"Y_list","term":"Z","bias":-0.002381,"se(bias)":0.0017940444803,"mean_CI_width":0.32487782874,"se(mean_CI_width)":0.00019770892924,"n_sims":2000}],"n_sims":2000}
