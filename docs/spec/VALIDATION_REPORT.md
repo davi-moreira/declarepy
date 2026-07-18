@@ -125,13 +125,52 @@ PS3 "smallest N with 80 % power" decision is a knife-edge (reference power
 at N=3000 is 0.802); the harness accepts 3000/5000 as the same substantive
 answer, documented inline.
 
+## Status ledger — Tranche 3 (declaration library), validated 2026-07-18
+
+The full replication-archive declaration set (chs. 2–23, ~66 designs) is
+translated in `src/declarepy/library/ch*.py`, one parameterized factory per
+declaration with a provenance docstring. Validation: per-chapter harnesses
+(`validation/validate_t3_*.py`), every check recorded in
+`validation/t3_results_*.csv`; references are the book's saved diagnosis
+objects, with fresh 2000-sim R references generated
+(`validation/r_scripts/t3_*_reference.R`) where the archive has none or
+where the saved object is itself too noisy/seedless (each case documented).
+
+**6,828 tranche-3 checks, all passing** (sims=2000, seed=464 unless noted):
+
+| Chapter group | Checks | Highlights / documented notes |
+|---|---|---|
+| ch04+05+07 | 27/27 | saved diagnosis_4.1 is sims=100 (its own MC error exceeds protocol bands) — fresh 2000-sim R reference is primary, documented; 7.1 is estimand-only (private estimand-diagnosis helper) |
+| ch09 | 168/168 | lh_robust linear-hypothesis test (≤1e-12); rstanarm log-gaussian posterior by deterministic quadrature (rstanarm not installable locally — semantics reconstructed, documented); weighted HC2 + weighted-clustered CR2/BM transcribed from estimatr internals (1e-12); randomization inference on foos (observed estimate ≤1e-8) |
+| ch10+11 | 2234/2234 | random-ATE designs (per-condition uniform draws); 11.4's fifty polynomial inquiries; 11.5 OLS/logit-AME/probit-AME (probit fixture vs margins); initial failures traced to a torn mid-edit harness state — full re-run on final code is clean |
+| ch12+13 | 93/93 | three-arm clustered survey experiment (cluster_rs/strata_rs/cluster_ra prob_each incl. fractional remainders); cost diagnosand exact; book index shift (diagnosis_13.1 ↔ declaration_13.2) documented |
+| ch15 | 223/223 | glmer Laplace GLMM (≈2e-5 vs lme4); post-stratification (7e-15); princomp fix_sign scores (9e-16, incl. the book's Y_2-typo kept faithfully); two book-seedless populations canon-fixed at seed 464 with fresh references (documented) |
+| ch16 | 391/391 | process-tracing posteriors vs rdss (1e-9); MatchIt exact matching (3e-15); TWFE (3e-14) + DIDmultiplegt 0.1.0 exact; iv_robust (1e-14); full rdrobust 4.0.0 sharp-RD port (8.5e-13); 69 group-conditional/heavy-tailed cells use documented max(protocol, 3√2·se_ref) bands |
+| ch17 | 379/379 | the book's own label-case bug in 17.1 preserved and reproduced; conjoint AMCEs (cjoint cluster-CR1) validated vs the saved diagnosis; trust-game behavioral functions exact (±1e-9) |
+| ch18 | 2804/2804 | lm_lin (fixture-exact), iv_robust, absorbed-FE CR2, stepped wedge, saturation, Aronow–Samii interference (re-implemented from published sources; queen adjacency validated end-to-end); 18.10-placebo c=0.3 investigated across seeds/sims=10000 + fresh R — a two-sided MC coincidence; that cell now validated against a fresh sims=10000 R reference under tighter bands |
+| ch19+23 | 509/509 | metafor rma REML port (FE exact to 1e-14; REML to its own convergence threshold, documented ±1e-5); **real bug found & fixed**: causal-forest emulation leaf-size miscalibration (systematic 10σ targeting shift) recalibrated against diagnosis_19.1; 19a re-adjudicated NA-aware vs a fresh 500-sim R reference with a documented binomial-SE floor |
+
+## Status ledger — Tranche 4 (diagnosis objects + figures), validated 2026-07-18
+
+* **Diagnosis-object coverage: 62/62** of the book's saved `.rds` objects
+  have a validated declarepy recomputation (or a documented structural
+  cover) — see `validation/coverage_report.py` → `validation/t4_coverage.csv`
+  for the object-by-object mapping. The ch21 standalone designs (no
+  declaration files; declared inside their diagnosis scripts) validate
+  40/40 (`validation/validate_t4_ch21.py`).
+* **Figures: matplotlib** (tranche decision, per SEMANTIC_DIFFERENCES §9 —
+  message over aesthetics; plotnine is not a dependency).
+  `declarepy.viz` implements the book's figure idioms (parameter sweeps,
+  power curves, sampling distributions, CI caterpillars, grid heatmaps);
+  `examples/book_figures.py` reproduces the six course-priority figure
+  families (chs. 2/9/10/11/18) with structural checks asserting the plotted
+  arrays are the validated diagnosand tables. Smoke/structural tests in
+  `tests/test_viz.py`.
+
 ## Remaining tranches
 
 | Element | Source | Python home | Method | Status |
 |---|---|---|---|---|
-| full declaration library (ch.9→23) | replication archive | Tranche 3 | full protocol | ⬜ |
-| remaining diagnosis objects (.rds) recomputation | replication archive | Tranche 4 | tolerance | ⬜ (5 of 62 done in T1) |
-| priority figures | figure scripts | Tranche 4 | visual/structural | ⬜ |
 
 ## Standing tolerances (restated)
 

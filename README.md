@@ -61,11 +61,14 @@ print(dp.diagnose_all(sweep, sims=1000, seed=464).diagnosands)
 | Layer | Contents |
 |---|---|
 | `declarepy` (core) | `Model`, `Inquiry`, `Sampling`, `Assignment`, `Measurement`, `Estimator`, `Diagnosands`, `Design`, `diagnose()`, `redesign()`, `run_design()`, `draw_data()` |
-| `declarepy.ra` | `complete_ra`, `block_ra`, `simple_rs`, `complete_rs` (randomizr-style procedures) |
-| `declarepy.estimators` | `difference_in_means` (incl. blocked/clustered), `lm_robust` (HC0–HC3, CR2) — estimatr-style, **HC2 default** |
-| `declarepy.data` | Five MIT-licensed datasets from `rdss` (with attribution) |
+| `declarepy.ra` | `complete_ra`, `block_ra`, `simple_ra`, `complete_rs`, `simple_rs`, `block_rs` (randomizr-style procedures) |
+| `declarepy.estimators` | `difference_in_means` (incl. blocked/clustered), `lm_robust` (HC0–HC3; CR0/CR1/CR2 + Bell–McCaffrey df), `glm_logit` (profile CIs), `logit_ame`, `prop_test` — estimatr-faithful, **HC2 default** |
+| `declarepy.library` | 60+ translated declarations from the book (chs. 2–23), each a parameterized factory validated against the book's saved diagnosis objects |
+| `declarepy.viz` | matplotlib diagnosis plots (power curves, CI caterpillars, sweep heatmaps) — see `examples/book_figures.py` |
+| `declarepy.data` | Datasets from `rdss` (MIT, with attribution) plus documented seeded simulation exports |
 | `docs/spec/` | The translation spec: inventory, API mapping, semantic differences, validation protocol, roadmap, parity matrix |
-| `validation/` | Reference outputs (from the book's replication archive + fresh R runs) and the comparison harness |
+| `docs/MIGRATION_GUIDE.md` | R → Python translation table for DeclareDesign users |
+| `validation/` | Reference outputs (from the book's replication archive + fresh R runs) and the per-tranche comparison harnesses |
 
 ## Semantic differences from R (deliberate)
 

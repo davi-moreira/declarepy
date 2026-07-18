@@ -1,0 +1,510 @@
+element,diagnosand,python,reference,delta,band,pass
+fixture rma_k200 REML,mu,0.18655,0.18655,0.0,±1e-05 exact,True
+fixture rma_k200 REML,se,0.0918,0.0918,-0.0,±1e-05 exact,True
+fixture rma_k200 REML,pval,0.04214,0.04214,-0.0,±1e-05 exact,True
+fixture rma_k200 REML,ci_lb,0.00663,0.00663,0.0,±1e-05 exact,True
+fixture rma_k200 REML,ci_ub,0.36647,0.36647,-0.0,±1e-05 exact,True
+fixture rma_k200 REML,tau2,1.05645,1.05645,-0.0,±1e-05 exact,True
+fixture rma_k200 REML,se_tau2,0.1601,0.1601,-0.0,±1e-05 exact,True
+fixture rma_k200 REML,tau2_ci_lb,0.77009,0.77009,0.0,±0.0001 exact,True
+fixture rma_k200 REML,tau2_ci_ub,1.4391,1.43911,-0.0,±0.0001 exact,True
+fixture rma_k200 FE,mu,0.25232,0.25232,0.0,±1e-06 exact,True
+fixture rma_k200 FE,se,0.02498,0.02498,-0.0,±1e-06 exact,True
+fixture rma_k200 FE,pval,0.0,0.0,0.0,±1e-06 exact,True
+fixture rma_k200 FE,ci_lb,0.20335,0.20335,-0.0,±1e-06 exact,True
+fixture rma_k200 FE,ci_ub,0.30129,0.30129,-0.0,±1e-06 exact,True
+fixture rma_k200 FE,tau2,0.0,0.0,0.0,±1e-06 exact,True
+fixture rma_k200_tau0 REML,mu,0.18395,0.18395,-0.0,±1e-05 exact,True
+fixture rma_k200_tau0 REML,se,0.02484,0.02484,-0.0,±1e-05 exact,True
+fixture rma_k200_tau0 REML,pval,0.0,0.0,-0.0,±1e-05 exact,True
+fixture rma_k200_tau0 REML,ci_lb,0.13527,0.13527,0.0,±1e-05 exact,True
+fixture rma_k200_tau0 REML,ci_ub,0.23263,0.23263,-0.0,±1e-05 exact,True
+fixture rma_k200_tau0 REML,tau2,0.00352,0.00352,-0.0,±1e-05 exact,True
+fixture rma_k200_tau0 REML,se_tau2,0.0051,0.0051,-0.0,±1e-05 exact,True
+fixture rma_k200_tau0 REML,tau2_ci_lb,0.0,0.0,0.0,±0.0001 exact,True
+fixture rma_k200_tau0 REML,tau2_ci_ub,0.1244,0.1244,0.0,±0.0001 exact,True
+fixture rma_k200_tau0 FE,mu,0.18124,0.18124,0.0,±1e-06 exact,True
+fixture rma_k200_tau0 FE,se,0.02236,0.02236,-0.0,±1e-06 exact,True
+fixture rma_k200_tau0 FE,pval,0.0,0.0,-0.0,±1e-06 exact,True
+fixture rma_k200_tau0 FE,ci_lb,0.13741,0.13741,-0.0,±1e-06 exact,True
+fixture rma_k200_tau0 FE,ci_ub,0.22507,0.22507,0.0,±1e-06 exact,True
+fixture rma_k200_tau0 FE,tau2,0.0,0.0,0.0,±1e-06 exact,True
+fixture rma_k5 REML,mu,0.23196,0.23196,-0.0,±1e-05 exact,True
+fixture rma_k5 REML,se,0.08123,0.08123,-0.0,±1e-05 exact,True
+fixture rma_k5 REML,pval,0.0043,0.0043,-0.0,±1e-05 exact,True
+fixture rma_k5 REML,ci_lb,0.07274,0.07274,0.0,±1e-05 exact,True
+fixture rma_k5 REML,ci_ub,0.39117,0.39117,-0.0,±1e-05 exact,True
+fixture rma_k5 REML,tau2,0.00338,0.00338,-0.0,±1e-05 exact,True
+fixture rma_k5 REML,se_tau2,0.01892,0.01892,-0.0,±1e-05 exact,True
+fixture rma_k5 REML,tau2_ci_lb,0.0,0.0,0.0,±0.0001 exact,True
+fixture rma_k5 REML,tau2_ci_ub,7.77025,7.77023,2e-05,±0.0001 exact,True
+fixture rma_k5 FE,mu,0.22925,0.22925,0.0,±1e-06 exact,True
+fixture rma_k5 FE,se,0.07035,0.07035,0.0,±1e-06 exact,True
+fixture rma_k5 FE,pval,0.00112,0.00112,-0.0,±1e-06 exact,True
+fixture rma_k5 FE,ci_lb,0.09137,0.09137,0.0,±1e-06 exact,True
+fixture rma_k5 FE,ci_ub,0.36713,0.36713,0.0,±1e-06 exact,True
+fixture rma_k5 FE,tau2,0.0,0.0,0.0,±1e-06 exact,True
+fixture mle_n2 k,estimate,2.41187,2.41182,6e-05,±0.001 exact,True
+fixture mle_n2 k,std_error,0.33086,0.33085,1e-05,±0.001 exact,True
+fixture mle_n2 k,conf_low,1.83692,1.83712,-0.00019,±0.002 exact,True
+fixture mle_n2 k,conf_high,3.13658,3.13674,-0.00016,±0.002 exact,True
+fixture mle_n2 d,estimate,0.82255,0.82254,0.0,±0.001 exact,True
+fixture mle_n2 d,std_error,0.03024,0.03024,-0.0,±0.001 exact,True
+fixture mle_n2 d,conf_low,0.75516,0.75515,1e-05,±0.002 exact,True
+fixture mle_n2 d,conf_high,0.8737,0.87367,2e-05,±0.002 exact,True
+fixture mle_n2 a,estimate,0.50647,0.50646,1e-05,±0.001 exact,True
+fixture mle_n2 a,std_error,0.06482,0.06482,-0.0,±0.001 exact,True
+fixture mle_n2 a,conf_low,0.3763,0.3763,0.0,±0.002 exact,True
+fixture mle_n2 a,conf_high,0.62837,0.62835,3e-05,±0.002 exact,True
+fixture mle_n8 k,estimate,2.06917,2.06917,0.0,±0.001 exact,True
+fixture mle_n8 k,std_error,0.20678,0.20678,0.0,±0.001 exact,True
+fixture mle_n8 k,conf_low,1.6916,1.69168,-7e-05,±0.002 exact,True
+fixture mle_n8 k,conf_high,2.50423,2.50429,-6e-05,±0.002 exact,True
+fixture mle_n8 d,estimate,0.80757,0.80757,0.0,±0.001 exact,True
+fixture mle_n8 d,std_error,0.02399,0.02399,-0.0,±0.001 exact,True
+fixture mle_n8 d,conf_low,0.75242,0.75242,0.0,±0.002 exact,True
+fixture mle_n8 d,conf_high,0.84932,0.84931,1e-05,±0.002 exact,True
+fixture mle_n8 a,estimate,0.35938,0.35938,0.0,±0.001 exact,True
+fixture mle_n8 a,std_error,0.08557,0.08557,-0.0,±0.001 exact,True
+fixture mle_n8 a,conf_low,0.19111,0.19113,-1e-05,±0.002 exact,True
+fixture mle_n8 a,conf_high,0.52472,0.52471,1e-05,±0.002 exact,True
+fixture best_predictor X.1,r_squared,0.13805,0.13805,0.0,±1e-09 exact,True
+fixture best_predictor X.2,r_squared,0.29041,0.29041,-0.0,±1e-09 exact,True
+fixture best_predictor X.3,r_squared,0.49043,0.49043,0.0,±1e-09 exact,True
+fixture best_predictor X.4,r_squared,0.01088,0.01088,-0.0,±1e-09 exact,True
+fixture best_predictor X.5,r_squared,0.00973,0.00973,0.0,±1e-09 exact,True
+fixture best_predictor X.6,r_squared,0.01205,0.01205,0.0,±1e-09 exact,True
+fixture best_predictor X.7,r_squared,0.01992,0.01992,0.0,±1e-09 exact,True
+fixture best_predictor X.8,r_squared,0.02236,0.02236,-0.0,±1e-09 exact,True
+fixture best_predictor X.9,r_squared,0.02058,0.02058,-0.0,±1e-09 exact,True
+fixture best_predictor X.10,r_squared,0.03605,0.03605,-0.0,±1e-09 exact,True
+fixture best_predictor,estimand,3.0,3.0,0.0,±1e-09 exact,True
+19.1 ate/estimator,correct,0.0,0.0,0.0,±0.05,True
+19.1 ate/estimator,bias,0.00284,-0.00084,0.00367,±0.05055,True
+19.1 ate/estimator,rmse,0.1094,0.11413,-0.00473,±0.01141,True
+19.1 ate/estimator,mean_estimate,2.65011,2.64614,0.00397,±0.05055,True
+19.1 ate/estimator,modal_estimate,2.6,2.6,0.0,±0.203,True
+19.1 ate/estimator,mean_estimand,2.64727,2.64697,0.0003,±0.05055,True
+19.1 ate/estimator,modal_estimand,2.6,2.6,0.0,±0.1341,True
+19.1 best_predictor/cf,correct,0.987,0.993,-0.006,±0.05,True
+19.1 best_predictor/cf,bias,-0.0225,-0.0115,-0.011,±0.02,True
+19.1 best_predictor/cf,rmse,0.21095,0.14318,0.06777,±0.08878,True
+19.1 best_predictor/cf,mean_estimate,2.977,2.9885,-0.0115,±0.02,True
+19.1 best_predictor/cf,modal_estimate,3.0,3.0,0.0,±0.1,True
+19.1 best_predictor/cf,mean_estimand,2.9995,3.0,-0.0005,±0.02,True
+19.1 best_predictor/cf,modal_estimand,3.0,3.0,0.0,±0.1,True
+19.1 weak_effects_all/lm_weak_all,correct,0.0,0.0,0.0,±0.05,True
+19.1 weak_effects_all/lm_weak_all,bias,0.01458,0.0202,-0.00562,±0.05055,True
+19.1 weak_effects_all/lm_weak_all,rmse,0.17384,0.17273,0.00111,±0.01727,True
+19.1 weak_effects_all/lm_weak_all,mean_estimate,0.07735,0.06702,0.01033,±0.05055,True
+19.1 weak_effects_all/lm_weak_all,modal_estimate,-0.0,0.0,-0.0,±0.1651,True
+19.1 weak_effects_all/lm_weak_all,mean_estimand,0.06277,0.04681,0.01596,±0.05055,True
+19.1 weak_effects_all/lm_weak_all,modal_estimand,0.1,0.0,0.1,±0.1,True
+19.1 weak_effects_test/lm_weak_test,correct,0.0,0.0,0.0,±0.05,True
+19.1 weak_effects_test/lm_weak_test,bias,-9e-05,-0.00092,0.00083,±0.05055,True
+19.1 weak_effects_test/lm_weak_test,rmse,0.247,0.2393,0.0077,±0.02393,True
+19.1 weak_effects_test/lm_weak_test,mean_estimate,0.06361,0.03947,0.02414,±0.05055,True
+19.1 weak_effects_test/lm_weak_test,modal_estimate,0.0,-0.1,0.1,±0.3373,True
+19.1 weak_effects_test/lm_weak_test,mean_estimand,0.0637,0.04039,0.02331,±0.05055,True
+19.1 weak_effects_test/lm_weak_test,modal_estimand,-0.0,0.0,-0.0,±0.1031,True
+19.1 worst_effects_all/lm_weak_all,correct,0.0,0.0,0.0,±0.05,True
+19.1 worst_effects_all/lm_weak_all,bias,0.44599,0.43064,0.01535,±0.05055,True
+19.1 worst_effects_all/lm_weak_all,rmse,0.48652,0.46864,0.01788,±0.04686,True
+19.1 worst_effects_all/lm_weak_all,mean_estimate,0.07735,0.06702,0.01033,±0.05055,True
+19.1 worst_effects_all/lm_weak_all,modal_estimate,-0.0,0.0,-0.0,±0.1651,True
+19.1 worst_effects_all/lm_weak_all,mean_estimand,-0.36864,-0.36363,-0.00502,±0.05055,True
+19.1 worst_effects_all/lm_weak_all,modal_estimand,-0.4,-0.4,0.0,±0.1,True
+19.1 worst_effects_test/lm_weak_test,correct,0.0,0.0,0.0,±0.05,True
+19.1 worst_effects_test/lm_weak_test,bias,0.42678,0.40431,0.02247,±0.05055,True
+19.1 worst_effects_test/lm_weak_test,rmse,0.50841,0.48918,0.01923,±0.04892,True
+19.1 worst_effects_test/lm_weak_test,mean_estimate,0.06361,0.03947,0.02414,±0.05055,True
+19.1 worst_effects_test/lm_weak_test,modal_estimate,0.0,-0.1,0.1,±0.3373,True
+19.1 worst_effects_test/lm_weak_test,mean_estimand,-0.36316,-0.36483,0.00167,±0.05055,True
+19.1 worst_effects_test/lm_weak_test,modal_estimand,-0.3,-0.4,0.1,±0.1256,True
+19.2 alpha,mean_estimand,0.5,0.5,0.0,±0.01,True
+19.2 alpha,mean_estimate,0.49823,0.49536,0.00287,±0.02319,True
+19.2 alpha,bias,-0.00177,-0.00464,0.00287,±0.02319,True
+19.2 alpha,sd_estimate,0.0742,0.08178,-0.00758,±0.01662,True
+19.2 alpha,rmse,0.0742,0.0815,-0.0073,±0.01639,True
+19.2 alpha,power,0.9995,1.0,-0.0005,±0.05,True
+19.2 alpha,coverage,0.9515,0.95,0.0015,±0.067,True
+19.2 delta,mean_estimand,0.8,0.8,0.0,±0.016,True
+19.2 delta,mean_estimate,0.79886,0.80192,-0.00306,±0.016,True
+19.2 delta,bias,-0.00114,0.00192,-0.00306,±0.016,True
+19.2 delta,sd_estimate,0.03264,0.03337,-0.00074,±0.006493,True
+19.2 delta,rmse,0.03265,0.03326,-0.00061,±0.006484,True
+19.2 delta,power,0.9995,1.0,-0.0005,±0.05,True
+19.2 delta,coverage,0.957,0.95,0.007,±0.067,True
+19.2 kappa,mean_estimand,2.0,2.0,0.0,±0.04,True
+19.2 kappa,mean_estimate,2.0377,2.06749,-0.0298,±0.07912,True
+19.2 kappa,bias,0.0377,0.06749,-0.0298,±0.07912,True
+19.2 kappa,sd_estimate,0.26859,0.25608,0.01251,±0.04992,True
+19.2 kappa,rmse,0.27116,0.26359,0.00757,±0.05629,True
+19.2 kappa,power,0.9995,1.0,-0.0005,±0.05,True
+19.2 kappa,coverage,0.9515,0.96,-0.0085,±0.06024,True
+19a n=2 a=0.25 alpha,mean_estimand,0.25,0.25,0.0,±0.005,True
+19a n=2 a=0.25 alpha,mean_estimate,0.24646,0.23918,0.00728,±0.02053,True
+19a n=2 a=0.25 alpha,bias,-0.00354,-0.01082,0.00728,±0.02053,True
+19a n=2 a=0.25 alpha,sd_estimate,0.07155,0.06094,0.0106,±0.01268,True
+19a n=2 a=0.25 alpha,rmse,0.07162,0.06159,0.01002,±0.01291,True
+19a n=2 a=0.25 alpha,power,0.947,0.96,-0.013,±0.06387,True
+19a n=2 a=0.25 alpha,coverage,0.92,0.97,-0.05,±0.05244,True
+19a n=2 a=0.25 delta,mean_estimand,0.8,0.8,0.0,±0.016,True
+19a n=2 a=0.25 delta,mean_estimate,0.79976,0.79852,0.00124,±0.016,True
+19a n=2 a=0.25 delta,bias,-0.00024,-0.00148,0.00124,±0.016,True
+19a n=2 a=0.25 delta,sd_estimate,0.02767,0.02447,0.0032,±0.004635,True
+19a n=2 a=0.25 delta,rmse,0.02766,0.02439,0.00327,±0.004675,True
+19a n=2 a=0.25 delta,power,1.0,1.0,0.0,±0.05,True
+19a n=2 a=0.25 delta,coverage,0.9395,0.97,-0.0305,±0.05244,True
+19a n=2 a=0.25 kappa,mean_estimand,2.0,2.0,0.0,±0.04,True
+19a n=2 a=0.25 kappa,mean_estimate,2.05065,2.01498,0.03566,±0.0895,True
+19a n=2 a=0.25 kappa,bias,0.05065,0.01498,0.03566,±0.0895,True
+19a n=2 a=0.25 kappa,sd_estimate,0.3056,0.27656,0.02903,±0.08675,True
+19a n=2 a=0.25 kappa,rmse,0.30969,0.27558,0.03411,±0.08672,True
+19a n=2 a=0.25 kappa,power,1.0,1.0,0.0,±0.05,True
+19a n=2 a=0.25 kappa,coverage,0.94,0.95,-0.01,±0.06737,True
+19a n=2 a=0.5 alpha,mean_estimand,0.5,0.5,0.0,±0.01,True
+19a n=2 a=0.5 alpha,mean_estimate,0.49885,0.49721,0.00164,±0.02392,True
+19a n=2 a=0.5 alpha,bias,-0.00115,-0.00279,0.00164,±0.02392,True
+19a n=2 a=0.5 alpha,sd_estimate,0.07604,0.07619,-0.00016,±0.01746,True
+19a n=2 a=0.5 alpha,rmse,0.07603,0.07586,0.00016,±0.01738,True
+19a n=2 a=0.5 alpha,power,1.0,1.0,0.0,±0.05,True
+19a n=2 a=0.5 alpha,coverage,0.9525,0.92,0.0325,±0.08867,True
+19a n=2 a=0.5 delta,mean_estimand,0.8,0.8,0.0,±0.016,True
+19a n=2 a=0.5 delta,mean_estimate,0.80012,0.80337,-0.00325,±0.016,True
+19a n=2 a=0.5 delta,bias,0.00012,0.00337,-0.00325,±0.016,True
+19a n=2 a=0.5 delta,sd_estimate,0.03265,0.03434,-0.00169,±0.007018,True
+19a n=2 a=0.5 delta,rmse,0.03264,0.03433,-0.00169,±0.006478,True
+19a n=2 a=0.5 delta,power,1.0,1.0,0.0,±0.05,True
+19a n=2 a=0.5 delta,coverage,0.9495,0.96,-0.0105,±0.06074,True
+19a n=2 a=0.5 kappa,mean_estimand,2.0,2.0,0.0,±0.04,True
+19a n=2 a=0.5 kappa,mean_estimate,2.0527,2.10231,-0.04961,±0.08954,True
+19a n=2 a=0.5 kappa,bias,0.0527,0.10231,-0.04961,±0.08954,True
+19a n=2 a=0.5 kappa,sd_estimate,0.26732,0.28542,-0.01809,±0.06261,True
+19a n=2 a=0.5 kappa,rmse,0.2724,0.30185,-0.02945,±0.07614,True
+19a n=2 a=0.5 kappa,power,1.0,1.0,0.0,±0.05,True
+19a n=2 a=0.5 kappa,coverage,0.9495,0.91,0.0395,±0.08797,True
+19a n=2 a=0.75 alpha,mean_estimand,0.75,0.75,0.0,±0.015,True
+19a n=2 a=0.75 alpha,mean_estimate,0.74258,0.73858,0.004,±0.01886,True
+19a n=2 a=0.75 alpha,bias,-0.00742,-0.01142,0.004,±0.01886,True
+19a n=2 a=0.75 alpha,sd_estimate,0.06679,0.06335,0.00343,±0.01097,True
+19a n=2 a=0.75 alpha,rmse,0.06718,0.06406,0.00312,±0.01201,True
+19a n=2 a=0.75 alpha,power,1.0,1.0,0.0,±0.05,True
+19a n=2 a=0.75 alpha,coverage,0.9465,0.98,-0.0335,±0.04304,True
+19a n=2 a=0.75 delta,mean_estimand,0.8,0.8,0.0,±0.016,True
+19a n=2 a=0.75 delta,mean_estimate,0.79584,0.78853,0.00731,±0.016,True
+19a n=2 a=0.75 delta,bias,-0.00416,-0.01147,0.00731,±0.016,True
+19a n=2 a=0.75 delta,sd_estimate,0.04675,0.05025,-0.0035,±0.009256,True
+19a n=2 a=0.75 delta,rmse,0.04692,0.0513,-0.00438,±0.01028,True
+19a n=2 a=0.75 delta,power,1.0,1.0,0.0,±0.05,True
+19a n=2 a=0.75 delta,coverage,0.9495,0.94,0.0095,±0.07301,True
+19a n=2 a=0.75 kappa,mean_estimand,2.0,2.0,0.0,±0.04,True
+19a n=2 a=0.75 kappa,mean_estimate,2.03073,2.01122,0.01952,±0.06834,True
+19a n=2 a=0.75 kappa,bias,0.03073,0.01122,0.01952,±0.06834,True
+19a n=2 a=0.75 kappa,sd_estimate,0.2226,0.22415,-0.00155,±0.06121,True
+19a n=2 a=0.75 kappa,rmse,0.22466,0.22331,0.00134,±0.06184,True
+19a n=2 a=0.75 kappa,power,1.0,1.0,0.0,±0.05,True
+19a n=2 a=0.75 kappa,coverage,0.951,0.9,0.051,±0.09786,True
+19a n=8 a=0.25 alpha,mean_estimand,0.25,0.25,0.0,±0.005,True
+19a n=8 a=0.25 alpha,mean_estimate,0.2531,0.26584,-0.01274,±0.02157,True
+19a n=8 a=0.25 alpha,bias,0.0031,0.01584,-0.01274,±0.02157,True
+19a n=8 a=0.25 alpha,sd_estimate,0.07922,0.07409,0.00514,±0.01583,True
+19a n=8 a=0.25 alpha,rmse,0.07927,0.0754,0.00387,±0.01601,True
+19a n=8 a=0.25 alpha,power,0.901,0.94,-0.039,±0.08419,True
+19a n=8 a=0.25 delta,mean_estimand,0.8,0.8,0.0,±0.016,True
+19a n=8 a=0.25 delta,mean_estimate,0.79834,0.80007,-0.00173,±0.016,True
+19a n=8 a=0.25 delta,bias,-0.00166,7e-05,-0.00173,±0.016,True
+19a n=8 a=0.25 delta,sd_estimate,0.02361,0.02158,0.00203,±0.00469,True
+19a n=8 a=0.25 delta,rmse,0.02367,0.02147,0.0022,±0.004609,True
+19a n=8 a=0.25 delta,power,1.0,1.0,0.0,±0.05,True
+19a n=8 a=0.25 delta,coverage,0.944,0.96,-0.016,±0.06024,True
+19a n=8 a=0.25 kappa,mean_estimand,2.0,2.0,0.0,±0.04,True
+19a n=8 a=0.25 kappa,mean_estimate,2.04179,2.05069,-0.0089,±0.05178,True
+19a n=8 a=0.25 kappa,bias,0.04179,0.05069,-0.0089,±0.05178,True
+19a n=8 a=0.25 kappa,sd_estimate,0.21304,0.18793,0.02511,±0.04461,True
+19a n=8 a=0.25 kappa,rmse,0.21705,0.19374,0.02331,±0.049,True
+19a n=8 a=0.25 kappa,power,1.0,1.0,0.0,±0.05,True
+19a n=8 a=0.25 kappa,coverage,0.949,0.98,-0.031,±0.04491,True
+19a n=8 a=0.5 alpha,mean_estimand,0.5,0.5,0.0,±0.01,True
+19a n=8 a=0.5 alpha,mean_estimate,0.50094,0.49683,0.00411,±0.02277,True
+19a n=8 a=0.5 alpha,bias,0.00094,-0.00317,0.00411,±0.02277,True
+19a n=8 a=0.5 alpha,sd_estimate,0.08328,0.0771,0.00618,±0.01441,True
+19a n=8 a=0.5 alpha,rmse,0.08326,0.07678,0.00648,±0.01489,True
+19a n=8 a=0.5 alpha,power,1.0,1.0,0.0,±0.05,True
+19a n=8 a=0.5 alpha,coverage,0.9475,0.96,-0.0125,±0.06577,True
+19a n=8 a=0.5 delta,mean_estimand,0.8,0.8,0.0,±0.016,True
+19a n=8 a=0.5 delta,mean_estimate,0.79718,0.79615,0.00103,±0.016,True
+19a n=8 a=0.5 delta,bias,-0.00282,-0.00385,0.00103,±0.016,True
+19a n=8 a=0.5 delta,sd_estimate,0.03318,0.02918,0.004,±0.005645,True
+19a n=8 a=0.5 delta,rmse,0.03329,0.02929,0.004,±0.005845,True
+19a n=8 a=0.5 delta,power,1.0,1.0,0.0,±0.05,True
+19a n=8 a=0.5 delta,coverage,0.945,0.97,-0.025,±0.05244,True
+19a n=8 a=0.5 kappa,mean_estimand,2.0,2.0,0.0,±0.04,True
+19a n=8 a=0.5 kappa,mean_estimate,2.03128,2.00929,0.02198,±0.05376,True
+19a n=8 a=0.5 kappa,bias,0.03128,0.00929,0.02198,±0.05376,True
+19a n=8 a=0.5 kappa,sd_estimate,0.19711,0.16444,0.03267,±0.03999,True
+19a n=8 a=0.5 kappa,rmse,0.19952,0.16388,0.03565,±0.03987,True
+19a n=8 a=0.5 kappa,power,1.0,1.0,0.0,±0.05,True
+19a n=8 a=0.5 kappa,coverage,0.954,0.97,-0.016,±0.06218,True
+19a n=8 a=0.75 alpha,mean_estimand,0.75,0.75,0.0,±0.015,True
+19a n=8 a=0.75 alpha,mean_estimate,0.75079,0.7502,0.00059,±0.02294,True
+19a n=8 a=0.75 alpha,bias,0.00079,0.0002,0.00059,±0.02294,True
+19a n=8 a=0.75 alpha,sd_estimate,0.08165,0.08302,-0.00137,±0.01702,True
+19a n=8 a=0.75 alpha,rmse,0.08163,0.0826,-0.00097,±0.01672,True
+19a n=8 a=0.75 delta,mean_estimand,0.8,0.8,0.0,±0.016,True
+19a n=8 a=0.75 delta,mean_estimate,0.79124,0.79815,-0.0069,±0.0192,True
+19a n=8 a=0.75 delta,bias,-0.00876,-0.00185,-0.0069,±0.0192,True
+19a n=8 a=0.75 delta,sd_estimate,0.06794,0.05733,0.01061,±0.01134,True
+19a n=8 a=0.75 delta,rmse,0.06848,0.05707,0.01141,±0.01147,True
+19a n=8 a=0.75 kappa,mean_estimand,2.0,2.0,0.0,±0.04,True
+19a n=8 a=0.75 kappa,mean_estimate,2.03255,2.06202,-0.02947,±0.05312,True
+19a n=8 a=0.75 kappa,bias,0.03255,0.06202,-0.02947,±0.05312,True
+19a n=8 a=0.75 kappa,sd_estimate,0.18116,0.18015,0.00101,±0.04131,True
+19a n=8 a=0.75 kappa,rmse,0.18401,0.18967,-0.00566,±0.04596,True
+19a n=8 a=0.75 kappa,coverage,0.954,0.94,0.014,±0.07454,True
+19a-fresh n=2 a=0.25 a,mean_estimate,0.24646,0.25033,-0.00387,±0.01041,True
+19a-fresh n=2 a=0.25 a,bias,-0.00354,0.00033,-0.00387,±0.01041,True
+19a-fresh n=2 a=0.25 a,sd_estimate,0.07155,0.06938,0.00216,±0.007359,True
+19a-fresh n=2 a=0.25 a,rmse,0.07162,0.06931,0.0023,±0.007352,True
+19a-fresh n=2 a=0.25 a,power_narm,0.947,0.946,0.001,±0.05,True
+19a-fresh n=2 a=0.25 a,coverage_narm,0.95485,0.95492,-7e-05,±0.03112,True
+19a-fresh n=2 a=0.25 a,na_ci_rate,0.0365,0.042,-0.0055,±0.03009,True
+19a-fresh n=2 a=0.25 d,mean_estimate,0.79976,0.80017,-0.00041,±0.016,True
+19a-fresh n=2 a=0.25 d,bias,-0.00024,0.00017,-0.00041,±0.016,True
+19a-fresh n=2 a=0.25 d,sd_estimate,0.02767,0.02738,0.00028,±0.002905,True
+19a-fresh n=2 a=0.25 d,rmse,0.02766,0.02736,0.0003,±0.002902,True
+19a-fresh n=2 a=0.25 d,power_narm,1.0,1.0,0.0,±0.05,True
+19a-fresh n=2 a=0.25 d,coverage_narm,0.9395,0.946,-0.0065,±0.0339,True
+19a-fresh n=2 a=0.25 d,na_ci_rate,0.0,0.0,0.0,±0.02,True
+19a-fresh n=2 a=0.25 k,mean_estimate,2.05065,2.04604,0.00461,±0.04654,True
+19a-fresh n=2 a=0.25 k,bias,0.05065,0.04604,0.00461,±0.04654,True
+19a-fresh n=2 a=0.25 k,sd_estimate,0.3056,0.31026,-0.00466,±0.03291,True
+19a-fresh n=2 a=0.25 k,rmse,0.30969,0.31335,-0.00366,±0.03324,True
+19a-fresh n=2 a=0.25 k,power_narm,1.0,1.0,0.0,±0.05,True
+19a-fresh n=2 a=0.25 k,coverage_narm,0.94,0.93,0.01,±0.03827,True
+19a-fresh n=2 a=0.25 k,na_ci_rate,0.0,0.0,0.0,±0.02,True
+19a-fresh n=2 a=0.5 a,mean_estimate,0.49885,0.49804,0.00081,±0.01048,True
+19a-fresh n=2 a=0.5 a,bias,-0.00115,-0.00196,0.00081,±0.01048,True
+19a-fresh n=2 a=0.5 a,sd_estimate,0.07604,0.06986,0.00617,±0.00741,True
+19a-fresh n=2 a=0.5 a,rmse,0.07603,0.06982,0.00621,±0.007406,True
+19a-fresh n=2 a=0.5 a,power_narm,1.0,1.0,0.0,±0.05,True
+19a-fresh n=2 a=0.5 a,coverage_narm,0.9525,0.958,-0.0055,±0.03009,True
+19a-fresh n=2 a=0.5 a,na_ci_rate,0.0,0.0,0.0,±0.02,True
+19a-fresh n=2 a=0.5 d,mean_estimate,0.80012,0.80032,-0.00019,±0.016,True
+19a-fresh n=2 a=0.5 d,bias,0.00012,0.00032,-0.00019,±0.016,True
+19a-fresh n=2 a=0.5 d,sd_estimate,0.03265,0.03325,-0.00061,±0.003527,True
+19a-fresh n=2 a=0.5 d,rmse,0.03264,0.03322,-0.00058,±0.003524,True
+19a-fresh n=2 a=0.5 d,power_narm,1.0,1.0,0.0,±0.05,True
+19a-fresh n=2 a=0.5 d,coverage_narm,0.9495,0.948,0.0015,±0.0333,True
+19a-fresh n=2 a=0.5 d,na_ci_rate,0.0,0.0,0.0,±0.02,True
+19a-fresh n=2 a=0.5 k,mean_estimate,2.0527,2.05444,-0.00174,±0.0401,True
+19a-fresh n=2 a=0.5 k,bias,0.0527,0.05444,-0.00174,±0.0401,True
+19a-fresh n=2 a=0.5 k,sd_estimate,0.26732,0.26733,-0.0,±0.02835,True
+19a-fresh n=2 a=0.5 k,rmse,0.2724,0.27255,-0.00015,±0.02891,True
+19a-fresh n=2 a=0.5 k,power_narm,1.0,1.0,0.0,±0.05,True
+19a-fresh n=2 a=0.5 k,coverage_narm,0.9495,0.944,0.0055,±0.03449,True
+19a-fresh n=2 a=0.5 k,na_ci_rate,0.0,0.0,0.0,±0.02,True
+19a-fresh n=2 a=0.75 a,mean_estimate,0.74258,0.74534,-0.00275,±0.015,True
+19a-fresh n=2 a=0.75 a,bias,-0.00742,-0.00466,-0.00275,±0.015,True
+19a-fresh n=2 a=0.75 a,sd_estimate,0.06679,0.06653,0.00026,±0.007057,True
+19a-fresh n=2 a=0.75 a,rmse,0.06718,0.06663,0.00055,±0.007067,True
+19a-fresh n=2 a=0.75 a,power_narm,1.0,1.0,0.0,±0.05,True
+19a-fresh n=2 a=0.75 a,coverage_narm,0.9465,0.968,-0.0215,±0.03,True
+19a-fresh n=2 a=0.75 a,na_ci_rate,0.0,0.0,0.0,±0.02,True
+19a-fresh n=2 a=0.75 d,mean_estimate,0.79584,0.79001,0.00584,±0.016,True
+19a-fresh n=2 a=0.75 d,bias,-0.00416,-0.00999,0.00584,±0.016,True
+19a-fresh n=2 a=0.75 d,sd_estimate,0.04675,0.0471,-0.00035,±0.004996,True
+19a-fresh n=2 a=0.75 d,rmse,0.04692,0.04811,-0.00118,±0.005103,True
+19a-fresh n=2 a=0.75 d,power_narm,1.0,1.0,0.0,±0.05,True
+19a-fresh n=2 a=0.75 d,coverage_narm,0.9495,0.956,-0.0065,±0.03076,True
+19a-fresh n=2 a=0.75 d,na_ci_rate,0.0,0.0,0.0,±0.02,True
+19a-fresh n=2 a=0.75 k,mean_estimate,2.03073,2.013,0.01773,±0.04,True
+19a-fresh n=2 a=0.75 k,bias,0.03073,0.013,0.01773,±0.04,True
+19a-fresh n=2 a=0.75 k,sd_estimate,0.2226,0.23567,-0.01307,±0.025,True
+19a-fresh n=2 a=0.75 k,rmse,0.22466,0.23579,-0.01113,±0.02501,True
+19a-fresh n=2 a=0.75 k,power_narm,1.0,1.0,0.0,±0.05,True
+19a-fresh n=2 a=0.75 k,coverage_narm,0.951,0.948,0.003,±0.0333,True
+19a-fresh n=2 a=0.75 k,na_ci_rate,0.0,0.0,0.0,±0.02,True
+19a-fresh n=8 a=0.25 a,mean_estimate,0.2531,0.25023,0.00287,±0.01204,True
+19a-fresh n=8 a=0.25 a,bias,0.0031,0.00023,0.00287,±0.01204,True
+19a-fresh n=8 a=0.25 a,sd_estimate,0.07922,0.08027,-0.00104,±0.008514,True
+19a-fresh n=8 a=0.25 a,rmse,0.07927,0.08019,-0.00092,±0.008505,True
+19a-fresh n=8 a=0.25 a,power_narm,0.901,0.884,0.017,±0.05,True
+19a-fresh n=8 a=0.25 a,coverage_narm,0.97522,0.9436,0.03162,±0.0346,True
+19a-fresh n=8 a=0.25 a,na_ci_rate,0.092,0.1,-0.008,±0.045,True
+19a-fresh n=8 a=0.25 d,mean_estimate,0.79834,0.79926,-0.00092,±0.016,True
+19a-fresh n=8 a=0.25 d,bias,-0.00166,-0.00074,-0.00092,±0.016,True
+19a-fresh n=8 a=0.25 d,sd_estimate,0.02361,0.02327,0.00035,±0.002468,True
+19a-fresh n=8 a=0.25 d,rmse,0.02367,0.02325,0.00041,±0.002467,True
+19a-fresh n=8 a=0.25 d,power_narm,1.0,1.0,0.0,±0.05,True
+19a-fresh n=8 a=0.25 d,coverage_narm,0.944,0.948,-0.004,±0.0333,True
+19a-fresh n=8 a=0.25 d,na_ci_rate,0.0,0.0,0.0,±0.02,True
+19a-fresh n=8 a=0.25 k,mean_estimate,2.04179,2.03919,0.0026,±0.04,True
+19a-fresh n=8 a=0.25 k,bias,0.04179,0.03919,0.0026,±0.04,True
+19a-fresh n=8 a=0.25 k,sd_estimate,0.21304,0.21172,0.00132,±0.02246,True
+19a-fresh n=8 a=0.25 k,rmse,0.21705,0.21511,0.00194,±0.02282,True
+19a-fresh n=8 a=0.25 k,power_narm,1.0,1.0,0.0,±0.05,True
+19a-fresh n=8 a=0.25 k,coverage_narm,0.949,0.96,-0.011,±0.03,True
+19a-fresh n=8 a=0.25 k,na_ci_rate,0.0,0.0,0.0,±0.02,True
+19a-fresh n=8 a=0.5 a,mean_estimate,0.50094,0.50264,-0.0017,±0.01255,True
+19a-fresh n=8 a=0.5 a,bias,0.00094,0.00264,-0.0017,±0.01255,True
+19a-fresh n=8 a=0.5 a,sd_estimate,0.08328,0.08366,-0.00038,±0.008873,True
+19a-fresh n=8 a=0.5 a,rmse,0.08326,0.08362,-0.00036,±0.008869,True
+19a-fresh n=8 a=0.5 a,power_narm,1.0,1.0,0.0,±0.05,True
+19a-fresh n=8 a=0.5 a,coverage_narm,0.9475,0.942,0.0055,±0.03506,True
+19a-fresh n=8 a=0.5 a,na_ci_rate,0.0,0.0,0.0,±0.02,True
+19a-fresh n=8 a=0.5 d,mean_estimate,0.79718,0.79547,0.00171,±0.016,True
+19a-fresh n=8 a=0.5 d,bias,-0.00282,-0.00453,0.00171,±0.016,True
+19a-fresh n=8 a=0.5 d,sd_estimate,0.03318,0.03214,0.00104,±0.003409,True
+19a-fresh n=8 a=0.5 d,rmse,0.03329,0.03242,0.00087,±0.003439,True
+19a-fresh n=8 a=0.5 d,power_narm,1.0,1.0,0.0,±0.05,True
+19a-fresh n=8 a=0.5 d,coverage_narm,0.945,0.952,-0.007,±0.03206,True
+19a-fresh n=8 a=0.5 d,na_ci_rate,0.0,0.0,0.0,±0.02,True
+19a-fresh n=8 a=0.5 k,mean_estimate,2.03128,2.0394,-0.00813,±0.04,True
+19a-fresh n=8 a=0.5 k,bias,0.03128,0.0394,-0.00813,±0.04,True
+19a-fresh n=8 a=0.5 k,sd_estimate,0.19711,0.20028,-0.00317,±0.02124,True
+19a-fresh n=8 a=0.5 k,rmse,0.19952,0.20392,-0.00439,±0.02163,True
+19a-fresh n=8 a=0.5 k,power_narm,1.0,1.0,0.0,±0.05,True
+19a-fresh n=8 a=0.5 k,coverage_narm,0.954,0.938,0.016,±0.03617,True
+19a-fresh n=8 a=0.5 k,na_ci_rate,0.0,0.0,0.0,±0.02,True
+19a-fresh n=8 a=0.75 a,mean_estimate,0.75079,0.7543,-0.00352,±0.015,True
+19a-fresh n=8 a=0.75 a,bias,0.00079,0.0043,-0.00352,±0.015,True
+19a-fresh n=8 a=0.75 a,sd_estimate,0.08165,0.07804,0.0036,±0.008278,True
+19a-fresh n=8 a=0.75 a,rmse,0.08163,0.07808,0.00355,±0.008282,True
+19a-fresh n=8 a=0.75 a,power_narm,1.0,1.0,0.0,±0.05,True
+19a-fresh n=8 a=0.75 a,coverage_narm,0.96031,0.96095,-0.00065,±0.03,True
+19a-fresh n=8 a=0.75 a,na_ci_rate,0.093,0.096,-0.003,±0.04419,True
+19a-fresh n=8 a=0.75 d,mean_estimate,0.79124,0.79471,-0.00347,±0.016,True
+19a-fresh n=8 a=0.75 d,bias,-0.00876,-0.00529,-0.00347,±0.016,True
+19a-fresh n=8 a=0.75 d,sd_estimate,0.06794,0.06922,-0.00128,±0.007342,True
+19a-fresh n=8 a=0.75 d,rmse,0.06848,0.06935,-0.00087,±0.007356,True
+19a-fresh n=8 a=0.75 d,power_narm,0.996,0.99594,6e-05,±0.05,True
+19a-fresh n=8 a=0.75 d,coverage_narm,0.95348,0.93802,0.01546,±0.03617,True
+19a-fresh n=8 a=0.75 d,na_ci_rate,0.022,0.032,-0.01,±0.0264,True
+19a-fresh n=8 a=0.75 k,mean_estimate,2.03255,2.03125,0.0013,±0.04,True
+19a-fresh n=8 a=0.75 k,bias,0.03255,0.03125,0.0013,±0.04,True
+19a-fresh n=8 a=0.75 k,sd_estimate,0.18116,0.1864,-0.00524,±0.01977,True
+19a-fresh n=8 a=0.75 k,rmse,0.18401,0.18881,-0.0048,±0.02003,True
+19a-fresh n=8 a=0.75 k,power_narm,1.0,1.0,0.0,±0.05,True
+19a-fresh n=8 a=0.75 k,coverage_narm,0.954,0.94908,0.00492,±0.03297,True
+19a-fresh n=8 a=0.75 k,na_ci_rate,0.0,0.018,-0.018,±0.02,True
+19.3 tau=0 mu/fixed-effects,mean_estimand,0.2,0.2,0.0,±0.01824,True
+19.3 tau=0 mu/fixed-effects,mean_estimate,0.19981,0.20075,-0.00095,±0.01824,True
+19.3 tau=0 mu/fixed-effects,bias,-0.00019,0.00075,-0.00095,±0.01824,True
+19.3 tau=0 mu/fixed-effects,sd_estimate,0.02288,0.02326,-0.00037,±0.002326,True
+19.3 tau=0 mu/fixed-effects,rmse,0.02288,0.02326,-0.00038,±0.002326,True
+19.3 tau=0 mu/fixed-effects,power,1.0,1.0,0.0,±0.05,True
+19.3 tau=0 mu/fixed-effects,coverage,0.9545,0.9445,0.01,±0.03,True
+19.3 tau=0 mu/random-effects,mean_estimand,0.2,0.2,0.0,±0.01824,True
+19.3 tau=0 mu/random-effects,mean_estimate,0.19974,0.2007,-0.00096,±0.01824,True
+19.3 tau=0 mu/random-effects,bias,-0.00026,0.0007,-0.00096,±0.01824,True
+19.3 tau=0 mu/random-effects,sd_estimate,0.02308,0.0235,-0.00041,±0.00235,True
+19.3 tau=0 mu/random-effects,rmse,0.02308,0.0235,-0.00042,±0.00235,True
+19.3 tau=0 mu/random-effects,power,1.0,1.0,0.0,±0.05,True
+19.3 tau=0 mu/random-effects,coverage,0.9615,0.953,0.0085,±0.03,True
+19.3 tau=0 tau_sq/fixed-effects,mean_estimand,0.0,0.0,0.0,±0,True
+19.3 tau=0 tau_sq/fixed-effects,mean_estimate,0.0,0.0,0.0,±0,True
+19.3 tau=0 tau_sq/fixed-effects,bias,0.0,0.0,0.0,±0,True
+19.3 tau=0 tau_sq/fixed-effects,sd_estimate,0.0,0.0,0.0,±0,True
+19.3 tau=0 tau_sq/fixed-effects,rmse,0.0,0.0,0.0,±0,True
+19.3 tau=0 tau_sq/random-effects,mean_estimand,0.0,0.0,0.0,±0,True
+19.3 tau=0 tau_sq/random-effects,mean_estimate,0.00175,0.00174,1e-05,±0.0002878,True
+19.3 tau=0 tau_sq/random-effects,bias,0.00175,0.00174,1e-05,±0.0002878,True
+19.3 tau=0 tau_sq/random-effects,sd_estimate,0.00308,0.00294,0.00013,±0.0004482,True
+19.3 tau=0 tau_sq/random-effects,rmse,0.00354,0.00342,0.00012,±0.0005086,True
+19.3 tau=0 tau_sq/random-effects,coverage,0.9765,0.982,-0.0055,±0.03,True
+19.3 tau=1 mu/fixed-effects,mean_estimand,0.2,0.2,0.0,±0.02791,True
+19.3 tau=1 mu/fixed-effects,mean_estimate,0.20393,0.20007,0.00387,±0.02791,True
+19.3 tau=1 mu/fixed-effects,bias,0.00393,7e-05,0.00387,±0.02791,True
+19.3 tau=1 mu/fixed-effects,sd_estimate,0.1873,0.18394,0.00336,±0.01839,True
+19.3 tau=1 mu/fixed-effects,rmse,0.18729,0.18389,0.0034,±0.01839,True
+19.3 tau=1 mu/fixed-effects,power,0.8865,0.892,-0.0055,±0.05,True
+19.3 tau=1 mu/fixed-effects,coverage,0.2035,0.204,-0.0005,±0.03823,True
+19.3 tau=1 mu/random-effects,mean_estimand,0.2,0.2,0.0,±0.02791,True
+19.3 tau=1 mu/random-effects,mean_estimate,0.20116,0.19941,0.00175,±0.02791,True
+19.3 tau=1 mu/random-effects,bias,0.00116,-0.00059,0.00175,±0.02791,True
+19.3 tau=1 mu/random-effects,sd_estimate,0.09008,0.09104,-0.00096,±0.009104,True
+19.3 tau=1 mu/random-effects,rmse,0.09007,0.09102,-0.00095,±0.009102,True
+19.3 tau=1 mu/random-effects,power,0.608,0.603,0.005,±0.05,True
+19.3 tau=1 mu/random-effects,coverage,0.9505,0.9365,0.014,±0.03,True
+19.3 tau=1 tau_sq/fixed-effects,mean_estimand,1.0,1.0,0.0,±0,True
+19.3 tau=1 tau_sq/fixed-effects,mean_estimate,0.0,0.0,0.0,±0,True
+19.3 tau=1 tau_sq/fixed-effects,bias,-1.0,-1.0,0.0,±0,True
+19.3 tau=1 tau_sq/fixed-effects,sd_estimate,0.0,0.0,0.0,±0,True
+19.3 tau=1 tau_sq/fixed-effects,rmse,1.0,1.0,0.0,±0.1,True
+19.3 tau=1 tau_sq/random-effects,mean_estimand,1.0,1.0,0.0,±0,True
+19.3 tau=1 tau_sq/random-effects,mean_estimate,1.0019,1.00246,-0.00056,±0.01472,True
+19.3 tau=1 tau_sq/random-effects,bias,0.0019,0.00246,-0.00056,±0.01472,True
+19.3 tau=1 tau_sq/random-effects,sd_estimate,0.14798,0.15288,-0.0049,±0.01529,True
+19.3 tau=1 tau_sq/random-effects,rmse,0.14795,0.15286,-0.00491,±0.01529,True
+19.3 tau=1 tau_sq/random-effects,coverage,0.9525,0.9425,0.01,±0.03,True
+19.4 high ATE_common,mean_estimand,0.14829,0.15054,-0.00225,±0.03289,True
+19.4 high ATE_common,mean_estimate,0.15523,0.15717,-0.00194,±0.03289,True
+19.4 high ATE_common,bias,0.00694,0.00662,0.00032,±0.03289,True
+19.4 high ATE_common,sd_estimate,0.0516,0.05285,-0.00125,±0.005285,True
+19.4 high ATE_common,rmse,0.02929,0.02932,-2e-05,±0.002932,True
+19.4 high ATE_common,power,0.601,0.5845,0.0165,±0.05,True
+19.4 high ATE_common,coverage,0.9915,0.9905,0.001,±0.03,True
+19.4 high ATE_implemented,mean_estimand,0.14829,0.15054,-0.00225,±0.03289,True
+19.4 high ATE_implemented,mean_estimate,0.15523,0.15717,-0.00194,±0.03289,True
+19.4 high ATE_implemented,bias,0.00694,0.00662,0.00032,±0.03289,True
+19.4 high ATE_implemented,sd_estimate,0.0516,0.05285,-0.00125,±0.005285,True
+19.4 high ATE_implemented,rmse,0.02929,0.02932,-2e-05,±0.002932,True
+19.4 high ATE_implemented,power,0.601,0.5845,0.0165,±0.05,True
+19.4 high ATE_implemented,coverage,0.9915,0.9905,0.001,±0.03,True
+19.4 low ATE_common,mean_estimand,0.15075,0.15053,0.00022,±0.03289,True
+19.4 low ATE_common,mean_estimate,0.34218,0.34458,-0.0024,±0.03289,True
+19.4 low ATE_common,bias,0.19143,0.19405,-0.00262,±0.03289,True
+19.4 low ATE_common,sd_estimate,0.07617,0.07696,-0.00079,±0.007696,True
+19.4 low ATE_common,rmse,0.20807,0.21076,-0.00269,±0.02108,True
+19.4 low ATE_common,power,0.9885,0.9885,0.0,±0.05,True
+19.4 low ATE_common,coverage,0.2875,0.2915,-0.004,±0.04311,True
+19.4 low ATE_implemented,mean_estimand,0.34098,0.34352,-0.00254,±0.03289,True
+19.4 low ATE_implemented,mean_estimate,0.34218,0.34458,-0.0024,±0.03289,True
+19.4 low ATE_implemented,bias,0.00121,0.00107,0.00014,±0.03289,True
+19.4 low ATE_implemented,sd_estimate,0.07617,0.07696,-0.00079,±0.007696,True
+19.4 low ATE_implemented,rmse,0.02817,0.0286,-0.00043,±0.00286,True
+19.4 low ATE_implemented,power,0.9885,0.9885,0.0,±0.05,True
+19.4 low ATE_implemented,coverage,0.9945,0.9925,0.002,±0.03,True
+23.1 design_1 A,mean_estimand,0.1,0.1,0.0,±0.02186,True
+23.1 design_1 A,mean_estimate,0.10112,0.09532,0.0058,±0.02186,True
+23.1 design_1 A,bias,0.00112,-0.00468,0.0058,±0.02186,True
+23.1 design_1 A,sd_estimate,0.21395,0.21372,0.00023,±0.02137,True
+23.1 design_1 A,rmse,0.2139,0.21372,0.00018,±0.02137,True
+23.1 design_1 A,power,0.081,0.079,0.002,±0.05,True
+23.1 design_1 A,coverage,0.9445,0.9515,-0.007,±0.03,True
+23.1 design_1 A_prime,mean_estimand,0.1,0.1,0.0,±0.02186,True
+23.1 design_1 A_prime,mean_estimate,0.10049,0.09512,0.00538,±0.02186,True
+23.1 design_1 A_prime,bias,0.00049,-0.00488,0.00538,±0.02186,True
+23.1 design_1 A_prime,sd_estimate,0.20915,0.20787,0.00128,±0.02079,True
+23.1 design_1 A_prime,rmse,0.2091,0.20787,0.00123,±0.02079,True
+23.1 design_1 A_prime,power,0.0835,0.0815,0.002,±0.05,True
+23.1 design_1 A_prime,coverage,0.946,0.949,-0.003,±0.03,True
+23.1 design_2 A,mean_estimand,0.1,0.1,0.0,±0.02199,True
+23.1 design_2 A,mean_estimate,0.3051,0.31041,-0.00531,±0.02199,True
+23.1 design_2 A,bias,0.2051,0.21041,-0.00531,±0.02199,True
+23.1 design_2 A,sd_estimate,0.20662,0.21002,-0.0034,±0.021,True
+23.1 design_2 A,rmse,0.2911,0.29725,-0.00615,±0.02973,True
+23.1 design_2 A,power,0.297,0.303,-0.006,±0.05,True
+23.1 design_2 A,coverage,0.844,0.8285,0.0155,±0.03576,True
+23.1 design_2 A_prime,mean_estimand,0.1,0.1,0.0,±0.02199,True
+23.1 design_2 A_prime,mean_estimate,0.09679,0.10288,-0.0061,±0.02199,True
+23.1 design_2 A_prime,bias,-0.00321,0.00288,-0.0061,±0.02199,True
+23.1 design_2 A_prime,sd_estimate,0.22423,0.22426,-3e-05,±0.02243,True
+23.1 design_2 A_prime,rmse,0.22419,0.22422,-3e-05,±0.02242,True
+23.1 design_2 A_prime,power,0.07,0.0775,-0.0075,±0.05,True
+23.1 design_2 A_prime,coverage,0.949,0.956,-0.007,±0.03,True
+23.1 design_3 A,mean_estimand,0.1,0.1,0.0,±0.02038,True
+23.1 design_3 A,mean_estimate,0.11014,0.10066,0.00948,±0.02038,True
+23.1 design_3 A,bias,0.01014,0.00066,0.00948,±0.02038,True
+23.1 design_3 A,sd_estimate,0.20659,0.2039,0.00269,±0.02039,True
+23.1 design_3 A,rmse,0.20679,0.20385,0.00294,±0.02038,True
+23.1 design_3 A,power,0.0745,0.08,-0.0055,±0.05,True
+23.1 design_3 A,coverage,0.9465,0.9525,-0.006,±0.03,True
+23.1 design_3 A_prime,mean_estimand,0.1,0.1,0.0,±0.02038,True
+23.1 design_3 A_prime,mean_estimate,-0.01437,-0.01402,-0.00035,±0.02038,True
+23.1 design_3 A_prime,bias,-0.11437,-0.11402,-0.00035,±0.02038,True
+23.1 design_3 A_prime,sd_estimate,0.04155,0.04206,-0.0005,±0.004206,True
+23.1 design_3 A_prime,rmse,0.12169,0.12153,0.00016,±0.01215,True
+23.1 design_3 A_prime,power,0.0675,0.0745,-0.007,±0.05,True
+23.1 design_3 A_prime,coverage,0.2095,0.214,-0.0045,±0.03925,True

@@ -29,7 +29,23 @@ design-based SEs (CR2/cluster),estimatr,declarepy.lm_robust clusters= (manual PT
 DesignLibrary designs,DesignLibrary,none,roadmap,,,P4,post-parity goal
 tidy/glance helpers,broom,EstimatorResult.to_frame / tidy DataFrames,partial-T1,,,P3,
 dataverse fetchers,rdss,none (data shipped as CSV),not-planned,,,P5,
-ggplot2 figure scripts,rdss/book,matplotlib re-implementations,T4,,,P3,decide matplotlib vs plotnine at T4 start
+ggplot2 figure scripts,rdss/book,declarepy.viz + examples/book_figures.py (matplotlib),validated-T4,,,P3,decision: matplotlib; 6 course-priority figure families with structural checks
 glm (binomial logit),stats::glm,declarepy.glm_logit (profile-likelihood CIs),validated-T2,,,P2,coef 1e-8; profile CI 1e-7 vs confint.glm
 margins (AME),margins,declarepy.logit_ame (statsmodels get_margeff),validated-T2,,,P2,AME 1e-11 / SE 2e-8 vs margins
 resample_data,DeclareDesign/fabricatr,declarepy.Model.resample,validated-T2,,,P2,PS2 chain reproduces
+declaration library ch.4-23 (~60 factories),book replication archive,declarepy.library.ch04..ch23,validated-T3,,,P1,6828 tolerance checks pass vs saved diagnosis objects / fresh R references; per-chapter CSVs in validation/
+lh_robust,estimatr,library.ch09._lh_robust_test (private),validated-T3,,,P3,single-restriction form; <=1e-12 vs car::linearHypothesis internals
+weighted lm_robust (HC2/CR2),estimatr,library.ch09._lm_robust_weighted (private),validated-T3,,,P2,transcribed from lm_robust_helper.cpp; 1e-12 incl weighted-clustered BM df
+iv_robust (2SLS),estimatr,library.ch16/_ch18 private helpers,validated-T3,,,P2,1e-14 vs estimatr on fixtures
+lm_lin,estimatr,library.ch18._lm_lin_est (private),validated-T3,,,P2,plain + weighted centering; fixture-exact
+cluster_ra/cluster_rs/strata_rs/block_and_cluster_ra/multi-arm ra,randomizr,chapter-private helpers (ch12/ch15/ch18),validated-T3,,,P2,distributional parity incl fractional prob_each remainders
+rdrobust (sharp RD),rdrobust,library.ch16._rdrobust (private),validated-T3,,,P3,full 4.0.0 default-path port; 8.5e-13 on fixtures
+process tracing posteriors,CausalQueries/rdss,library.ch16._pt_posterior (private),validated-T3,,,P3,1e-9 vs rdss::process_tracing_estimator
+glmer (logit GLMM),lme4,library.ch15._glmer_logit_intercept (private),validated-T3,,,P3,Laplace nAGQ=1; ~2e-5 vs glmer
+rma (meta-analysis),metafor,library.ch19 private helper,validated-T3,,,P3,FE exact 1e-14; REML to convergence threshold (documented 1e-5)
+causal forest (grf emulation),grf,library.ch19 private helper,validated-T3,,,P3,R-learner emulation calibrated to diagnosis_19.1 targeting diagnosands (leaf=7; documented)
+AMCE (conjoint),cjoint,library.ch17._amce_fit (private),validated-T3,,,P3,respondent-clustered CR1 + tidy z inference; validated vs saved diagnosis
+stan_glm log-gaussian,rstanarm,library.ch09._stan_glm_log_gaussian (private),validated-T3,,,P4,deterministic quadrature; rstanarm not installable locally (documented)
+interference HT/Hajek,interference pkg,library.ch18 private helpers,validated-T3,,,P3,re-implemented from published sources; end-to-end diagnosand parity
+diagnosis objects (62 .rds),book replication archive,validation/coverage_report.py -> t4_coverage.csv,validated-T4,,,P1,62/62 covered by validated recomputations (or documented structural cover)
+diagnosis plots,book figure idioms,declarepy.viz (matplotlib),validated-T4,,,P3,power curves / CI caterpillars / sweeps / heatmaps; structural tests
