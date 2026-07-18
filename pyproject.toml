@@ -65,7 +65,8 @@ testpaths = ["tests"]
 addopts = "-q"
 
 [tool.mypy]
-python_version = "3.10"
+# Runtime supports 3.10+; checking assumes 3.12 (numpy's stubs need it).
+python_version = "3.12"
 files = ["src/declarepy"]
 strict = false
 warn_unused_ignores = true

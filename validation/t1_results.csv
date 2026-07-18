@@ -1,0 +1,98 @@
+element,diagnosand,python,reference,delta,band,pass
+declaration_18.1,mean_estimand,0.2,0.2,0.0,±0.01739,True
+declaration_18.1,mean_estimate,0.20445,0.19494,0.00952,±0.01739,True
+declaration_18.1,bias,0.00445,-0.00506,0.00952,±0.01739,True
+declaration_18.1,sd_estimate,0.1956,0.20218,-0.00658,±10% rel,True
+declaration_18.1,rmse,0.1956,0.20219,-0.00659,±10% rel,True
+declaration_18.1,power,0.1655,0.1665,-0.001,±0.05,True
+declaration_18.1,coverage,0.9535,0.948,0.0055,±0.03,True
+declaration_10.1,power,0.1655,0.1605,0.005,±0.05,True
+declaration_9.1,mean_estimand,40.1352,40.04183,0.09337,±0.4917,True
+declaration_9.1,mean_estimate,40.465,40.28867,0.17633,±1.229,True
+declaration_9.1,bias,0.32981,0.24684,0.08296,±1.229,True
+declaration_9.1,sd_estimate,13.52634,13.28299,0.24335,±10% rel,True
+declaration_9.1,rmse,13.39153,13.1179,0.27362,±10% rel,True
+declaration_9.1,power,0.3055,0.3115,-0.006,±0.05,True
+declaration_9.1,coverage,0.9255,0.924,0.0015,±0.03,True
+declaration_11.1 N=100,mean_estimate,0.4499,0.44896,0.00094,±0.01,True
+declaration_11.1 N=100,sd_estimate,0.05035,0.04867,0.00168,±10% rel,True
+declaration_11.1 N=100,power,0.135,0.139,-0.004,±0.05,True
+declaration_11.1 N=200,mean_estimate,0.44829,0.45022,-0.00193,±0.01,True
+declaration_11.1 N=200,sd_estimate,0.03498,0.03478,0.0002,±10% rel,True
+declaration_11.1 N=200,power,0.272,0.2525,0.0195,±0.05,True
+declaration_11.1 N=300,mean_estimate,0.44998,0.44989,9e-05,±0.01,True
+declaration_11.1 N=300,sd_estimate,0.02895,0.02858,0.00038,±10% rel,True
+declaration_11.1 N=300,power,0.387,0.379,0.008,±0.05,True
+declaration_11.1 N=400,mean_estimate,0.45082,0.44973,0.00108,±0.01,True
+declaration_11.1 N=400,sd_estimate,0.0251,0.02487,0.00023,±10% rel,True
+declaration_11.1 N=400,power,0.478,0.481,-0.003,±0.05,True
+declaration_11.1 N=500,mean_estimate,0.45047,0.44992,0.00055,±0.01,True
+declaration_11.1 N=500,sd_estimate,0.02215,0.02226,-0.00011,±10% rel,True
+declaration_11.1 N=500,power,0.585,0.5995,-0.0145,±0.05,True
+declaration_11.1 N=600,mean_estimate,0.44986,0.44988,-3e-05,±0.01,True
+declaration_11.1 N=600,sd_estimate,0.02005,0.02041,-0.00036,±10% rel,True
+declaration_11.1 N=600,power,0.6805,0.675,0.0055,±0.05,True
+declaration_11.1 N=700,mean_estimate,0.44953,0.44974,-0.00021,±0.01,True
+declaration_11.1 N=700,sd_estimate,0.01857,0.01893,-0.00036,±10% rel,True
+declaration_11.1 N=700,power,0.7625,0.7425,0.02,±0.05,True
+declaration_11.1 N=800,mean_estimate,0.45051,0.44988,0.00063,±0.01,True
+declaration_11.1 N=800,sd_estimate,0.01754,0.01747,6e-05,±10% rel,True
+declaration_11.1 N=800,power,0.7865,0.797,-0.0105,±0.05,True
+declaration_11.1 N=900,mean_estimate,0.44996,0.44991,5e-05,±0.01,True
+declaration_11.1 N=900,sd_estimate,0.01665,0.01655,0.0001,±10% rel,True
+declaration_11.1 N=900,power,0.8585,0.8525,0.006,±0.05,True
+declaration_11.1 N=1000,mean_estimate,0.45026,0.44985,0.00041,±0.01,True
+declaration_11.1 N=1000,sd_estimate,0.01599,0.01601,-2e-05,±10% rel,True
+declaration_11.1 N=1000,power,0.8715,0.8875,-0.016,±0.05,True
+declaration_2.x twoarm b=0.0,success,0.3485,0.344,0.0045,±0.05,True
+declaration_2.x twoarm b=0.0,failure,0.037,0.038,-0.001,±0.05,True
+declaration_2.x twoarm b=0.25,success,0.329,0.344,-0.015,±0.05,True
+declaration_2.x twoarm b=0.25,failure,0.037,0.0355,0.0015,±0.05,True
+declaration_2.x twoarm b=0.5,success,0.337,0.3385,-0.0015,±0.05,True
+declaration_2.x twoarm b=0.5,failure,0.032,0.033,-0.001,±0.05,True
+declaration_2.x twoarm b=0.75,success,0.305,0.322,-0.017,±0.05,True
+declaration_2.x twoarm b=0.75,failure,0.0455,0.032,0.0135,±0.05,True
+declaration_2.x twoarm b=1.0,success,0.3025,0.305,-0.0025,±0.05,True
+declaration_2.x twoarm b=1.0,failure,0.0275,0.0305,-0.003,±0.05,True
+declaration_2.x twoarm b=1.25,success,0.2825,0.285,-0.0025,±0.05,True
+declaration_2.x twoarm b=1.25,failure,0.0315,0.0295,0.002,±0.05,True
+declaration_2.x twoarm b=1.5,success,0.2405,0.2585,-0.018,±0.05,True
+declaration_2.x twoarm b=1.5,failure,0.0345,0.029,0.0055,±0.05,True
+declaration_2.x twoarm b=1.75,success,0.218,0.2375,-0.0195,±0.05,True
+declaration_2.x twoarm b=1.75,failure,0.029,0.029,0.0,±0.05,True
+declaration_2.x twoarm b=2.0,success,0.2135,0.217,-0.0035,±0.05,True
+declaration_2.x twoarm b=2.0,failure,0.0275,0.028,-0.0005,±0.05,True
+declaration_2.x twoarm b=2.25,success,0.194,0.196,-0.002,±0.05,True
+declaration_2.x twoarm b=2.25,failure,0.0285,0.0255,0.003,±0.05,True
+declaration_2.x twoarm b=2.5,success,0.163,0.1825,-0.0195,±0.05,True
+declaration_2.x twoarm b=2.5,failure,0.021,0.0245,-0.0035,±0.05,True
+declaration_2.x twoarm b=2.75,success,0.141,0.1565,-0.0155,±0.05,True
+declaration_2.x twoarm b=2.75,failure,0.0205,0.0245,-0.004,±0.05,True
+declaration_2.x twoarm b=3.0,success,0.1235,0.136,-0.0125,±0.05,True
+declaration_2.x twoarm b=3.0,failure,0.0235,0.0245,-0.001,±0.05,True
+declaration_2.x blocked b=0.0,success,0.2495,0.267,-0.0175,±0.05,True
+declaration_2.x blocked b=0.0,failure,0.0335,0.0335,0.0,±0.05,True
+declaration_2.x blocked b=0.25,success,0.252,0.267,-0.015,±0.05,True
+declaration_2.x blocked b=0.25,failure,0.029,0.0335,-0.0045,±0.05,True
+declaration_2.x blocked b=0.5,success,0.2555,0.267,-0.0115,±0.05,True
+declaration_2.x blocked b=0.5,failure,0.027,0.0335,-0.0065,±0.05,True
+declaration_2.x blocked b=0.75,success,0.2575,0.268,-0.0105,±0.05,True
+declaration_2.x blocked b=0.75,failure,0.0305,0.0325,-0.002,±0.05,True
+declaration_2.x blocked b=1.0,success,0.2585,0.268,-0.0095,±0.05,True
+declaration_2.x blocked b=1.0,failure,0.035,0.0325,0.0025,±0.05,True
+declaration_2.x blocked b=1.25,success,0.227,0.267,-0.04,±0.05,True
+declaration_2.x blocked b=1.25,failure,0.04,0.0335,0.0065,±0.05,True
+declaration_2.x blocked b=1.5,success,0.2575,0.2665,-0.009,±0.05,True
+declaration_2.x blocked b=1.5,failure,0.0265,0.0335,-0.007,±0.05,True
+declaration_2.x blocked b=1.75,success,0.259,0.266,-0.007,±0.05,True
+declaration_2.x blocked b=1.75,failure,0.027,0.0335,-0.0065,±0.05,True
+declaration_2.x blocked b=2.0,success,0.253,0.2665,-0.0135,±0.05,True
+declaration_2.x blocked b=2.0,failure,0.027,0.0335,-0.0065,±0.05,True
+declaration_2.x blocked b=2.25,success,0.2435,0.268,-0.0245,±0.05,True
+declaration_2.x blocked b=2.25,failure,0.0305,0.0325,-0.002,±0.05,True
+declaration_2.x blocked b=2.5,success,0.26,0.266,-0.006,±0.05,True
+declaration_2.x blocked b=2.5,failure,0.0325,0.0335,-0.001,±0.05,True
+declaration_2.x blocked b=2.75,success,0.255,0.268,-0.013,±0.05,True
+declaration_2.x blocked b=2.75,failure,0.0265,0.0325,-0.006,±0.05,True
+declaration_2.x blocked b=3.0,success,0.251,0.266,-0.015,±0.05,True
+declaration_2.x blocked b=3.0,failure,0.025,0.0335,-0.0085,±0.05,True
