@@ -1,11 +1,14 @@
 # TRANSLATION_ROADMAP — rdss/DeclareDesign → Python, as a parallel project
 
-> **Status:** planning only. The course does NOT depend on this roadmap
-> (locked decision #4): notebooks ship self-contained inline helpers. This
-> roadmap sequences the real parity work so it can start any time without
-> blocking — prioritized by the course calendar, so each tranche lands (if
-> pursued) before the notebooks that would benefit from swapping inline
-> helpers for package calls.
+> **Status (2026-07-18): BUILT.** Tranches 0-4 are complete and validated
+> in this repository (see VALIDATION_REPORT.md for the ledgers: T1 97/97,
+> T2 55/55, T3 6,828/6,828, T4 62/62 diagnosis objects + figures). T5
+> (polish) is complete except the public release itself, which is
+> deliberately withheld: **the PyPI/distribution name must be coordinated
+> with the DeclareDesign authors first** (professor's action item). The
+> course still does NOT depend on this package (locked decision #4):
+> notebooks ship self-contained inline helpers this term; swaps happen
+> between terms.
 
 ## Guiding principles
 
@@ -59,11 +62,24 @@ priority figures (matplotlib or plotnine — decide at tranche start).
 Docs, PyPI packaging, CI matrix, a "for DeclareDesign users" migration guide;
 coordinate with the DeclareDesign authors before any public release naming.
 
-## Non-goals
+## Non-goals / exclusions (each justified)
 
-- Emulating tidy-eval / quosures.
-- The `dataverse` download client (course ships CSVs).
-- `DesignLibrary` breadth before Tranche 5.
+- **Tidy-eval / quosure emulation** — deliberate API departure
+  (SEMANTIC_DIFFERENCES §10): steps take explicit callables/column names.
+- **The `dataverse` download client** — the needed datasets ship as CSVs
+  with attribution (data/README.md).
+- **`DesignLibrary` breadth** — post-parity goal; the book's own designs
+  are covered by `declarepy.library`.
+- **Blocked + clustered `difference_in_means` combined** — no book design
+  requires it; raises NotImplementedError with a pointer here.
+- **MCMC-backed `stan_glm`** — rstanarm is not installable locally;
+  declaration 9.3's posterior is reproduced by deterministic quadrature
+  (documented in ch09), which is exact for the 2-parameter model.
+- **Pixel-level figure parity** — figures reproduce the *message*
+  (SEMANTIC_DIFFERENCES §9) with structural checks; matplotlib, not
+  plotnine (T4 decision).
+- **Digit-level RNG parity with R** — impossible across RNG streams
+  (SEMANTIC_DIFFERENCES §1); the tolerance protocol is the contract.
 
 ## Risks
 

@@ -23,7 +23,7 @@ declaration_9.1,book replication archive,declarepy.library.ch09,validated-T1,,,P
 declaration_10.1,book replication archive,declarepy.library.ch10,validated-T1,,,P1,power within ±0.05 of diagnosis_10.1.rds
 declaration_11.1,book replication archive,declarepy.library.ch11,validated-T1,,,P1,mean/sd/power within tolerance of diagnosis_11.1.rds across N=100..1000
 declaration_18.1,book replication archive,declarepy.library.ch18,validated-T1,,,P1,all 7 default diagnosands within tolerance of diagnosis_18.1.rds
-datasets (5 CSVs),rdss,declarepy.data.load,shipped,nb02+,,P1,MIT + attribution; byte-identical to course/book copies
+datasets (11 CSVs),rdss + seeded exports,declarepy.data.load,shipped,nb02+,,P1,6 rdss (MIT + attribution) + 5 documented derived/seeded exports; provenance in data/README.md
 fabricate,fabricatr,Model build callables (+Model.resample for resample_data),partial-T2,,,P3,hierarchies built explicitly with numpy/pandas
 design-based SEs (CR2/cluster),estimatr,declarepy.lm_robust clusters= (manual PT-CR2 + BM df),validated-T2,,,P2,PS answer keys 1-4 reproduce (55/55 checks)
 DesignLibrary designs,DesignLibrary,none,roadmap,,,P4,post-parity goal
