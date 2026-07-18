@@ -1,0 +1,380 @@
+element,diagnosand,python,reference,delta,band,pass
+17.6a average_invested a=0.05,value,0.595545,0.595545,0.0,±1e-09,True
+17.6a average_invested a=0.2,value,0.754455,0.754455,-0.0,±1e-09,True
+17.6a average_invested a=0.333,value,0.821782,0.821782,0.0,±1e-09,True
+17.6a average_invested a=0.5,value,0.851485,0.851485,-0.0,±1e-09,True
+17.6a average_invested a=0.65,value,0.854455,0.854455,-0.0,±1e-09,True
+17.6a average_invested a=0.8,value,0.879208,0.879208,-0.0,±1e-09,True
+17.6a average_invested a=0.95,value,0.955446,0.955446,-0.0,±1e-09,True
+17.6a average_returned a2=0.05,value,0.002717,0.002717,0.0,±1e-09,True
+17.6a average_returned a2=0.2,value,0.03882,0.03882,0.0,±1e-09,True
+17.6a average_returned a2=0.333,value,0.103943,0.103943,-0.0,±1e-09,True
+17.6a average_returned a2=0.5,value,0.227855,0.227855,-0.0,±1e-09,True
+17.6a average_returned a2=0.65,value,0.381897,0.381897,0.0,±1e-09,True
+17.6a average_returned a2=0.8,value,0.58425,0.58425,-0.0,±1e-09,True
+17.6a average_returned a2=0.95,value,0.863316,0.863316,0.0,±1e-09,True
+17.6a invested case 1,value,1.0,1.0,0.0,±1e-09,True
+17.6a invested case 2,value,1.0,1.0,0.0,±1e-09,True
+17.6a invested case 3,value,0.9,0.9,0.0,±1e-09,True
+17.6a returned case 1,value,0.1,0.1,0.0,±1e-09,True
+17.6a returned case 2,value,0.296296,0.296296,-0.0,±1e-09,True
+17.6a returned case 3,value,0.25,0.25,0.0,±1e-09,True
+declaration_17.1,mean_estimand,0.0499,0.04998,-8e-05,±0.01001,True
+declaration_17.1,mean_estimate,1.0,1.0,-0.0,±0.01001,True
+declaration_17.1,bias,0.9501,0.95002,8e-05,±0.01001,True
+declaration_17.1,sd_estimate,0.0,0.0,-0.0,noise<1e-09,True
+declaration_17.1,rmse,0.95015,0.950071,7.9e-05,±10% rel,True
+declaration_17.1,power,1.0,1.0,0.0,±0.05,True
+declaration_17.1,coverage,0.0,0.0,0.0,±0.03,True
+declaration_17.2,mean_estimand,-0.024992,-0.024995,3e-06,±0.009444,True
+declaration_17.2,mean_estimate,-0.024614,-0.024727,0.000112,±0.009444,True
+declaration_17.2,bias,0.000377,0.000268,0.000109,±0.009444,True
+declaration_17.2,sd_estimate,0.027261,0.026946,0.000315,±10% rel,True
+declaration_17.2,rmse,0.027179,0.026846,0.000333,±10% rel,True
+declaration_17.2,power,0.1655,0.1525,0.013,±0.05,True
+declaration_17.2,coverage,0.9455,0.9435,0.002,±0.03,True
+declaration_17.3,bias,-0.002508,-0.002381,-0.000127,±0.01795,True
+declaration_17.3,mean_CI_width,0.325102,0.324878,0.000224,±10% rel,True
+declaration_17.4 ph=0.0 N=500 direct,mean_estimand,0.300151,0.299987,0.000164,±0.009174,True
+declaration_17.4 ph=0.0 N=500 direct,mean_estimate,0.300151,0.299987,0.000164,±0.009174,True
+declaration_17.4 ph=0.0 N=500 direct,bias,0.0,-0.0,0.0,±0.009174,True
+declaration_17.4 ph=0.0 N=500 direct,sd_estimate,0.020412,0.020327,8.5e-05,±10% rel,True
+declaration_17.4 ph=0.0 N=500 direct,rmse,0.0,0.0,-0.0,noise<1e-09,True
+declaration_17.4 ph=0.0 N=500 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.0 N=500 direct,coverage,1.0,1.0,0.0,±0.03,True
+declaration_17.4 ph=0.0 N=500 list,mean_estimand,0.300151,0.299987,0.000164,±0.01828,True
+declaration_17.4 ph=0.0 N=500 list,mean_estimate,0.298632,0.30032,-0.001688,±0.01828,True
+declaration_17.4 ph=0.0 N=500 list,bias,-0.001519,0.000333,-0.001852,±0.01828,True
+declaration_17.4 ph=0.0 N=500 list,sd_estimate,0.081173,0.080199,0.000973,±10% rel,True
+declaration_17.4 ph=0.0 N=500 list,rmse,0.079317,0.077083,0.002234,±10% rel,True
+declaration_17.4 ph=0.0 N=500 list,power,0.953,0.9605,-0.0075,±0.05,True
+declaration_17.4 ph=0.0 N=500 list,coverage,0.962,0.9615,0.0005,±0.03,True
+declaration_17.4 ph=0.1 N=500 direct,mean_estimand,0.300608,0.298691,0.001917,±0.008929,True
+declaration_17.4 ph=0.1 N=500 direct,mean_estimate,0.270404,0.268951,0.001453,±0.008929,True
+declaration_17.4 ph=0.1 N=500 direct,bias,-0.030204,-0.02974,-0.000464,±0.008929,True
+declaration_17.4 ph=0.1 N=500 direct,sd_estimate,0.020077,0.019817,0.00026,±10% rel,True
+declaration_17.4 ph=0.1 N=500 direct,rmse,0.031137,0.030755,0.000382,±10% rel,True
+declaration_17.4 ph=0.1 N=500 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.1 N=500 direct,coverage,0.871,0.8715,-0.0005,±0.03,True
+declaration_17.4 ph=0.1 N=500 list,mean_estimand,0.300608,0.298691,0.001917,±0.01862,True
+declaration_17.4 ph=0.1 N=500 list,mean_estimate,0.30274,0.29837,0.00437,±0.01862,True
+declaration_17.4 ph=0.1 N=500 list,bias,0.002132,-0.000321,0.002453,±0.01862,True
+declaration_17.4 ph=0.1 N=500 list,sd_estimate,0.082481,0.07984,0.002642,±10% rel,True
+declaration_17.4 ph=0.1 N=500 list,rmse,0.079879,0.077809,0.002069,±10% rel,True
+declaration_17.4 ph=0.1 N=500 list,power,0.9555,0.9575,-0.002,±0.05,True
+declaration_17.4 ph=0.1 N=500 list,coverage,0.959,0.964,-0.005,±0.03,True
+declaration_17.4 ph=0.2 N=500 direct,mean_estimand,0.299459,0.298693,0.000766,±0.008574,True
+declaration_17.4 ph=0.2 N=500 direct,mean_estimate,0.239614,0.238938,0.000676,±0.008574,True
+declaration_17.4 ph=0.2 N=500 direct,bias,-0.059845,-0.059755,-9e-05,±0.008574,True
+declaration_17.4 ph=0.2 N=500 direct,sd_estimate,0.019026,0.019037,-1.1e-05,±10% rel,True
+declaration_17.4 ph=0.2 N=500 direct,rmse,0.060796,0.060716,8e-05,±10% rel,True
+declaration_17.4 ph=0.2 N=500 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.2 N=500 direct,coverage,0.013,0.0155,-0.0025,±0.03,True
+declaration_17.4 ph=0.2 N=500 list,mean_estimand,0.299459,0.298693,0.000766,±0.01862,True
+declaration_17.4 ph=0.2 N=500 list,mean_estimate,0.300882,0.29839,0.002492,±0.01862,True
+declaration_17.4 ph=0.2 N=500 list,bias,0.001423,-0.000303,0.001726,±0.01862,True
+declaration_17.4 ph=0.2 N=500 list,sd_estimate,0.082469,0.079835,0.002634,±10% rel,True
+declaration_17.4 ph=0.2 N=500 list,rmse,0.079682,0.077805,0.001877,±10% rel,True
+declaration_17.4 ph=0.2 N=500 list,power,0.955,0.9575,-0.0025,±0.05,True
+declaration_17.4 ph=0.2 N=500 list,coverage,0.962,0.964,-0.002,±0.03,True
+declaration_17.4 ph=0.3 N=500 direct,mean_estimand,0.299847,0.298694,0.001153,±0.008293,True
+declaration_17.4 ph=0.3 N=500 direct,mean_estimate,0.209613,0.208972,0.000641,±0.008293,True
+declaration_17.4 ph=0.3 N=500 direct,bias,-0.090234,-0.089722,-0.000512,±0.008293,True
+declaration_17.4 ph=0.3 N=500 direct,sd_estimate,0.017931,0.018488,-0.000557,±10% rel,True
+declaration_17.4 ph=0.3 N=500 direct,rmse,0.091136,0.090654,0.000482,±10% rel,True
+declaration_17.4 ph=0.3 N=500 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.3 N=500 direct,coverage,0.0,0.0,0.0,±0.03,True
+declaration_17.4 ph=0.3 N=500 list,mean_estimand,0.299847,0.298694,0.001153,±0.01862,True
+declaration_17.4 ph=0.3 N=500 list,mean_estimate,0.294918,0.29843,-0.003512,±0.01862,True
+declaration_17.4 ph=0.3 N=500 list,bias,-0.004929,-0.000264,-0.004665,±0.01862,True
+declaration_17.4 ph=0.3 N=500 list,sd_estimate,0.083084,0.079856,0.003228,±10% rel,True
+declaration_17.4 ph=0.3 N=500 list,rmse,0.080185,0.077825,0.002361,±10% rel,True
+declaration_17.4 ph=0.3 N=500 list,power,0.9495,0.9575,-0.008,±0.05,True
+declaration_17.4 ph=0.3 N=500 list,coverage,0.958,0.964,-0.006,±0.03,True
+declaration_17.4 ph=0.0 N=1000 direct,mean_estimand,0.30014,0.300239,-9.9e-05,±0.009125,True
+declaration_17.4 ph=0.0 N=1000 direct,mean_estimate,0.30014,0.300239,-9.9e-05,±0.009125,True
+declaration_17.4 ph=0.0 N=1000 direct,bias,0.0,-0.0,0.0,±0.009125,True
+declaration_17.4 ph=0.0 N=1000 direct,sd_estimate,0.014722,0.014324,0.000398,±10% rel,True
+declaration_17.4 ph=0.0 N=1000 direct,rmse,0.0,0.0,-0.0,noise<1e-09,True
+declaration_17.4 ph=0.0 N=1000 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.0 N=1000 direct,coverage,1.0,1.0,0.0,±0.03,True
+declaration_17.4 ph=0.0 N=1000 list,mean_estimand,0.30014,0.300239,-9.9e-05,±0.01822,True
+declaration_17.4 ph=0.0 N=1000 list,mean_estimate,0.300196,0.30226,-0.002064,±0.01822,True
+declaration_17.4 ph=0.0 N=1000 list,bias,5.7e-05,0.002021,-0.001965,±0.01822,True
+declaration_17.4 ph=0.0 N=1000 list,sd_estimate,0.057839,0.059526,-0.001687,±10% rel,True
+declaration_17.4 ph=0.0 N=1000 list,rmse,0.056088,0.057647,-0.001559,±10% rel,True
+declaration_17.4 ph=0.0 N=1000 list,power,1.0,0.9985,0.0015,±0.05,True
+declaration_17.4 ph=0.0 N=1000 list,coverage,0.955,0.956,-0.001,±0.03,True
+declaration_17.4 ph=0.1 N=1000 direct,mean_estimand,0.299842,0.299913,-7.2e-05,±0.008766,True
+declaration_17.4 ph=0.1 N=1000 direct,mean_estimate,0.269699,0.269788,-8.9e-05,±0.008766,True
+declaration_17.4 ph=0.1 N=1000 direct,bias,-0.030143,-0.030126,-1.7e-05,±0.008766,True
+declaration_17.4 ph=0.1 N=1000 direct,sd_estimate,0.014204,0.014227,-2.3e-05,±10% rel,True
+declaration_17.4 ph=0.1 N=1000 direct,rmse,0.030622,0.030592,3e-05,±10% rel,True
+declaration_17.4 ph=0.1 N=1000 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.1 N=1000 direct,coverage,0.322,0.319,0.003,±0.03,True
+declaration_17.4 ph=0.1 N=1000 list,mean_estimand,0.299842,0.299913,-7.2e-05,±0.01791,True
+declaration_17.4 ph=0.1 N=1000 list,mean_estimate,0.297997,0.299064,-0.001067,±0.01791,True
+declaration_17.4 ph=0.1 N=1000 list,bias,-0.001845,-0.000849,-0.000995,±0.01791,True
+declaration_17.4 ph=0.1 N=1000 list,sd_estimate,0.058397,0.058625,-0.000228,±10% rel,True
+declaration_17.4 ph=0.1 N=1000 list,rmse,0.055902,0.056484,-0.000582,±10% rel,True
+declaration_17.4 ph=0.1 N=1000 list,power,0.998,1.0,-0.002,±0.05,True
+declaration_17.4 ph=0.1 N=1000 list,coverage,0.9615,0.9545,0.007,±0.03,True
+declaration_17.4 ph=0.2 N=1000 direct,mean_estimand,0.300027,0.299913,0.000114,±0.008459,True
+declaration_17.4 ph=0.2 N=1000 direct,mean_estimate,0.240083,0.239785,0.000298,±0.008459,True
+declaration_17.4 ph=0.2 N=1000 direct,bias,-0.059944,-0.060129,0.000185,±0.008459,True
+declaration_17.4 ph=0.2 N=1000 direct,sd_estimate,0.013219,0.013516,-0.000297,±10% rel,True
+declaration_17.4 ph=0.2 N=1000 direct,rmse,0.060404,0.06059,-0.000186,±10% rel,True
+declaration_17.4 ph=0.2 N=1000 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.2 N=1000 direct,coverage,0.0,0.0,0.0,±0.03,True
+declaration_17.4 ph=0.2 N=1000 list,mean_estimand,0.300027,0.299913,0.000114,±0.01791,True
+declaration_17.4 ph=0.2 N=1000 list,mean_estimate,0.30065,0.299106,0.001544,±0.01791,True
+declaration_17.4 ph=0.2 N=1000 list,bias,0.000623,-0.000807,0.001431,±0.01791,True
+declaration_17.4 ph=0.2 N=1000 list,sd_estimate,0.059028,0.058643,0.000385,±10% rel,True
+declaration_17.4 ph=0.2 N=1000 list,rmse,0.056914,0.056495,0.000419,±10% rel,True
+declaration_17.4 ph=0.2 N=1000 list,power,0.9995,1.0,-0.0005,±0.05,True
+declaration_17.4 ph=0.2 N=1000 list,coverage,0.957,0.9545,0.0025,±0.03,True
+declaration_17.4 ph=0.3 N=1000 direct,mean_estimand,0.299887,0.299914,-2.7e-05,±0.008019,True
+declaration_17.4 ph=0.3 N=1000 direct,mean_estimate,0.209742,0.209778,-3.6e-05,±0.008019,True
+declaration_17.4 ph=0.3 N=1000 direct,bias,-0.090146,-0.090136,-9e-06,±0.008019,True
+declaration_17.4 ph=0.3 N=1000 direct,sd_estimate,0.013089,0.012906,0.000183,±10% rel,True
+declaration_17.4 ph=0.3 N=1000 direct,rmse,0.090599,0.090593,5e-06,±10% rel,True
+declaration_17.4 ph=0.3 N=1000 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.3 N=1000 direct,coverage,0.0,0.0,0.0,±0.03,True
+declaration_17.4 ph=0.3 N=1000 list,mean_estimand,0.299887,0.299914,-2.7e-05,±0.01791,True
+declaration_17.4 ph=0.3 N=1000 list,mean_estimate,0.298328,0.299066,-0.000738,±0.01791,True
+declaration_17.4 ph=0.3 N=1000 list,bias,-0.001559,-0.000848,-0.000711,±0.01791,True
+declaration_17.4 ph=0.3 N=1000 list,sd_estimate,0.057365,0.058614,-0.001249,±10% rel,True
+declaration_17.4 ph=0.3 N=1000 list,rmse,0.055276,0.056471,-0.001196,±10% rel,True
+declaration_17.4 ph=0.3 N=1000 list,power,0.999,1.0,-0.001,±0.05,True
+declaration_17.4 ph=0.3 N=1000 list,coverage,0.968,0.9545,0.0135,±0.03,True
+declaration_17.4 ph=0.0 N=1500 direct,mean_estimand,0.300145,0.300025,0.00012,±0.00918,True
+declaration_17.4 ph=0.0 N=1500 direct,mean_estimate,0.300145,0.300025,0.00012,±0.00918,True
+declaration_17.4 ph=0.0 N=1500 direct,bias,-0.0,0.0,-0.0,±0.00918,True
+declaration_17.4 ph=0.0 N=1500 direct,sd_estimate,0.011935,0.011724,0.00021,±10% rel,True
+declaration_17.4 ph=0.0 N=1500 direct,rmse,0.0,0.0,-0.0,noise<1e-09,True
+declaration_17.4 ph=0.0 N=1500 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.0 N=1500 direct,coverage,1.0,1.0,0.0,±0.03,True
+declaration_17.4 ph=0.0 N=1500 list,mean_estimand,0.300145,0.300025,0.00012,±0.019,True
+declaration_17.4 ph=0.0 N=1500 list,mean_estimate,0.300029,0.301373,-0.001344,±0.019,True
+declaration_17.4 ph=0.0 N=1500 list,bias,-0.000116,0.001348,-0.001464,±0.019,True
+declaration_17.4 ph=0.0 N=1500 list,sd_estimate,0.047815,0.047753,6.2e-05,±10% rel,True
+declaration_17.4 ph=0.0 N=1500 list,rmse,0.046153,0.046066,8.6e-05,±10% rel,True
+declaration_17.4 ph=0.0 N=1500 list,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.0 N=1500 list,coverage,0.956,0.957,-0.001,±0.03,True
+declaration_17.4 ph=0.1 N=1500 direct,mean_estimand,0.300669,0.300054,0.000615,±0.008903,True
+declaration_17.4 ph=0.1 N=1500 direct,mean_estimate,0.270618,0.27009,0.000528,±0.008903,True
+declaration_17.4 ph=0.1 N=1500 direct,bias,-0.030051,-0.029964,-8.7e-05,±0.008903,True
+declaration_17.4 ph=0.1 N=1500 direct,sd_estimate,0.011443,0.011686,-0.000243,±10% rel,True
+declaration_17.4 ph=0.1 N=1500 direct,rmse,0.030383,0.030283,0.0001,±10% rel,True
+declaration_17.4 ph=0.1 N=1500 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.1 N=1500 direct,coverage,0.0455,0.045,0.0005,±0.03,True
+declaration_17.4 ph=0.1 N=1500 list,mean_estimand,0.300669,0.300054,0.000615,±0.01909,True
+declaration_17.4 ph=0.1 N=1500 list,mean_estimate,0.301139,0.299846,0.001293,±0.01909,True
+declaration_17.4 ph=0.1 N=1500 list,bias,0.000471,-0.000208,0.000679,±0.01909,True
+declaration_17.4 ph=0.1 N=1500 list,sd_estimate,0.047796,0.048129,-0.000333,±10% rel,True
+declaration_17.4 ph=0.1 N=1500 list,rmse,0.046346,0.046177,0.000169,±10% rel,True
+declaration_17.4 ph=0.1 N=1500 list,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.1 N=1500 list,coverage,0.9575,0.9585,-0.001,±0.03,True
+declaration_17.4 ph=0.2 N=1500 direct,mean_estimand,0.299702,0.300054,-0.000351,±0.008609,True
+declaration_17.4 ph=0.2 N=1500 direct,mean_estimate,0.239966,0.240118,-0.000152,±0.008609,True
+declaration_17.4 ph=0.2 N=1500 direct,bias,-0.059736,-0.059936,0.0002,±0.008609,True
+declaration_17.4 ph=0.2 N=1500 direct,sd_estimate,0.011188,0.01123,-4.1e-05,±10% rel,True
+declaration_17.4 ph=0.2 N=1500 direct,rmse,0.060068,0.060245,-0.000177,±10% rel,True
+declaration_17.4 ph=0.2 N=1500 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.2 N=1500 direct,coverage,0.0,0.0,0.0,±0.03,True
+declaration_17.4 ph=0.2 N=1500 list,mean_estimand,0.299702,0.300054,-0.000351,±0.01909,True
+declaration_17.4 ph=0.2 N=1500 list,mean_estimate,0.299045,0.299831,-0.000786,±0.01909,True
+declaration_17.4 ph=0.2 N=1500 list,bias,-0.000658,-0.000223,-0.000435,±0.01909,True
+declaration_17.4 ph=0.2 N=1500 list,sd_estimate,0.048224,0.048113,0.000111,±10% rel,True
+declaration_17.4 ph=0.2 N=1500 list,rmse,0.046796,0.046162,0.000634,±10% rel,True
+declaration_17.4 ph=0.2 N=1500 list,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.2 N=1500 list,coverage,0.949,0.9585,-0.0095,±0.03,True
+declaration_17.4 ph=0.3 N=1500 direct,mean_estimand,0.30004,0.300054,-1.4e-05,±0.008158,True
+declaration_17.4 ph=0.3 N=1500 direct,mean_estimate,0.209964,0.210029,-6.5e-05,±0.008158,True
+declaration_17.4 ph=0.3 N=1500 direct,bias,-0.090076,-0.090025,-5.1e-05,±0.008158,True
+declaration_17.4 ph=0.3 N=1500 direct,sd_estimate,0.010794,0.0108,-7e-06,±10% rel,True
+declaration_17.4 ph=0.3 N=1500 direct,rmse,0.090364,0.090325,3.9e-05,±10% rel,True
+declaration_17.4 ph=0.3 N=1500 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.3 N=1500 direct,coverage,0.0,0.0,0.0,±0.03,True
+declaration_17.4 ph=0.3 N=1500 list,mean_estimand,0.30004,0.300054,-1.4e-05,±0.01909,True
+declaration_17.4 ph=0.3 N=1500 list,mean_estimate,0.299608,0.299807,-0.000199,±0.01909,True
+declaration_17.4 ph=0.3 N=1500 list,bias,-0.000432,-0.000247,-0.000185,±0.01909,True
+declaration_17.4 ph=0.3 N=1500 list,sd_estimate,0.049417,0.048145,0.001272,±10% rel,True
+declaration_17.4 ph=0.3 N=1500 list,rmse,0.047694,0.046198,0.001497,±10% rel,True
+declaration_17.4 ph=0.3 N=1500 list,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.3 N=1500 list,coverage,0.9455,0.9585,-0.013,±0.03,True
+declaration_17.4 ph=0.0 N=2000 direct,mean_estimand,0.299927,0.299704,0.000223,±0.009316,True
+declaration_17.4 ph=0.0 N=2000 direct,mean_estimate,0.299927,0.299704,0.000223,±0.009316,True
+declaration_17.4 ph=0.0 N=2000 direct,bias,0.0,-0.0,0.0,±0.009316,True
+declaration_17.4 ph=0.0 N=2000 direct,sd_estimate,0.010085,0.010265,-0.00018,±10% rel,True
+declaration_17.4 ph=0.0 N=2000 direct,rmse,0.0,0.0,-0.0,noise<1e-09,True
+declaration_17.4 ph=0.0 N=2000 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.0 N=2000 direct,coverage,1.0,1.0,0.0,±0.03,True
+declaration_17.4 ph=0.0 N=2000 list,mean_estimand,0.299927,0.299704,0.000223,±0.01916,True
+declaration_17.4 ph=0.0 N=2000 list,mean_estimate,0.30192,0.300845,0.001074,±0.01916,True
+declaration_17.4 ph=0.0 N=2000 list,bias,0.001992,0.001141,0.000851,±0.01916,True
+declaration_17.4 ph=0.0 N=2000 list,sd_estimate,0.041236,0.041292,-5.6e-05,±10% rel,True
+declaration_17.4 ph=0.0 N=2000 list,rmse,0.040148,0.040057,9.1e-05,±10% rel,True
+declaration_17.4 ph=0.0 N=2000 list,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.0 N=2000 list,coverage,0.9555,0.96,-0.0045,±0.03,True
+declaration_17.4 ph=0.1 N=2000 direct,mean_estimand,0.299789,0.299597,0.000192,±0.008992,True
+declaration_17.4 ph=0.1 N=2000 direct,mean_estimate,0.269794,0.269696,9.8e-05,±0.008992,True
+declaration_17.4 ph=0.1 N=2000 direct,bias,-0.029995,-0.029901,-9.4e-05,±0.008992,True
+declaration_17.4 ph=0.1 N=2000 direct,sd_estimate,0.009963,0.009755,0.000208,±10% rel,True
+declaration_17.4 ph=0.1 N=2000 direct,rmse,0.030246,0.030151,9.5e-05,±10% rel,True
+declaration_17.4 ph=0.1 N=2000 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.1 N=2000 direct,coverage,0.001,0.0055,-0.0045,±0.03,True
+declaration_17.4 ph=0.1 N=2000 list,mean_estimand,0.299789,0.299597,0.000192,±0.01945,True
+declaration_17.4 ph=0.1 N=2000 list,mean_estimate,0.298756,0.300306,-0.001551,±0.01945,True
+declaration_17.4 ph=0.1 N=2000 list,bias,-0.001034,0.000709,-0.001742,±0.01945,True
+declaration_17.4 ph=0.1 N=2000 list,sd_estimate,0.041219,0.041807,-0.000588,±10% rel,True
+declaration_17.4 ph=0.1 N=2000 list,rmse,0.040116,0.040427,-0.000311,±10% rel,True
+declaration_17.4 ph=0.1 N=2000 list,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.1 N=2000 list,coverage,0.963,0.9595,0.0035,±0.03,True
+declaration_17.4 ph=0.2 N=2000 direct,mean_estimand,0.300451,0.299598,0.000853,±0.008633,True
+declaration_17.4 ph=0.2 N=2000 direct,mean_estimate,0.24046,0.239692,0.000768,±0.008633,True
+declaration_17.4 ph=0.2 N=2000 direct,bias,-0.059991,-0.059906,-8.5e-05,±0.008633,True
+declaration_17.4 ph=0.2 N=2000 direct,sd_estimate,0.009679,0.009296,0.000383,±10% rel,True
+declaration_17.4 ph=0.2 N=2000 direct,rmse,0.06023,0.06015,8e-05,±10% rel,True
+declaration_17.4 ph=0.2 N=2000 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.2 N=2000 direct,coverage,0.0,0.0,0.0,±0.03,True
+declaration_17.4 ph=0.2 N=2000 list,mean_estimand,0.300451,0.299598,0.000853,±0.01945,True
+declaration_17.4 ph=0.2 N=2000 list,mean_estimate,0.300477,0.300352,0.000125,±0.01945,True
+declaration_17.4 ph=0.2 N=2000 list,bias,2.6e-05,0.000754,-0.000728,±0.01945,True
+declaration_17.4 ph=0.2 N=2000 list,sd_estimate,0.041641,0.04178,-0.000139,±10% rel,True
+declaration_17.4 ph=0.2 N=2000 list,rmse,0.040132,0.040381,-0.000249,±10% rel,True
+declaration_17.4 ph=0.2 N=2000 list,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.2 N=2000 list,coverage,0.955,0.96,-0.005,±0.03,True
+declaration_17.4 ph=0.3 N=2000 direct,mean_estimand,0.300046,0.299598,0.000448,±0.008225,True
+declaration_17.4 ph=0.3 N=2000 direct,mean_estimate,0.21003,0.209849,0.000182,±0.008225,True
+declaration_17.4 ph=0.3 N=2000 direct,bias,-0.090015,-0.089749,-0.000266,±0.008225,True
+declaration_17.4 ph=0.3 N=2000 direct,sd_estimate,0.00907,0.008885,0.000185,±10% rel,True
+declaration_17.4 ph=0.3 N=2000 direct,rmse,0.090252,0.089983,0.000269,±10% rel,True
+declaration_17.4 ph=0.3 N=2000 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.3 N=2000 direct,coverage,0.0,0.0,0.0,±0.03,True
+declaration_17.4 ph=0.3 N=2000 list,mean_estimand,0.300046,0.299598,0.000448,±0.01945,True
+declaration_17.4 ph=0.3 N=2000 list,mean_estimate,0.29992,0.300369,-0.000449,±0.01945,True
+declaration_17.4 ph=0.3 N=2000 list,bias,-0.000126,0.000771,-0.000897,±0.01945,True
+declaration_17.4 ph=0.3 N=2000 list,sd_estimate,0.040904,0.041795,-0.000891,±10% rel,True
+declaration_17.4 ph=0.3 N=2000 list,rmse,0.039639,0.04039,-0.000751,±10% rel,True
+declaration_17.4 ph=0.3 N=2000 list,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.3 N=2000 list,coverage,0.96,0.96,0.0,±0.03,True
+declaration_17.4 ph=0.0 N=2500 direct,mean_estimand,0.300068,0.299789,0.000279,±0.009322,True
+declaration_17.4 ph=0.0 N=2500 direct,mean_estimate,0.300068,0.299789,0.000279,±0.009322,True
+declaration_17.4 ph=0.0 N=2500 direct,bias,0.0,-0.0,0.0,±0.009322,True
+declaration_17.4 ph=0.0 N=2500 direct,sd_estimate,0.009248,0.009308,-6e-05,±10% rel,True
+declaration_17.4 ph=0.0 N=2500 direct,rmse,0.0,0.0,-0.0,noise<1e-09,True
+declaration_17.4 ph=0.0 N=2500 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.0 N=2500 direct,coverage,1.0,1.0,0.0,±0.03,True
+declaration_17.4 ph=0.0 N=2500 list,mean_estimand,0.300068,0.299789,0.000279,±0.01891,True
+declaration_17.4 ph=0.0 N=2500 list,mean_estimate,0.299004,0.302091,-0.003087,±0.01891,True
+declaration_17.4 ph=0.0 N=2500 list,bias,-0.001064,0.002302,-0.003366,±0.01891,True
+declaration_17.4 ph=0.0 N=2500 list,sd_estimate,0.036877,0.037197,-0.00032,±10% rel,True
+declaration_17.4 ph=0.0 N=2500 list,rmse,0.035589,0.035915,-0.000326,±10% rel,True
+declaration_17.4 ph=0.0 N=2500 list,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.0 N=2500 list,coverage,0.957,0.955,0.002,±0.03,True
+declaration_17.4 ph=0.1 N=2500 direct,mean_estimand,0.299932,0.299852,8.1e-05,±0.009058,True
+declaration_17.4 ph=0.1 N=2500 direct,mean_estimate,0.269977,0.269707,0.00027,±0.009058,True
+declaration_17.4 ph=0.1 N=2500 direct,bias,-0.029956,-0.030145,0.000189,±0.009058,True
+declaration_17.4 ph=0.1 N=2500 direct,sd_estimate,0.008833,0.009051,-0.000218,±10% rel,True
+declaration_17.4 ph=0.1 N=2500 direct,rmse,0.030144,0.030335,-0.00019,±10% rel,True
+declaration_17.4 ph=0.1 N=2500 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.1 N=2500 direct,coverage,0.0,0.0,0.0,±0.03,True
+declaration_17.4 ph=0.1 N=2500 list,mean_estimand,0.299932,0.299852,8.1e-05,±0.01871,True
+declaration_17.4 ph=0.1 N=2500 list,mean_estimate,0.29914,0.298817,0.000323,±0.01871,True
+declaration_17.4 ph=0.1 N=2500 list,bias,-0.000792,-0.001035,0.000243,±0.01871,True
+declaration_17.4 ph=0.1 N=2500 list,sd_estimate,0.036134,0.035898,0.000237,±10% rel,True
+declaration_17.4 ph=0.1 N=2500 list,rmse,0.034946,0.03488,6.6e-05,±10% rel,True
+declaration_17.4 ph=0.1 N=2500 list,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.1 N=2500 list,coverage,0.955,0.9595,-0.0045,±0.03,True
+declaration_17.4 ph=0.2 N=2500 direct,mean_estimand,0.299975,0.299852,0.000124,±0.008739,True
+declaration_17.4 ph=0.2 N=2500 direct,mean_estimate,0.240059,0.239829,0.000231,±0.008739,True
+declaration_17.4 ph=0.2 N=2500 direct,bias,-0.059916,-0.060023,0.000107,±0.008739,True
+declaration_17.4 ph=0.2 N=2500 direct,sd_estimate,0.008535,0.008662,-0.000127,±10% rel,True
+declaration_17.4 ph=0.2 N=2500 direct,rmse,0.060105,0.060207,-0.000102,±10% rel,True
+declaration_17.4 ph=0.2 N=2500 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.2 N=2500 direct,coverage,0.0,0.0,0.0,±0.03,True
+declaration_17.4 ph=0.2 N=2500 list,mean_estimand,0.299975,0.299852,0.000124,±0.01871,True
+declaration_17.4 ph=0.2 N=2500 list,mean_estimate,0.300237,0.2988,0.001437,±0.01871,True
+declaration_17.4 ph=0.2 N=2500 list,bias,0.000262,-0.001052,0.001314,±0.01871,True
+declaration_17.4 ph=0.2 N=2500 list,sd_estimate,0.037913,0.035874,0.00204,±10% rel,True
+declaration_17.4 ph=0.2 N=2500 list,rmse,0.036529,0.034858,0.001671,±10% rel,True
+declaration_17.4 ph=0.2 N=2500 list,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.2 N=2500 list,coverage,0.9465,0.9595,-0.013,±0.03,True
+declaration_17.4 ph=0.3 N=2500 direct,mean_estimand,0.299884,0.299852,3.2e-05,±0.008292,True
+declaration_17.4 ph=0.3 N=2500 direct,mean_estimate,0.209959,0.209771,0.000188,±0.008292,True
+declaration_17.4 ph=0.3 N=2500 direct,bias,-0.089925,-0.090081,0.000155,±0.008292,True
+declaration_17.4 ph=0.3 N=2500 direct,sd_estimate,0.007965,0.008096,-0.000131,±10% rel,True
+declaration_17.4 ph=0.3 N=2500 direct,rmse,0.090107,0.090262,-0.000155,±10% rel,True
+declaration_17.4 ph=0.3 N=2500 direct,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.3 N=2500 direct,coverage,0.0,0.0,0.0,±0.03,True
+declaration_17.4 ph=0.3 N=2500 list,mean_estimand,0.299884,0.299852,3.2e-05,±0.01871,True
+declaration_17.4 ph=0.3 N=2500 list,mean_estimate,0.301079,0.298789,0.00229,±0.01871,True
+declaration_17.4 ph=0.3 N=2500 list,bias,0.001195,-0.001063,0.002258,±0.01871,True
+declaration_17.4 ph=0.3 N=2500 list,sd_estimate,0.036042,0.035866,0.000176,±10% rel,True
+declaration_17.4 ph=0.3 N=2500 list,rmse,0.03493,0.034853,7.7e-05,±10% rel,True
+declaration_17.4 ph=0.3 N=2500 list,power,1.0,1.0,0.0,±0.05,True
+declaration_17.4 ph=0.3 N=2500 list,coverage,0.97,0.9595,0.0105,±0.03,True
+declaration_17.5 genderWoman,mean_estimand,0.034313,0.034361,-4.8e-05,±0.01,True
+declaration_17.5 genderWoman,mean_estimate,0.034878,0.035032,-0.000154,±0.01,True
+declaration_17.5 genderWoman,bias,0.000565,0.000671,-0.000106,±0.01,True
+declaration_17.5 genderWoman,sd_estimate,0.018363,0.018395,-3.2e-05,±10% rel,True
+declaration_17.5 genderWoman,rmse,0.018692,0.018787,-9.5e-05,±10% rel,True
+declaration_17.5 genderWoman,power,0.488,0.4895,-0.0015,±0.05,True
+declaration_17.5 genderWoman,coverage,0.943,0.942,0.001,±0.03,True
+declaration_17.5 partyRight,mean_estimand,0.068837,0.068693,0.000144,±0.01,True
+declaration_17.5 partyRight,mean_estimate,0.067251,0.068822,-0.001571,±0.01,True
+declaration_17.5 partyRight,bias,-0.001586,0.000129,-0.001715,±0.01,True
+declaration_17.5 partyRight,sd_estimate,0.018068,0.0179,0.000168,±10% rel,True
+declaration_17.5 partyRight,rmse,0.018795,0.018487,0.000308,±10% rel,True
+declaration_17.5 partyRight,power,0.96,0.967,-0.007,±0.05,True
+declaration_17.5 partyRight,coverage,0.9435,0.9445,-0.001,±0.03,True
+declaration_17.5 regionEast,mean_estimand,-0.068492,-0.068498,6e-06,±0.01,True
+declaration_17.5 regionEast,mean_estimate,-0.068399,-0.067907,-0.000491,±0.01,True
+declaration_17.5 regionEast,bias,9.3e-05,0.000591,-0.000497,±0.01,True
+declaration_17.5 regionEast,sd_estimate,0.026498,0.02508,0.001418,±10% rel,True
+declaration_17.5 regionEast,rmse,0.027153,0.025703,0.00145,±10% rel,True
+declaration_17.5 regionEast,power,0.7545,0.76,-0.0055,±0.05,True
+declaration_17.5 regionEast,coverage,0.934,0.954,-0.02,±0.03,True
+declaration_17.5 regionSouth,mean_estimand,-0.033861,-0.033949,8.8e-05,±0.01,True
+declaration_17.5 regionSouth,mean_estimate,-0.033693,-0.034052,0.000359,±0.01,True
+declaration_17.5 regionSouth,bias,0.000168,-0.000103,0.000271,±0.01,True
+declaration_17.5 regionSouth,sd_estimate,0.026441,0.025462,0.000979,±10% rel,True
+declaration_17.5 regionSouth,rmse,0.026982,0.025795,0.001187,±10% rel,True
+declaration_17.5 regionSouth,power,0.2655,0.257,0.0085,±0.05,True
+declaration_17.5 regionSouth,coverage,0.9335,0.951,-0.0175,±0.03,True
+declaration_17.5 regionWest,mean_estimand,-0.10318,-0.103274,9.4e-05,±0.01,True
+declaration_17.5 regionWest,mean_estimate,-0.102799,-0.103278,0.000479,±0.01,True
+declaration_17.5 regionWest,bias,0.000381,-3e-06,0.000385,±0.01,True
+declaration_17.5 regionWest,sd_estimate,0.025539,0.025018,0.000521,±10% rel,True
+declaration_17.5 regionWest,rmse,0.026126,0.025391,0.000736,±10% rel,True
+declaration_17.5 regionWest,power,0.9825,0.9835,-0.001,±0.05,True
+declaration_17.5 regionWest,coverage,0.9415,0.9505,-0.009,±0.03,True
+declaration_17.6 deceive=True trusting,mean_estimand,0.819215,0.81921,5e-06,±0.005842,True
+declaration_17.6 deceive=True trusting,mean_estimate,0.82354,0.823024,0.000516,±0.005842,True
+declaration_17.6 deceive=True trusting,bias,0.004325,0.003814,0.000511,±0.005842,True
+declaration_17.6 deceive=True trusting,sd_estimate,0.020927,0.0204,0.000527,±10% rel,True
+declaration_17.6 deceive=True trusting,rmse,0.019335,0.018596,0.000738,±10% rel,True
+declaration_17.6 deceive=True trusting,power,1.0,1.0,0.0,±0.05,True
+declaration_17.6 deceive=True trusting,coverage,0.9515,0.961,-0.0095,±0.03,True
+declaration_17.6 deceive=True trustworthy,mean_estimand,0.309282,0.309039,0.000243,±0.006399,True
+declaration_17.6 deceive=True trustworthy,mean_estimate,0.306994,0.306797,0.000197,±0.006399,True
+declaration_17.6 deceive=True trustworthy,bias,-0.002288,-0.002243,-4.6e-05,±0.006399,True
+declaration_17.6 deceive=True trustworthy,sd_estimate,0.023014,0.024025,-0.001011,±10% rel,True
+declaration_17.6 deceive=True trustworthy,rmse,0.018391,0.019293,-0.000902,±10% rel,True
+declaration_17.6 deceive=True trustworthy,power,1.0,1.0,0.0,±0.05,True
+declaration_17.6 deceive=True trustworthy,coverage,0.986,0.9845,0.0015,±0.03,True
+declaration_17.6 deceive=False trusting,mean_estimand,0.819224,0.81921,1.4e-05,±0.005842,True
+declaration_17.6 deceive=False trusting,mean_estimate,0.823338,0.823022,0.000315,±0.005842,True
+declaration_17.6 deceive=False trusting,bias,0.004114,0.003812,0.000301,±0.005842,True
+declaration_17.6 deceive=False trusting,sd_estimate,0.019954,0.020399,-0.000445,±10% rel,True
+declaration_17.6 deceive=False trusting,rmse,0.018383,0.018595,-0.000211,±10% rel,True
+declaration_17.6 deceive=False trusting,power,1.0,1.0,0.0,±0.05,True
+declaration_17.6 deceive=False trusting,coverage,0.9645,0.961,0.0035,±0.03,True
+declaration_17.6 deceive=False trustworthy,mean_estimand,0.309146,0.309038,0.000108,±0.006399,True
+declaration_17.6 deceive=False trustworthy,mean_estimate,0.470213,0.469985,0.000228,±0.006399,True
+declaration_17.6 deceive=False trustworthy,bias,0.161067,0.160948,0.00012,±0.006399,True
+declaration_17.6 deceive=False trustworthy,sd_estimate,0.022405,0.022284,0.000121,±10% rel,True
+declaration_17.6 deceive=False trustworthy,rmse,0.161874,0.161702,0.000173,±10% rel,True
+declaration_17.6 deceive=False trustworthy,power,1.0,1.0,0.0,±0.05,True
+declaration_17.6 deceive=False trustworthy,coverage,0.0,0.0,0.0,±0.03,True

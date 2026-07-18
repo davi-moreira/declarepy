@@ -1,0 +1,224 @@
+element,diagnosand,python,reference,delta,band,pass
+helper princomp (r>0),max|score-R|,8.88e-16,0.0,8.88e-16,≤1e-09,True
+helper princomp (r<0),max|score-R|,8.88e-16,0.0,8.88e-16,≤1e-09,True
+helper glmm partial pooling,max|estimate-R|,2.96e-06,0.0,2.96e-06,≤0.002,True
+helper ols no pooling,max|estimate-R|,7.11e-15,0.0,7.11e-15,≤1e-08,True
+helper ols full pooling,max|estimate-R|,3e-15,0.0,3e-15,≤1e-08,True
+declaration_15.1,bias,-0.003815,0.00251,-0.006325,±0.0232,True
+declaration_15.1,rmse,0.115392,0.112148,0.003244,±10% rel,True
+declaration_15.2 effort=0.0 estimator,mean_estimand,4.291905,4.291905,0.0,±1e-06,True
+declaration_15.2 effort=0.0 estimator,mean_estimate,4.930538,4.937088,-0.00655,±0.0232,True
+declaration_15.2 effort=0.0 estimator,bias,0.638633,0.645183,-0.00655,±0.0232,True
+declaration_15.2 effort=0.0 estimator,sd_estimate,0.132408,0.134817,-0.002409,±10% rel,True
+declaration_15.2 effort=0.0 estimator,rmse,0.652208,0.659111,-0.006904,±10% rel,True
+declaration_15.2 effort=0.0 estimator,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=0.0 estimator,coverage,0.005,0.0015,0.0035,±0.03,True
+declaration_15.2 effort=0.0 Response Rate,mean_estimate,0.49603,0.494995,0.001035,±0.01,True
+declaration_15.2 effort=0.0 Response Rate,sd_estimate,0.048644,0.049666,-0.001022,±10% rel,True
+declaration_15.2 effort=0.0 Response Rate,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=0.5 estimator,mean_estimand,4.291905,4.291905,0.0,±1e-06,True
+declaration_15.2 effort=0.5 estimator,mean_estimate,4.770306,4.770767,-0.000461,±0.0232,True
+declaration_15.2 effort=0.5 estimator,bias,0.478401,0.478863,-0.000461,±0.0232,True
+declaration_15.2 effort=0.5 estimator,sd_estimate,0.123603,0.121336,0.002267,±10% rel,True
+declaration_15.2 effort=0.5 estimator,rmse,0.494103,0.493988,0.000115,±10% rel,True
+declaration_15.2 effort=0.5 estimator,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=0.5 estimator,coverage,0.035,0.0305,0.0045,±0.03,True
+declaration_15.2 effort=0.5 Response Rate,mean_estimate,0.63306,0.63399,-0.00093,±0.01,True
+declaration_15.2 effort=0.5 Response Rate,sd_estimate,0.047665,0.047526,0.000139,±10% rel,True
+declaration_15.2 effort=0.5 Response Rate,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=1.0 estimator,mean_estimand,4.291905,4.291905,0.0,±1e-06,True
+declaration_15.2 effort=1.0 estimator,mean_estimate,4.630494,4.630887,-0.000393,±0.0232,True
+declaration_15.2 effort=1.0 estimator,bias,0.338589,0.338982,-0.000393,±0.0232,True
+declaration_15.2 effort=1.0 estimator,sd_estimate,0.11492,0.114603,0.000316,±10% rel,True
+declaration_15.2 effort=1.0 estimator,rmse,0.357551,0.357821,-0.000271,±10% rel,True
+declaration_15.2 effort=1.0 estimator,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=1.0 estimator,coverage,0.1685,0.1715,-0.003,±0.03,True
+declaration_15.2 effort=1.0 Response Rate,mean_estimate,0.75623,0.754755,0.001475,±0.01,True
+declaration_15.2 effort=1.0 Response Rate,sd_estimate,0.042014,0.043482,-0.001468,±10% rel,True
+declaration_15.2 effort=1.0 Response Rate,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=1.5 estimator,mean_estimand,4.291905,4.291905,0.0,±1e-06,True
+declaration_15.2 effort=1.5 estimator,mean_estimate,4.513481,4.514035,-0.000554,±0.0232,True
+declaration_15.2 effort=1.5 estimator,bias,0.221576,0.22213,-0.000554,±0.0232,True
+declaration_15.2 effort=1.5 estimator,sd_estimate,0.115333,0.111352,0.003981,±10% rel,True
+declaration_15.2 effort=1.5 estimator,rmse,0.249782,0.248465,0.001317,±10% rel,True
+declaration_15.2 effort=1.5 estimator,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=1.5 estimator,coverage,0.5035,0.513,-0.0095,±0.03,True
+declaration_15.2 effort=1.5 Response Rate,mean_estimate,0.851225,0.851485,-0.00026,±0.01,True
+declaration_15.2 effort=1.5 Response Rate,sd_estimate,0.035812,0.036478,-0.000666,±10% rel,True
+declaration_15.2 effort=1.5 Response Rate,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=2.0 estimator,mean_estimand,4.291905,4.291905,0.0,±1e-06,True
+declaration_15.2 effort=2.0 estimator,mean_estimate,4.424181,4.427598,-0.003417,±0.0232,True
+declaration_15.2 effort=2.0 estimator,bias,0.132276,0.135694,-0.003417,±0.0232,True
+declaration_15.2 effort=2.0 estimator,sd_estimate,0.109115,0.111666,-0.00255,±10% rel,True
+declaration_15.2 effort=2.0 estimator,rmse,0.171456,0.175715,-0.004259,±10% rel,True
+declaration_15.2 effort=2.0 estimator,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=2.0 estimator,coverage,0.799,0.7885,0.0105,±0.03,True
+declaration_15.2 effort=2.0 Response Rate,mean_estimate,0.91821,0.91778,0.00043,±0.01,True
+declaration_15.2 effort=2.0 Response Rate,sd_estimate,0.027559,0.02798,-0.000421,±10% rel,True
+declaration_15.2 effort=2.0 Response Rate,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=2.5 estimator,mean_estimand,4.291905,4.291905,0.0,±1e-06,True
+declaration_15.2 effort=2.5 estimator,mean_estimate,4.367882,4.366829,0.001054,±0.0232,True
+declaration_15.2 effort=2.5 estimator,bias,0.075978,0.074924,0.001054,±0.0232,True
+declaration_15.2 effort=2.5 estimator,sd_estimate,0.109981,0.113006,-0.003025,±10% rel,True
+declaration_15.2 effort=2.5 estimator,rmse,0.13365,0.135564,-0.001914,±10% rel,True
+declaration_15.2 effort=2.5 estimator,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=2.5 estimator,coverage,0.91,0.9025,0.0075,±0.03,True
+declaration_15.2 effort=2.5 Response Rate,mean_estimate,0.95868,0.958735,-5.5e-05,±0.01,True
+declaration_15.2 effort=2.5 Response Rate,sd_estimate,0.020069,0.020245,-0.000176,±10% rel,True
+declaration_15.2 effort=2.5 Response Rate,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=3.0 estimator,mean_estimand,4.291905,4.291905,0.0,±1e-06,True
+declaration_15.2 effort=3.0 estimator,mean_estimate,4.32722,4.328116,-0.000896,±0.0232,True
+declaration_15.2 effort=3.0 estimator,bias,0.035315,0.036211,-0.000896,±0.0232,True
+declaration_15.2 effort=3.0 estimator,sd_estimate,0.109604,0.114714,-0.005111,±10% rel,True
+declaration_15.2 effort=3.0 estimator,rmse,0.115126,0.120266,-0.00514,±10% rel,True
+declaration_15.2 effort=3.0 estimator,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=3.0 estimator,coverage,0.9485,0.934,0.0145,±0.03,True
+declaration_15.2 effort=3.0 Response Rate,mean_estimate,0.981525,0.981615,-9e-05,±0.01,True
+declaration_15.2 effort=3.0 Response Rate,sd_estimate,0.013781,0.013165,0.000616,±10% rel,True
+declaration_15.2 effort=3.0 Response Rate,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=3.5 estimator,mean_estimand,4.291905,4.291905,0.0,±1e-06,True
+declaration_15.2 effort=3.5 estimator,mean_estimate,4.31093,4.307526,0.003404,±0.0232,True
+declaration_15.2 effort=3.5 estimator,bias,0.019025,0.015622,0.003404,±0.0232,True
+declaration_15.2 effort=3.5 estimator,sd_estimate,0.112488,0.114197,-0.001709,±10% rel,True
+declaration_15.2 effort=3.5 estimator,rmse,0.114058,0.115232,-0.001174,±10% rel,True
+declaration_15.2 effort=3.5 estimator,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=3.5 estimator,coverage,0.955,0.9495,0.0055,±0.03,True
+declaration_15.2 effort=3.5 Response Rate,mean_estimate,0.992565,0.99271,-0.000145,±0.01,True
+declaration_15.2 effort=3.5 Response Rate,sd_estimate,0.008661,0.008148,0.000513,±10% rel,True
+declaration_15.2 effort=3.5 Response Rate,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=4.0 estimator,mean_estimand,4.291905,4.291905,0.0,±1e-06,True
+declaration_15.2 effort=4.0 estimator,mean_estimate,4.297464,4.297197,0.000267,±0.0232,True
+declaration_15.2 effort=4.0 estimator,bias,0.005559,0.005292,0.000267,±0.0232,True
+declaration_15.2 effort=4.0 estimator,sd_estimate,0.112253,0.115012,-0.002759,±10% rel,True
+declaration_15.2 effort=4.0 estimator,rmse,0.112363,0.115105,-0.002742,±10% rel,True
+declaration_15.2 effort=4.0 estimator,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=4.0 estimator,coverage,0.9575,0.952,0.0055,±0.03,True
+declaration_15.2 effort=4.0 Response Rate,mean_estimate,0.997575,0.99749,8.5e-05,±0.01,True
+declaration_15.2 effort=4.0 Response Rate,sd_estimate,0.004825,0.004981,-0.000156,±10% rel,True
+declaration_15.2 effort=4.0 Response Rate,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=4.5 estimator,mean_estimand,4.291905,4.291905,0.0,±1e-06,True
+declaration_15.2 effort=4.5 estimator,mean_estimate,4.29303,4.292978,5.2e-05,±0.0232,True
+declaration_15.2 effort=4.5 estimator,bias,0.001126,0.001073,5.2e-05,±0.0232,True
+declaration_15.2 effort=4.5 estimator,sd_estimate,0.112277,0.11536,-0.003083,±10% rel,True
+declaration_15.2 effort=4.5 estimator,rmse,0.112255,0.115336,-0.003082,±10% rel,True
+declaration_15.2 effort=4.5 estimator,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=4.5 estimator,coverage,0.9605,0.953,0.0075,±0.03,True
+declaration_15.2 effort=4.5 Response Rate,mean_estimate,0.999295,0.99925,4.5e-05,±0.01,True
+declaration_15.2 effort=4.5 Response Rate,sd_estimate,0.002618,0.002782,-0.000164,±10% rel,True
+declaration_15.2 effort=4.5 Response Rate,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=5.0 estimator,mean_estimand,4.291905,4.291905,0.0,±1e-06,True
+declaration_15.2 effort=5.0 estimator,mean_estimate,4.293043,4.291591,0.001452,±0.0232,True
+declaration_15.2 effort=5.0 estimator,bias,0.001139,-0.000313,0.001452,±0.0232,True
+declaration_15.2 effort=5.0 estimator,sd_estimate,0.113901,0.115597,-0.001696,±10% rel,True
+declaration_15.2 effort=5.0 estimator,rmse,0.113879,0.115569,-0.00169,±10% rel,True
+declaration_15.2 effort=5.0 estimator,power,1.0,1.0,0.0,±0.05,True
+declaration_15.2 effort=5.0 estimator,coverage,0.953,0.9525,0.0005,±0.03,True
+declaration_15.2 effort=5.0 Response Rate,mean_estimate,0.99978,0.999805,-2.5e-05,±0.01,True
+declaration_15.2 effort=5.0 Response Rate,sd_estimate,0.001467,0.001419,4.8e-05,±10% rel,True
+declaration_15.2 effort=5.0 Response Rate,power,1.0,1.0,0.0,±0.05,True
+declaration_15.3 cluster_prob=0.1,mean_estimand,3.95689,3.95689,0.0,±1e-09,True
+declaration_15.3 cluster_prob=0.1,mean_estimate,3.957116,3.955225,0.001891,±0.01806,True
+declaration_15.3 cluster_prob=0.1,bias,0.000226,-0.001665,0.001891,±0.01806,True
+declaration_15.3 cluster_prob=0.1,sd_estimate,0.050882,0.050212,0.00067,±10% rel,True
+declaration_15.3 cluster_prob=0.1,rmse,0.05087,0.050227,0.000643,±10% rel,True
+declaration_15.3 cluster_prob=0.1,power,1.0,1.0,0.0,±0.05,True
+declaration_15.3 cluster_prob=0.1,coverage,0.969,0.971,-0.002,±0.03,True
+declaration_15.3 cluster_prob=0.2,mean_estimand,3.95689,3.95689,0.0,±1e-09,True
+declaration_15.3 cluster_prob=0.2,mean_estimate,3.956549,3.956987,-0.000438,±0.01806,True
+declaration_15.3 cluster_prob=0.2,bias,-0.000341,9.7e-05,-0.000438,±0.01806,True
+declaration_15.3 cluster_prob=0.2,sd_estimate,0.034972,0.034428,0.000544,±10% rel,True
+declaration_15.3 cluster_prob=0.2,rmse,0.034965,0.034419,0.000546,±10% rel,True
+declaration_15.3 cluster_prob=0.2,power,1.0,1.0,0.0,±0.05,True
+declaration_15.3 cluster_prob=0.2,coverage,0.9755,0.974,0.0015,±0.03,True
+declaration_15.3 cluster_prob=0.3,mean_estimand,3.95689,3.95689,0.0,±1e-09,True
+declaration_15.3 cluster_prob=0.3,mean_estimate,3.957461,3.956466,0.000994,±0.01806,True
+declaration_15.3 cluster_prob=0.3,bias,0.000571,-0.000424,0.000994,±0.01806,True
+declaration_15.3 cluster_prob=0.3,sd_estimate,0.026934,0.026673,0.000262,±10% rel,True
+declaration_15.3 cluster_prob=0.3,rmse,0.026934,0.026669,0.000264,±10% rel,True
+declaration_15.3 cluster_prob=0.3,power,1.0,1.0,0.0,±0.05,True
+declaration_15.3 cluster_prob=0.3,coverage,0.9855,0.984,0.0015,±0.03,True
+declaration_15.3 cluster_prob=0.4,mean_estimand,3.95689,3.95689,0.0,±1e-09,True
+declaration_15.3 cluster_prob=0.4,mean_estimate,3.956519,3.95648,4e-05,±0.01806,True
+declaration_15.3 cluster_prob=0.4,bias,-0.000371,-0.00041,4e-05,±0.01806,True
+declaration_15.3 cluster_prob=0.4,sd_estimate,0.022539,0.022698,-0.000159,±10% rel,True
+declaration_15.3 cluster_prob=0.4,rmse,0.022536,0.022696,-0.00016,±10% rel,True
+declaration_15.3 cluster_prob=0.4,power,1.0,1.0,0.0,±0.05,True
+declaration_15.3 cluster_prob=0.4,coverage,0.99,0.992,-0.002,±0.03,True
+declaration_15.3 cluster_prob=0.5,mean_estimand,3.95689,3.95689,0.0,±1e-09,True
+declaration_15.3 cluster_prob=0.5,mean_estimate,3.957178,3.95666,0.000518,±0.01806,True
+declaration_15.3 cluster_prob=0.5,bias,0.000288,-0.00023,0.000518,±0.01806,True
+declaration_15.3 cluster_prob=0.5,sd_estimate,0.020308,0.019552,0.000756,±10% rel,True
+declaration_15.3 cluster_prob=0.5,rmse,0.020305,0.019548,0.000756,±10% rel,True
+declaration_15.3 cluster_prob=0.5,power,1.0,1.0,0.0,±0.05,True
+declaration_15.3 cluster_prob=0.5,coverage,0.987,0.995,-0.008,±0.03,True
+declaration_15.3 cluster_prob=0.6,mean_estimand,3.95689,3.95689,0.0,±1e-09,True
+declaration_15.3 cluster_prob=0.6,mean_estimate,3.957354,3.956582,0.000772,±0.01806,True
+declaration_15.3 cluster_prob=0.6,bias,0.000464,-0.000308,0.000772,±0.01806,True
+declaration_15.3 cluster_prob=0.6,sd_estimate,0.017668,0.017333,0.000335,±10% rel,True
+declaration_15.3 cluster_prob=0.6,rmse,0.01767,0.017332,0.000338,±10% rel,True
+declaration_15.3 cluster_prob=0.6,power,1.0,1.0,0.0,±0.05,True
+declaration_15.3 cluster_prob=0.6,coverage,0.9935,0.9955,-0.002,±0.03,True
+declaration_15.3 cluster_prob=0.7,mean_estimand,3.95689,3.95689,0.0,±1e-09,True
+declaration_15.3 cluster_prob=0.7,mean_estimate,3.957546,3.957004,0.000542,±0.01806,True
+declaration_15.3 cluster_prob=0.7,bias,0.000656,0.000114,0.000542,±0.01806,True
+declaration_15.3 cluster_prob=0.7,sd_estimate,0.017125,0.016961,0.000163,±10% rel,True
+declaration_15.3 cluster_prob=0.7,rmse,0.017133,0.016957,0.000176,±10% rel,True
+declaration_15.3 cluster_prob=0.7,power,1.0,1.0,0.0,±0.05,True
+declaration_15.3 cluster_prob=0.7,coverage,0.995,0.997,-0.002,±0.03,True
+declaration_15.3 cluster_prob=0.8,mean_estimand,3.95689,3.95689,0.0,±1e-09,True
+declaration_15.3 cluster_prob=0.8,mean_estimate,3.9567,3.956594,0.000105,±0.01806,True
+declaration_15.3 cluster_prob=0.8,bias,-0.00019,-0.000296,0.000105,±0.01806,True
+declaration_15.3 cluster_prob=0.8,sd_estimate,0.019178,0.017972,0.001206,±10% rel,True
+declaration_15.3 cluster_prob=0.8,rmse,0.019174,0.01797,0.001204,±10% rel,True
+declaration_15.3 cluster_prob=0.8,power,1.0,1.0,0.0,±0.05,True
+declaration_15.3 cluster_prob=0.8,coverage,0.9905,0.9955,-0.005,±0.03,True
+declaration_15.3 cluster_prob=0.9,mean_estimand,3.95689,3.95689,0.0,±1e-09,True
+declaration_15.3 cluster_prob=0.9,mean_estimate,3.956757,3.955659,0.001098,±0.01806,True
+declaration_15.3 cluster_prob=0.9,bias,-0.000133,-0.001231,0.001098,±0.01806,True
+declaration_15.3 cluster_prob=0.9,sd_estimate,0.023742,0.023391,0.00035,±10% rel,True
+declaration_15.3 cluster_prob=0.9,rmse,0.023736,0.023418,0.000318,±10% rel,True
+declaration_15.3 cluster_prob=0.9,power,1.0,1.0,0.0,±0.05,True
+declaration_15.3 cluster_prob=0.9,coverage,0.985,0.992,-0.007,±0.03,True
+declaration_15.5 Full pooling,mean_estimand,0.571044,0.571044,-0.0,±1e-09,True
+declaration_15.5 Full pooling,mean_estimate,0.569908,0.570709,-0.000801,±0.01,True
+declaration_15.5 Full pooling,bias,-0.001136,-0.000335,-0.000801,±0.01,True
+declaration_15.5 Full pooling,sd_estimate,0.015324,0.015279,4.5e-05,±10% rel,True
+declaration_15.5 Full pooling,rmse,0.148021,0.147994,2.7e-05,±10% rel,True
+declaration_15.5 No pooling,mean_estimand,0.571044,0.571044,-0.0,±1e-09,True
+declaration_15.5 No pooling,mean_estimate,0.565413,0.566167,-0.000754,±0.01,True
+declaration_15.5 No pooling,bias,-0.005631,-0.004877,-0.000754,±0.01,True
+declaration_15.5 No pooling,sd_estimate,0.182803,0.183082,-0.000279,±10% rel,True
+declaration_15.5 No pooling,rmse,0.126622,0.127258,-0.000636,±10% rel,True
+declaration_15.5 Partial pooling,mean_estimand,0.571044,0.571044,-0.0,±1e-09,True
+declaration_15.5 Partial pooling,mean_estimate,0.574296,0.575203,-0.000907,±0.01,True
+declaration_15.5 Partial pooling,bias,0.003251,0.004158,-0.000907,±0.01,True
+declaration_15.5 Partial pooling,sd_estimate,0.109506,0.109271,0.000235,±10% rel,True
+declaration_15.5 Partial pooling,rmse,0.090575,0.090774,-0.000199,±10% rel,True
+declaration_15.6 Y_avg,mean_estimand,0.244639,0.2419,0.002739,±0.02,True
+declaration_15.6 Y_avg,mean_estimate,0.120234,0.11932,0.000915,±0.01382,True
+declaration_15.6 Y_avg,bias,-0.124404,-0.12258,-0.001824,±0.01382,True
+declaration_15.6 Y_avg,sd_estimate,0.028861,0.029851,-0.00099,±10% rel,True
+declaration_15.6 Y_avg,rmse,0.127843,0.125956,0.001887,±10% rel,True
+declaration_15.6 Y_avg,power,0.895,0.876,0.019,±0.05,True
+declaration_15.6 Y_avg,coverage,0.0845,0.0895,-0.005,±0.03,True
+declaration_15.6 Y_avg_adjusted,mean_estimand,0.244639,0.2419,0.002739,±0.02,True
+declaration_15.6 Y_avg_adjusted,mean_estimate,0.244995,0.243038,0.001957,±0.01409,True
+declaration_15.6 Y_avg_adjusted,bias,0.000356,0.001139,-0.000782,±0.01409,True
+declaration_15.6 Y_avg_adjusted,sd_estimate,0.06025,0.062528,-0.002277,±10% rel,True
+declaration_15.6 Y_avg_adjusted,rmse,0.042881,0.043886,-0.001005,±10% rel,True
+declaration_15.6 Y_avg_adjusted,power,0.9955,0.9945,0.001,±0.05,True
+declaration_15.6 Y_avg_adjusted,coverage,0.9475,0.9485,-0.001,±0.03,True
+declaration_15.6 Y_avg_rescaled,mean_estimand,0.244639,0.2419,0.002739,±0.02,True
+declaration_15.6 Y_avg_rescaled,mean_estimate,0.177063,0.175667,0.001396,±0.02,True
+declaration_15.6 Y_avg_rescaled,bias,-0.067575,-0.066233,-0.001343,±0.02,True
+declaration_15.6 Y_avg_rescaled,sd_estimate,0.042163,0.043507,-0.001344,±10% rel,True
+declaration_15.6 Y_avg_rescaled,rmse,0.074816,0.07362,0.001196,±10% rel,True
+declaration_15.6 Y_avg_rescaled,power,0.895,0.876,0.019,±0.05,True
+declaration_15.6 Y_avg_rescaled,coverage,0.956,0.9585,-0.0025,±0.03,True
+declaration_15.6 Y_first_factor,mean_estimand,0.244639,0.2419,0.002739,±0.02,True
+declaration_15.6 Y_first_factor,mean_estimate,0.068347,0.072147,-0.0038,±0.02098,True
+declaration_15.6 Y_first_factor,bias,-0.176292,-0.169753,-0.00654,±0.02098,True
+declaration_15.6 Y_first_factor,sd_estimate,0.120345,0.11816,0.002185,±10% rel,True
+declaration_15.6 Y_first_factor,rmse,0.21519,0.20757,0.00762,±10% rel,True
+declaration_15.6 Y_first_factor,power,0.5475,0.5525,-0.005,±0.05,True
+declaration_15.6 Y_first_factor,coverage,0.4775,0.5055,-0.028,±0.03,True

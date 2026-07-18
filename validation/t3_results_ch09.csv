@@ -1,0 +1,169 @@
+element,diagnosand,python,reference,delta,band,pass
+"helper lh_robust (y ~ z, 'z = 0.5')",estimate,2.4,2.4,-0.0,±1e-08,True
+"helper lh_robust (y ~ z, 'z = 0.5')",std_error,0.786695,0.786695,-0.0,±1e-08,True
+"helper lh_robust (y ~ z, 'z = 0.5')",statistic,3.050738,3.050738,-0.0,±1e-08,True
+"helper lh_robust (y ~ z, 'z = 0.5')",p_value,0.038001,0.038001,-0.0,±1e-08,True
+"helper lh_robust (y ~ z, 'z = 0.5')",conf_low,0.215785,0.215785,0.0,±1e-08,True
+"helper lh_robust (y ~ z, 'z = 0.5')",conf_high,4.584215,4.584215,0.0,±1e-08,True
+"helper lh_robust (y ~ z, 'z = 0.5')",df,4.0,4.0,0.0,±1e-06,True
+"helper lh_robust (age ~ 1, '(Intercept) = 20')",estimate,21.666667,21.666667,-0.0,±1e-08,True
+"helper lh_robust (age ~ 1, '(Intercept) = 20')",std_error,17.647789,17.647789,0.0,±1e-08,True
+"helper lh_robust (age ~ 1, '(Intercept) = 20')",statistic,1.227727,1.227727,0.0,±1e-08,True
+"helper lh_robust (age ~ 1, '(Intercept) = 20')",p_value,0.344437,0.344437,-0.0,±1e-08,True
+"helper lh_robust (age ~ 1, '(Intercept) = 20')",conf_low,-54.265639,-54.265639,-0.0,±1e-08,True
+"helper lh_robust (age ~ 1, '(Intercept) = 20')",conf_high,97.598973,97.598973,0.0,±1e-08,True
+"helper lh_robust (age ~ 1, '(Intercept) = 20')",df,2.0,2.0,0.0,±1e-06,True
+helper weighted lm_robust wls_hc2 [(Intercept)],estimate,0.608628,0.608628,0.0,±1e-08,True
+helper weighted lm_robust wls_hc2 [(Intercept)],std_error,0.346924,0.346924,0.0,±1e-08,True
+helper weighted lm_robust wls_hc2 [(Intercept)],statistic,1.754357,1.754357,0.0,±1e-08,True
+helper weighted lm_robust wls_hc2 [(Intercept)],p_value,0.096378,0.096378,-0.0,±1e-08,True
+helper weighted lm_robust wls_hc2 [(Intercept)],conf_low,-0.120232,-0.120232,0.0,±1e-08,True
+helper weighted lm_robust wls_hc2 [(Intercept)],conf_high,1.337488,1.337488,0.0,±1e-08,True
+helper weighted lm_robust wls_hc2 [(Intercept)],df,18.0,18.0,0.0,±1e-06,True
+helper weighted lm_robust wls_hc2 [z],estimate,0.52122,0.52122,-0.0,±1e-08,True
+helper weighted lm_robust wls_hc2 [z],std_error,0.435064,0.435064,0.0,±1e-08,True
+helper weighted lm_robust wls_hc2 [z],statistic,1.19803,1.19803,-0.0,±1e-08,True
+helper weighted lm_robust wls_hc2 [z],p_value,0.246443,0.246443,0.0,±1e-08,True
+helper weighted lm_robust wls_hc2 [z],conf_low,-0.392816,-0.392816,-0.0,±1e-08,True
+helper weighted lm_robust wls_hc2 [z],conf_high,1.435255,1.435255,-0.0,±1e-08,True
+helper weighted lm_robust wls_hc2 [z],df,18.0,18.0,0.0,±1e-06,True
+helper weighted lm_robust wls_cr2 [(Intercept)],estimate,1.43592,1.43592,-0.0,±1e-08,True
+helper weighted lm_robust wls_cr2 [(Intercept)],std_error,0.673073,0.673073,-0.0,±1e-08,True
+helper weighted lm_robust wls_cr2 [(Intercept)],statistic,2.133378,2.133378,0.0,±1e-08,True
+helper weighted lm_robust wls_cr2 [(Intercept)],p_value,0.168436,0.168436,-0.0,±1e-08,True
+helper weighted lm_robust wls_cr2 [(Intercept)],conf_low,-1.502698,-1.502698,0.0,±1e-08,True
+helper weighted lm_robust wls_cr2 [(Intercept)],conf_high,4.374537,4.374537,-0.0,±1e-08,True
+helper weighted lm_robust wls_cr2 [(Intercept)],df,1.97004,1.97004,-0.0,±1e-06,True
+helper weighted lm_robust wls_cr2 [z],estimate,-1.530499,-1.530499,0.0,±1e-08,True
+helper weighted lm_robust wls_cr2 [z],std_error,0.91672,0.91672,-0.0,±1e-08,True
+helper weighted lm_robust wls_cr2 [z],statistic,-1.669539,-1.669539,-0.0,±1e-08,True
+helper weighted lm_robust wls_cr2 [z],p_value,0.172586,0.172586,0.0,±1e-08,True
+helper weighted lm_robust wls_cr2 [z],conf_low,-4.107791,-4.107791,0.0,±1e-08,True
+helper weighted lm_robust wls_cr2 [z],conf_high,1.046793,1.046793,-0.0,±1e-08,True
+helper weighted lm_robust wls_cr2 [z],df,3.877344,3.877344,0.0,±1e-06,True
+helper weighted CR2 foos observed [treat],estimate,0.028333,0.028333,0.0,±1e-08,True
+helper weighted CR2 foos observed [treat],std_error,0.0185,0.0185,-0.0,±1e-08,True
+helper weighted CR2 foos observed [treat],statistic,1.531549,1.531549,0.0,±1e-08,True
+helper weighted CR2 foos observed [treat],p_value,0.128083,0.128083,-0.0,±1e-08,True
+helper weighted CR2 foos observed [treat],conf_low,-0.008269,-0.008269,0.0,±1e-08,True
+helper weighted CR2 foos observed [treat],conf_high,0.064936,0.064936,0.0,±1e-08,True
+helper weighted CR2 foos observed [treat],df,128.957993,128.957993,-0.0,±1e-06,True
+declaration_9.2 [estimator],mean_estimand,40.135195,40.041825,0.09337,±0.4676,True
+declaration_9.2 [estimator],mean_estimate,40.465,40.288667,0.176333,±1.169,True
+declaration_9.2 [estimator],bias,0.329805,0.246842,0.082963,±1.169,True
+declaration_9.2 [estimator],sd_estimate,13.526342,13.282993,0.243349,±10% rel,True
+declaration_9.2 [estimator],rmse,13.391525,13.117902,0.273623,±10% rel,True
+declaration_9.2 [estimator],power,0.3055,0.3115,-0.006,±0.05,True
+declaration_9.2 [estimator],coverage,0.9255,0.924,0.0015,±0.03,True
+declaration_9.2 [test],mean_estimand,40.135195,40.041825,0.09337,±0.4676,True
+declaration_9.2 [test],mean_estimate,20.465,20.288667,0.176333,±1.169,True
+declaration_9.2 [test],bias,-19.670195,-19.753158,0.082963,±1.169,True
+declaration_9.2 [test],sd_estimate,13.526342,13.282993,0.243349,±10% rel,True
+declaration_9.2 [test],rmse,23.793712,23.710877,0.082835,±10% rel,True
+declaration_9.2 [test],power,0.1355,0.13,0.0055,±0.05,True
+declaration_9.2 [test],coverage,0.8745,0.8705,0.004,±0.03,True
+declaration_9.3,mean_estimand,40.135195,40.01485,0.120345,±0.4676,True
+declaration_9.3,mean_estimate,45.080158,44.736331,0.343827,±1.169,True
+declaration_9.3,bias,4.944963,4.721481,0.223482,±1.169,True
+declaration_9.3,sd_estimate,12.899696,13.056761,-0.157065,±10% rel,True
+declaration_9.3,rmse,13.701169,13.779373,-0.078204,±10% rel,True
+declaration_9.4 true_mean=0.0,mean_estimand,0.058125,-0.106355,0.16448,±0.46,True
+declaration_9.4 true_mean=0.0,mean_estimate,0.104667,0.203333,-0.098667,±1.15,True
+declaration_9.4 true_mean=0.0,bias,0.046542,0.309688,-0.263147,±1.15,True
+declaration_9.4 true_mean=0.0,sd_estimate,12.908719,12.941533,-0.032814,±10% rel,True
+declaration_9.4 true_mean=0.0,rmse,12.748507,12.762549,-0.014042,±10% rel,True
+declaration_9.4 true_mean=0.0,power,0.0445,0.048,-0.0035,±0.05,True
+declaration_9.4 true_mean=0.0,coverage,0.957,0.955,0.002,±0.03,True
+declaration_9.4 true_mean=11.1,mean_estimand,11.13649,11.005145,0.131345,±0.46,True
+declaration_9.4 true_mean=11.1,mean_estimate,11.177667,11.326,-0.148333,±1.15,True
+declaration_9.4 true_mean=11.1,bias,0.041177,0.320855,-0.279678,±1.15,True
+declaration_9.4 true_mean=11.1,sd_estimate,13.063136,12.922964,0.140172,±10% rel,True
+declaration_9.4 true_mean=11.1,rmse,12.909354,12.744299,0.165055,±10% rel,True
+declaration_9.4 true_mean=11.1,power,0.0755,0.0825,-0.007,±0.05,True
+declaration_9.4 true_mean=11.1,coverage,0.9505,0.9555,-0.005,±0.03,True
+declaration_9.4 true_mean=22.2,mean_estimand,22.23855,22.11654,0.12201,±0.46,True
+declaration_9.4 true_mean=22.2,mean_estimate,22.141,22.440833,-0.299833,±1.15,True
+declaration_9.4 true_mean=22.2,bias,-0.09755,0.324293,-0.421843,±1.15,True
+declaration_9.4 true_mean=22.2,sd_estimate,13.285942,12.92474,0.361202,±10% rel,True
+declaration_9.4 true_mean=22.2,rmse,13.081764,12.746516,0.335248,±10% rel,True
+declaration_9.4 true_mean=22.2,power,0.178,0.167,0.011,±0.05,True
+declaration_9.4 true_mean=22.2,coverage,0.95,0.9555,-0.0055,±0.03,True
+declaration_9.4 true_mean=33.3,mean_estimand,33.346655,33.22781,0.118845,±0.46,True
+declaration_9.4 true_mean=33.3,mean_estimate,33.401,33.562833,-0.161833,±1.15,True
+declaration_9.4 true_mean=33.3,bias,0.054345,0.335023,-0.280678,±1.15,True
+declaration_9.4 true_mean=33.3,sd_estimate,13.41637,12.926736,0.489634,±10% rel,True
+declaration_9.4 true_mean=33.3,rmse,13.181387,12.748688,0.432699,±10% rel,True
+declaration_9.4 true_mean=33.3,power,0.3115,0.3095,0.002,±0.05,True
+declaration_9.4 true_mean=33.3,coverage,0.9515,0.956,-0.0045,±0.03,True
+declaration_9.4 true_mean=44.4,mean_estimand,44.432635,44.33995,0.092685,±0.46,True
+declaration_9.4 true_mean=44.4,mean_estimate,44.699833,44.676833,0.023,±1.15,True
+declaration_9.4 true_mean=44.4,bias,0.267198,0.336883,-0.069685,±1.15,True
+declaration_9.4 true_mean=44.4,sd_estimate,13.04385,12.930257,0.113593,±10% rel,True
+declaration_9.4 true_mean=44.4,rmse,12.888395,12.752847,0.135549,±10% rel,True
+declaration_9.4 true_mean=44.4,power,0.459,0.456,0.003,±0.05,True
+declaration_9.4 true_mean=44.4,coverage,0.95,0.957,-0.007,±0.03,True
+declaration_9.4 true_mean=55.6,mean_estimand,55.48061,55.44782,0.03279,±0.46,True
+declaration_9.4 true_mean=55.6,mean_estimate,55.855667,55.784667,0.071,±1.15,True
+declaration_9.4 true_mean=55.6,bias,0.375057,0.336847,0.03821,±1.15,True
+declaration_9.4 true_mean=55.6,sd_estimate,12.822833,12.927175,-0.104342,±10% rel,True
+declaration_9.4 true_mean=55.6,rmse,12.61611,12.750718,-0.134607,±10% rel,True
+declaration_9.4 true_mean=55.6,power,0.5985,0.6,-0.0015,±0.05,True
+declaration_9.4 true_mean=55.6,coverage,0.95,0.9575,-0.0075,±0.03,True
+declaration_9.4 true_mean=66.7,mean_estimand,66.66812,66.5598,0.10832,±0.46,True
+declaration_9.4 true_mean=66.7,mean_estimate,66.665,66.888333,-0.223333,±1.15,True
+declaration_9.4 true_mean=66.7,bias,-0.00312,0.328533,-0.331653,±1.15,True
+declaration_9.4 true_mean=66.7,sd_estimate,13.272456,12.926423,0.346033,±10% rel,True
+declaration_9.4 true_mean=66.7,rmse,13.034124,12.750952,0.283171,±10% rel,True
+declaration_9.4 true_mean=66.7,power,0.7165,0.728,-0.0115,±0.05,True
+declaration_9.4 true_mean=66.7,coverage,0.95,0.9575,-0.0075,±0.03,True
+declaration_9.4 true_mean=77.8,mean_estimand,77.771285,77.67048,0.100805,±0.46,True
+declaration_9.4 true_mean=77.8,mean_estimate,78.212167,77.998833,0.213333,±1.15,True
+declaration_9.4 true_mean=77.8,bias,0.440882,0.328353,0.112528,±1.15,True
+declaration_9.4 true_mean=77.8,sd_estimate,13.015297,12.919364,0.095934,±10% rel,True
+declaration_9.4 true_mean=77.8,rmse,12.87304,12.744513,0.128527,±10% rel,True
+declaration_9.4 true_mean=77.8,power,0.8095,0.84,-0.0305,±0.05,True
+declaration_9.4 true_mean=77.8,coverage,0.9465,0.956,-0.0095,±0.03,True
+declaration_9.4 true_mean=88.9,mean_estimand,88.93788,88.781625,0.156255,±0.46,True
+declaration_9.4 true_mean=88.9,mean_estimate,89.535333,89.0965,0.438833,±1.15,True
+declaration_9.4 true_mean=88.9,bias,0.597453,0.314875,0.282578,±1.15,True
+declaration_9.4 true_mean=88.9,sd_estimate,13.446835,12.925838,0.520998,±10% rel,True
+declaration_9.4 true_mean=88.9,rmse,13.184202,12.748557,0.435644,±10% rel,True
+declaration_9.4 true_mean=88.9,power,0.892,0.9025,-0.0105,±0.05,True
+declaration_9.4 true_mean=88.9,coverage,0.948,0.956,-0.008,±0.03,True
+declaration_9.4 true_mean=100.0,mean_estimand,99.902715,99.892595,0.01012,±0.46,True
+declaration_9.4 true_mean=100.0,mean_estimate,99.5325,100.220833,-0.688333,±1.15,True
+declaration_9.4 true_mean=100.0,bias,-0.370215,0.328238,-0.698453,±1.15,True
+declaration_9.4 true_mean=100.0,sd_estimate,12.816351,12.920577,-0.104226,±10% rel,True
+declaration_9.4 true_mean=100.0,rmse,12.603801,12.743054,-0.139254,±10% rel,True
+declaration_9.4 true_mean=100.0,power,0.936,0.9515,-0.0155,±0.05,True
+declaration_9.4 true_mean=100.0,coverage,0.9585,0.955,0.0035,±0.03,True
+declaration_9.5,sd_estimate,0.159816,0.161179,-0.001363,±10% rel,True
+declaration_9.6 design_1 [Unweighted],mean_estimand,0.749317,0.749862,-0.000545,±0.02169,True
+declaration_9.6 design_1 [Unweighted],mean_estimate,0.751723,0.74672,0.005004,±0.02169,True
+declaration_9.6 design_1 [Unweighted],bias,0.002406,-0.003143,0.005549,±0.02169,True
+declaration_9.6 design_1 [Unweighted],sd_estimate,0.205838,0.207925,-0.002088,±10% rel,True
+declaration_9.6 design_1 [Unweighted],rmse,0.203739,0.206251,-0.002511,±10% rel,True
+declaration_9.6 design_1 [Unweighted],power,0.9555,0.944,0.0115,±0.05,True
+declaration_9.6 design_1 [Unweighted],coverage,0.9515,0.9465,0.005,±0.03,True
+declaration_9.6 design_2 [Weighted],mean_estimand,0.749058,0.749733,-0.000675,±0.02169,True
+declaration_9.6 design_2 [Weighted],mean_estimate,0.911476,0.897546,0.01393,±0.02169,True
+declaration_9.6 design_2 [Weighted],bias,0.162419,0.147814,0.014605,±0.02169,True
+declaration_9.6 design_2 [Weighted],sd_estimate,0.246733,0.246931,-0.000198,±10% rel,True
+declaration_9.6 design_2 [Weighted],rmse,0.295109,0.287456,0.007652,±10% rel,True
+declaration_9.6 design_2 [Weighted],power,0.956,0.944,0.012,±0.05,True
+declaration_9.6 design_2 [Weighted],coverage,0.889,0.9045,-0.0155,±0.03,True
+declaration_9.6 design_3 [Unweighted],mean_estimand,0.749872,0.750305,-0.000433,±0.02103,True
+declaration_9.6 design_3 [Unweighted],mean_estimate,0.584529,0.592494,-0.007964,±0.02103,True
+declaration_9.6 design_3 [Unweighted],bias,-0.165343,-0.157811,-0.007532,±0.02103,True
+declaration_9.6 design_3 [Unweighted],sd_estimate,0.205086,0.205421,-0.000335,±10% rel,True
+declaration_9.6 design_3 [Unweighted],rmse,0.263872,0.258897,0.004975,±10% rel,True
+declaration_9.6 design_3 [Unweighted],power,0.8075,0.8115,-0.004,±0.05,True
+declaration_9.6 design_3 [Unweighted],coverage,0.8655,0.8675,-0.002,±0.03,True
+declaration_9.6 design_4 [Weighted],mean_estimand,0.75011,0.750502,-0.000393,±0.02103,True
+declaration_9.6 design_4 [Weighted],mean_estimate,0.755539,0.751181,0.004358,±0.02103,True
+declaration_9.6 design_4 [Weighted],bias,0.005429,0.000679,0.004751,±0.02103,True
+declaration_9.6 design_4 [Weighted],sd_estimate,0.297266,0.299245,-0.001979,±10% rel,True
+declaration_9.6 design_4 [Weighted],rmse,0.296982,0.29868,-0.001698,±10% rel,True
+declaration_9.6 design_4 [Weighted],power,0.7275,0.715,0.0125,±0.05,True
+declaration_9.6 design_4 [Weighted],coverage,0.935,0.939,-0.004,±0.03,True
+declaration_9.7,p.value,0.13,0.1275,0.0025,±0.05,True

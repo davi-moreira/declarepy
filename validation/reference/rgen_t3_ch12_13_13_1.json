@@ -1,0 +1,1 @@
+{"kind":"diagnosis","source":"declaration_13.1.R, diagnose_design(sims = 2000), default diagnosands","diagnosands":[{"design":"declaration_13.1","inquiry":"ATE","estimator":"OLS","outcome":"Y","term":"Z","mean_estimand":0.2,"mean_estimate":0.1998016363598,"bias":-0.0001983636401931,"sd_estimate":0.199747350692,"rmse":0.19969750613,"power":0.165,"coverage":0.947,"n_sims":2000}]}

@@ -14,11 +14,19 @@ import pandas as pd
 __all__ = ["load", "available"]
 
 _DATASETS = {
+    # rdss package datasets (MIT, with attribution)
     "lapop_brazil",
     "la_voter_file",
     "foos_etal",
     "cliningsmith_etal",
     "bonilla_tillery",
+    "fairfax",
+    # derived / seeded simulation exports (see data/README.md)
+    "fairfax_adjacency",
+    "fixed_pop_18_6",
+    "ch15_portola",
+    "ch15_states",
+    "ch15_two_nigerian_states",
 }
 
 
